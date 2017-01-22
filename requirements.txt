@@ -4,3 +4,4 @@ django-crispy-forms==1.6.1
 django-datatables-view==1.13.2
 django-report-builder==3.4.4
 django-tables2==1.2.7
+gunicorn
