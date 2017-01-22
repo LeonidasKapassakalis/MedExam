@@ -1,0 +1,31 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+
+<head>
+<title>List</title>
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="{% static 'css/DjgLeoApp001.css' %}">
+
+{% if user.is_authenticated %}
+<p>Welcome, {{ user.username }} . Thanks for logging in.</p>
+<p>{{ STATIC_URL }}</p>
+<p><a href="{% url 'tables0' %}"/a>Tables0</p>
+<p><a href="{% url 'tables100' %}"/a>Tables100</p>
+
+<p>Welcome, {{ user.username }} </p>
+{% else %}
+<p>Welcome, new user. Please log in.</p>
+{% endif %}
+</head>
+{% block content %}
+    <h2>Examination</h2>
+    <ul>
+        {% for Examination0 in object_list %}
+            <li><a href="http://127.0.0.1:8000/examinationupd/{{ Examination0.pk }}/">{{ Examination0.peopleid.name }} {{ Examination0.peopleid.surname }} {{ Examination0.categorid.name }} {{ Examination0.dateofexam }} </li>
+        {% endfor %}
+    </ul>
+<li><a href="http://127.0.0.1:8000/examinationcre/">Add</li>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'DjgLeoApp001/style.css' %}" />
+<!DOCTYPE html>
+<html lang="en-us" >
+<head>
+<title>Djgleoapp001 administration | Django site admin</title>
+<link rel="stylesheet" type="text/css" href="/static/css/base.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/dashboard.css" />
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+<form action="" method="post">{% csrf_token %}
+<ul> 
+    {{ form.as_ul }}
+</ul> 	
+    <input type="submit" value="Update" />
+<li><a href="http://127.0.0.1:8000/publishers">List</li>		
+<li><a href="http://127.0.0.1:8000/publisherdel/{{ People.id }}/">Delete</li>
+<li>{{ People.name }}</li>
+</form>

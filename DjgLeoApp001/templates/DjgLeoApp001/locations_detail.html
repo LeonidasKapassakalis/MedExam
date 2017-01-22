@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us" >
+<head>
+<title>Djgleoapp001 administration | Django site admin</title>
+<link rel="stylesheet" type="text/css" href="/static/css/base.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/dashboard.css" />
+{% block content %}
+    <h2>Locations</h2>
+    <ul>
+            <h1>Name {{ object.name }}</h1>
+            <h3>Address {{ object.address }} {{ object.tk }}</h3>
+			<h3>email{{ object.mail }}</h3>
+			<h3>.</h3>
+			<h3>.</h3>
+			<h3>Text {{ object.text }}</h3>
+			<h3>Hospital {{ object.hospital }}</h3>
+	</ul>   
+
+  <ul>
+  {% for area in object.peoples.all %}
+    <li>{{ area }}</li>
+  {% endfor %}
+  </ul>
+	
+{% endblock %}

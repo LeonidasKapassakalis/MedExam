@@ -1,0 +1,20 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+
+
+<head>
+<title>List</title>
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="{% static 'css/DjgLeoApp001.css' %}">
+
+{% block content %}
+    <h2>People</h2>
+    <ul>
+        {% for People in object_list %}
+            <li><a href="http://127.0.0.1:8000/publisherupd/{{ People.pk }}/">{{ People.name }}	{{ People.surname }} {{ People.dateofbirth }} </li>
+        {% endfor %}
+    </ul>
+<li><a href="http://127.0.0.1:8000/publishercre/">Add</li>
+{% endblock %}

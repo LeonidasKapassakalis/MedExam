@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en-us" >
+<head>
+<title>Djgleoapp001 administration | Django site admin</title>
+<link rel="stylesheet" type="text/css" href="/static/css/base.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/dashboard.css" />
+{% block content %}
+    <h2>People</h2>
+    <ul>
+            <li>{{ object.name }}</li>
+            <li>{{ object.surname }}</li>
+			<li>{{ object.notes }}</li>
+			<li>{{ object.phone }}</li>
+			<li>{{ object.fax }}</li>
+			<li>{{ object.mail }}</li>
+	</ul>    			
+{% endblock %}

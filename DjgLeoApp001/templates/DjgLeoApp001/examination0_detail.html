@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en-us" >
+<head>
+<title>Djgleoapp001 administration | Django site admin</title>
+<link rel="stylesheet" type="text/css" href="/static/css/base.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/dashboard.css" />
+{% block content %}
+
+
+<h1>{{ object.dateofexam|date }}</h1>
+<h1>{{ object.categorid.name }}</h1>
+<h1>{{ object.peopleid.name }} {{ object.peopleid.surname }}</h1>
+<textarea cols=100 rows=10>{{ object.notes }}</textarea>
+<textarea cols=100 rows=5>{{ object.comments }}</textarea>
+{% endblock %}

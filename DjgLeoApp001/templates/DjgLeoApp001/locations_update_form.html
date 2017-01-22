@@ -1,0 +1,17 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'DjgLeoApp001/style.css' %}" />
+<!DOCTYPE html>
+<html lang="en-us" >
+<head>
+<title>Djgleoapp001 administration | Django site admin</title>
+<link rel="stylesheet" type="text/css" href="/static/admin/css/base.css" />
+<link rel="stylesheet" type="text/css" href="/static/admin/css/dashboard.css" />
+</head>
+
+
+<form action="" method="post">{% csrf_token %}
+<table> 
+    {{ form.as_table }}
+</table> 	
+    <input type="submit" value="Update" />
+</form>

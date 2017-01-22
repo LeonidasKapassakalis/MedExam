@@ -1,0 +1,10 @@
+li a {
+    color: green;
+}
+h1 a {
+    color: #FCA205;
+    font-family: 'Lobster';
+}
+body {
+    padding-left: 35px;
+}
