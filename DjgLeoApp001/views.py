@@ -364,7 +364,7 @@ class ExaminationTable(tables.Table):
 def examination_list(request):
     table = ExaminationTable(Examination0.objects.all())
     RequestConfig(request).configure(table)
-    return render(request, 'people.html', {'people': table, 'page_title' : 'Malakies', 'add_url_leo': 'examinationcreate' })
+    return render(request, 'people.html', {'people': table, 'page_title' : 'Εξετάσεις', 'add_url_leo': 'examinationcreate' })
 
 
 #Crispy
@@ -600,7 +600,100 @@ class LocationDelete(DeleteView):
     fields = ['name','surname','notes','mail']
     success_url = '/locations/'
 
-
-
-
 ###Locations<
+
+###MultiExamForm>
+
+from django.contrib.admin.widgets import AdminDateWidget
+from django.contrib.admin.widgets import AdminTimeWidget
+from django.contrib.admin.widgets import AdminSplitDateTime
+
+from django.contrib.admin import widgets
+
+class CustomAdminSplitDateTime(AdminSplitDateTime):
+    def __init__(self, attrs=None):
+        widgets = [AdminDateWidget, AdminTimeWidget(attrs=None, format='%I:%M %p')]
+        forms.MultiWidget.__init__(self, widgets, attrs)    
+
+class MultiExamForm(forms.Form):
+    name = forms.CharField()
+    address = forms.CharField()
+    phone = forms.CharField()
+    mail = forms.EmailField(required=False)
+    tk = forms.CharField()
+    text = forms.CharField()
+    #hospital = forms.NullBooleanField(db_column='Hospital')  # Field name made lowercase.
+    #medicalcenter = models.NullBooleanField(db_column='MedicalCenter')  # Field name made lowercase.
+    #eopyy = models.NullBooleanField(db_column='EOPYY')  # Field name made lowercase.
+#    contact = forms.CharField()
+    #countryid = forms.ForeignKey(Country, db_column='CountryId')  # Field name
+    CHOICES = (('1', 'First',), ('2', 'Second',))
+    choice_field = forms.ChoiceField(widget=forms.RadioSelect, choices=CHOICES)
+    choice_field1 = forms.ChoiceField(widget=forms.Select, choices=CHOICES)
+#    choice_field2 = forms.SplitDateTimeField()
+#    choice_field3 = forms.SplitDateTimeWidget()
+    choice_field4 = forms.DateField(widget=widgets.AdminDateWidget())
+
+#    start_datetime = forms.DateField(
+#        widget=CustomAdminSplitDateTime())
+#    end_datetime= forms.DateField(
+#        widget=CustomAdminSplitDateTime())
+        
+
+    OPTIONS = (
+                ("AUT", "Austria"),
+                ("DEU", "Germany"),
+                ("NLD", "Neitherlands"),
+                ("GRE", "Greece"),
+                )
+    Countries = forms.MultipleChoiceField(widget=forms.CheckboxSelectMultiple,
+                                             choices=OPTIONS)
+
+    countries1 = forms.ModelChoiceField(queryset=People.objects.all())
+
+    countries2 = forms.ModelMultipleChoiceField(queryset=People.objects.all())
+
+    
+
+
+def MultiExam(request):
+    if request.method == 'POST':
+        form = MultiExamForm(request.POST)
+        if form.is_valid():
+            cd = form.cleaned_data
+            print cd['mail']
+            print cd['Countries']
+            print cd['countries1']
+            print cd['countries2']
+##            send_mail(
+##                cd['subject'],
+##                cd['message'],
+##                cd.get('email', 'noreply@example.com'),
+##                ['siteowner@example.com'],
+##            )
+            return HttpResponseRedirect('/contact/thanks/')
+    else:
+        form = MultiExamForm()
+    return render(request, 'contact_form.html', {'form': form})
+
+def MultiExam0(request):
+    if request.method == 'POST':
+        form = MultiExamForm(request.POST)
+        if form.is_valid():
+            cd = form.cleaned_data
+##            send_mail(
+##                cd['subject'],
+##                cd['message'],
+##                cd.get('email', 'noreply@example.com'),
+##                ['siteowner@example.com'],
+##            )
+            return HttpResponseRedirect('/contact/thanks/')
+    else:
+        form = MultiExamForm()
+    return render(request, 'contact_form0.html', {'form': form})
+
+    
+
+    
+
+###MultiExamForm<

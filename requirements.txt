@@ -6,3 +6,5 @@ django-datatable-view==0.9.0b5
 django-datatables-view==1.13.2
 django-report-builder==3.4.4
 django-tables2==1.2.7
+psycopg2
+dj-database-url

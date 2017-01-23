@@ -76,5 +76,8 @@ urlpatterns = [
     url(r'^contact999/$',views.ZeroConfigurationDatatableView.as_view(), name='contact999'),
     url(r'^contact998/$',views.ZeroConfigurationDatatableView0.as_view(), name='contact998'),
 
+    url(r'^multiexam/$', views.MultiExam, name='MultiExamForm'),
+    url(r'^multiexam0/$', views.MultiExam0, name='MultiExamForm0'),    
+
     url(r'', views.MainMenu),
 ]

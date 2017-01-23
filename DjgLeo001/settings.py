@@ -85,12 +85,26 @@ WSGI_APPLICATION = 'DjgLeo001.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
+# Update database configuration with $DATABASE_URL.
 DATABASES = {
-    'default': {
+    'default0': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'LeoKapa+.db'),
+    },
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'MedExam',
+        'USER': 'postgres',
+        'PASSWORD': '130368',
+        'HOST': '127.0.0.1',
+        'PORT': '5434',
     }
 }
+
+import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
+
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
