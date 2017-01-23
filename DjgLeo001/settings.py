@@ -147,6 +147,8 @@ CURRENT_PATH = os.path.abspath(os.path.dirname(__file__).decode('utf-8'))
 
 STATIC_ROOT = 'static/'
 
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
