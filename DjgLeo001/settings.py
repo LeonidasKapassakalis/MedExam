@@ -145,6 +145,8 @@ FIXTURE_DIRS = ('/fixtures/',)
 import os
 CURRENT_PATH = os.path.abspath(os.path.dirname(__file__).decode('utf-8'))
 
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+
 STATIC_ROOT = 'static/'
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
