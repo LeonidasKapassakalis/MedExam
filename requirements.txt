@@ -6,3 +6,4 @@ django-report-builder==3.4.4
 django-tables2==1.2.7
 psycopg2
 dj-database-url
+gunicorn
