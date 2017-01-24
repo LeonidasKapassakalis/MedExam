@@ -374,7 +374,7 @@ from crispy_forms.layout import Layout, Fieldset, ButtonHolder, Submit, Div, Mul
 class ExampleForm0(CreateView):
     model = People
     fields = ['name', 'surname', 'notes', 'mail', 'dateofbirth', 'nationality', 'countryid',
-              'idoncontry', 'phone', 'fax', 'mail', 'ispatient', 'isdoctor', 'canlogin',
+              'phone', 'fax', 'mail', 'ispatient', 'isdoctor', 'canlogin',
               'accessonlyhisfile', 'notes']
     success_url = '/examinations'
 

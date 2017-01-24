@@ -1,7 +1,340 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c740e0c-ea5a-408b-9209-810a36073e0b" name="Default" comment="" />
+    <list default="true" id="9c740e0c-ea5a-408b-9209-810a36073e0b" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/DjgLeoApp001/New Text Document.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/DjgLeoApp001/styles.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/css/base.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/css/bootstrap-responsive.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/css/bootstrap-responsive.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/css/changelists.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/css/dashboard.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/css/eztables.demo.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/css/fonts.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/css/forms.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/css/login.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/css/rtl.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/css/solarized_dark.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/css/widgets.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/fonts/LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/fonts/README.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/fonts/Roboto-Bold-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/fonts/Roboto-Light-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/fonts/Roboto-Regular-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/img/DataTables.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/img/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/img/README.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/img/calendar-icons.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/img/gis/move_vertex_off.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/img/gis/move_vertex_on.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/img/glyphicons-halflings-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/img/glyphicons-halflings.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/img/icon-addlink.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/img/icon-alert.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/img/icon-calendar.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/img/icon-changelink.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/img/icon-clock.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/img/icon-deletelink.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/img/icon-no.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/img/icon-unknown-alt.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/img/icon-unknown.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/img/icon-yes.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/img/image-0-02-05-d33b895930d70941f8cf27c6d095a4b9e9118e40b354c1e7dcc20468b7f5be39-V - Copy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/img/image-0-02-05-d33b895930d70941f8cf27c6d095a4b9e9118e40b354c1e7dcc20468b7f5be39-V.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/img/inline-delete.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/img/search.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/img/selector-icons.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/img/sorting-icons.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/img/tooltag-add.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/img/tooltag-arrowright.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/SelectBox.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/SelectFilter2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/actions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/actions.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/admin/DateTimeShortcuts.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/admin/RelatedObjectLookups.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/calendar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/cancel.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/change_form.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/collapse.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/collapse.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/core.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/eztables.client.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/eztables.demo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/eztables.server.base.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/eztables.server.custom.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/eztables.server.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/eztables.server.objects.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/eztables.server.search.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/inlines.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/inlines.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/jquery.init.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/libs/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/libs/highlight.pack.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/libs/modernizr-2.5.3-respond-1.1.0.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/popup_response.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/prepopulate.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/prepopulate.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/prepopulate_init.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/timeparse.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/urlify.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/vendor/jquery/LICENSE-JQUERY.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/vendor/jquery/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/vendor/jquery/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/vendor/xregexp/LICENSE-XREGEXP.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/vendor/xregexp/xregexp.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/js/vendor/xregexp/xregexp.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/publishers/image-0-02-05-d33b895930d70941f8cf27c6d095a4b9e9118e40b354c1e7dcc20468b7f5be39-V.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/static/snippets/bootstrap.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/templates/contact_form.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/templates/contact_form0.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeo001/templates/examination_list_per_person.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/css/DjgLeoApp001.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/css/base.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/css/bootstrap-responsive.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/css/bootstrap-responsive.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/css/changelists.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/css/dashboard.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/css/datatables.bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/css/datatables.demo.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/css/eztables.demo.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/css/fonts.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/css/forms.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/css/login.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/css/rtl.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/css/solarized_dark.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/css/styles.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/css/widgets.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/datepicker/css/datepicker.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/datepicker/js/bootstrap-datepicker.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/fonts/LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/fonts/README.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/fonts/Roboto-Bold-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/fonts/Roboto-Light-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/fonts/Roboto-Regular-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/images/back_disabled.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/images/back_enabled.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/images/back_enabled_hover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/images/forward_disabled.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/images/forward_enabled.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/images/forward_enabled_hover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/images/sort_asc.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/images/sort_asc_disabled.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/images/sort_both.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/images/sort_desc.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/images/sort_desc_disabled.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/img/DataTables.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/img/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/img/README.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/img/calendar-icons.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/img/gis/move_vertex_off.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/img/gis/move_vertex_on.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/img/glyphicons-halflings-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/img/glyphicons-halflings.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/img/icon-addlink.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/img/icon-alert.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/img/icon-calendar.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/img/icon-changelink.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/img/icon-clock.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/img/icon-deletelink.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/img/icon-no.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/img/icon-unknown-alt.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/img/icon-unknown.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/img/icon-yes.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/img/inline-delete.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/img/search.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/img/selector-icons.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/img/sorting-icons.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/img/tooltag-add.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/img/tooltag-arrowright.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/SelectBox.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/SelectFilter2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/actions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/actions.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/admin/DateTimeShortcuts.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/admin/RelatedObjectLookups.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/calendar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/cancel.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/change_form.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/collapse.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/collapse.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/core.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/datatableview.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/datatableview.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/eztables.client.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/eztables.demo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/eztables.server.base.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/eztables.server.custom.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/eztables.server.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/eztables.server.objects.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/eztables.server.search.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/inlines.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/inlines.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/jquery.init.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/datatables.bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/datatables.django.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/jquery.dataTables.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/jquery.dataTables.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.ar.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.cs.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.da.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.de.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.el.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.es.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.et.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.fa.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.fi.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.fr.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.ga.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.he.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.hi.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.hr.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.hu.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.id.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.it.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.ja.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.ka.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.lt.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.lv.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.mk.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.nl.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.nn.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.pl.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.pt-br.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.pt.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.ro.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.ru.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.sk.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.sl.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.sr-latn.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.sv.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.th.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.tr.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.uk.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.ur.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.vi.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.zh-cn.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/datatables/language.zh-tw.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/highlight.pack.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/libs/modernizr-2.5.3-respond-1.1.0.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/popup_response.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/prepopulate.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/prepopulate.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/prepopulate_init.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/timeparse.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/urlify.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/vendor/jquery/LICENSE-JQUERY.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/vendor/jquery/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/vendor/jquery/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/vendor/xregexp/LICENSE-XREGEXP.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/vendor/xregexp/xregexp.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/js/vendor/xregexp/xregexp.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/snippets/bootstrap.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/syntaxhighlighter/shAutoloader.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/syntaxhighlighter/shBrushJScript.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/syntaxhighlighter/shBrushPython.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/syntaxhighlighter/shBrushXML.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/syntaxhighlighter/shCore.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/syntaxhighlighter/shCore.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/static/syntaxhighlighter/shThemeDefault.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/DjgLeoApp001/base.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/DjgLeoApp001/examination0_confirm_delete.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/DjgLeoApp001/examination0_create_form.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/DjgLeoApp001/examination0_detail.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/DjgLeoApp001/examination0_list.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/DjgLeoApp001/examination0_update_form.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/DjgLeoApp001/examination_list_per_person.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/DjgLeoApp001/image-0-02-05-d33b895930d70941f8cf27c6d095a4b9e9118e40b354c1e7dcc20468b7f5be39-V.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/DjgLeoApp001/image-0-02-05-d33b895930d70941f8cf27c6d095a4b9e9118e40b354c1e7dcc20468b7f5be39-V.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/DjgLeoApp001/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/DjgLeoApp001/locations_confirm_delete.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/DjgLeoApp001/locations_create_form.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/DjgLeoApp001/locations_detail.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/DjgLeoApp001/locations_update_form.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/DjgLeoApp001/people.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/DjgLeoApp001/people0.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/DjgLeoApp001/people_confirm_delete.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/DjgLeoApp001/people_create_form.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/DjgLeoApp001/people_detail.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/DjgLeoApp001/people_form.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/DjgLeoApp001/people_list.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/DjgLeoApp001/people_update_form.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/DjgLeoApp001/people_update_formb.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/DjgLeoApp001/people_update_formt.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/DjgLeoApp001/valid_column_formats.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/+base.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/500.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/Leo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/base.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/blank.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/contact_form.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/custom_table_template.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/datatableview/bootstrap_structure.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/datatableview/default_structure.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/datatableview/legacy_structure.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/demos/bootstrap_template.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/demos/col_reorder.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/demos/columns_reference.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/demos/configure_datatable_object.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/demos/configure_values_datatable_object.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/demos/css_styling.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/demos/custom_model_fields.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/demos/helpers_reference.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/demos/multi_filter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/demos/multiple_tables.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/demos/x_editable_columns.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/example_base.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/eztables/base.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/eztables/client-side.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/eztables/deferred-loading.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/eztables/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/eztables/localization.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/eztables/server-side-base.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/eztables/server-side-custom.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/eztables/server-side-objects.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/eztables/server-side-search.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/eztables/server-side.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/javascript_initialization.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/meta/columns.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/meta/footer.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/meta/hidden_columns.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/meta/model.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/meta/ordering.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/meta/page_length.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/meta/search_fields.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/meta/structure_template.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/meta/unsortable_columns.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/migration_guide.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/people.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/people0.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/publishers/image-0-02-05-d33b895930d70941f8cf27c6d095a4b9e9118e40b354c1e7dcc20468b7f5be39-V.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/publishers/image-0-02-05-d33b895930d70941f8cf27c6d095a4b9e9118e40b354c1e7dcc20468b7f5be39-V.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/New folder/valid_column_formats.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/base - Copy.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/base.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/baseMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/example_base - Copy.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/example_base.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/example_form.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/example_form0.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/people.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/people0.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DjgLeoApp001/templates/valid_column_formats.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/datatableview.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/js/datatableview.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/contact_form.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/contact_form0.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/examination_list_per_person.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DjgLeo001/settings.py" afterPath="$PROJECT_DIR$/DjgLeo001/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DjgLeoApp001/views.py" afterPath="$PROJECT_DIR$/DjgLeoApp001/views.py" />
+    </list>
     <ignored path="DjgLeo001.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -46,7 +379,7 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DjgLeoApp001/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
+            <state relative-caret-position="833">
               <caret line="49" column="13" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="13" />
               <folding />
             </state>
@@ -56,28 +389,28 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DjgLeo001/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="42" column="33" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="40" />
+            <state relative-caret-position="-116">
+              <caret line="42" column="40" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DjgLeoApp001/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="322" column="19" selection-start-line="322" selection-start-column="19" selection-end-line="322" selection-end-column="19" />
+            <state relative-caret-position="142">
+              <caret line="326" column="14" selection-start-line="326" selection-start-column="4" selection-end-line="326" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DjgLeo001/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2397">
-              <caret line="141" column="0" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+            <state relative-caret-position="238">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -93,6 +426,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -102,15 +438,16 @@
         <option value="$PROJECT_DIR$/DjgLeoApp001/templates/DjgLeoApp001/examination0_list.html" />
         <option value="$PROJECT_DIR$/DjgLeoApp001/templates/example_form.html" />
         <option value="$PROJECT_DIR$/DjgLeoApp001/forms.py" />
-        <option value="$PROJECT_DIR$/DjgLeo001/settings.py" />
         <option value="$PROJECT_DIR$/DjgLeoApp001/templates/base - Copy.html" />
         <option value="$PROJECT_DIR$/DjgLeoApp001/templates/baseMenu.html" />
         <option value="$PROJECT_DIR$/DjgLeoApp001/templates/DjgLeoApp001/locations_detail.html" />
         <option value="$PROJECT_DIR$/DjgLeoApp001/templates/DjgLeoApp001/people.html" />
         <option value="$PROJECT_DIR$/DjgLeoApp001/templates/people.html" />
-        <option value="$PROJECT_DIR$/DjgLeo001/urls.py" />
         <option value="$PROJECT_DIR$/DjgLeoApp001/models.py" />
         <option value="$PROJECT_DIR$/DjgLeoApp001/views.py" />
+        <option value="$PROJECT_DIR$/DjgLeo001/urls.py" />
+        <option value="$PROJECT_DIR$/templates/examination_list_per_person.html" />
+        <option value="$PROJECT_DIR$/DjgLeo001/settings.py" />
       </list>
     </option>
   </component>
@@ -154,27 +491,27 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="DjgLeo001" />
+              <option name="myItemId" value="MedExam" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="DjgLeo001" />
+              <option name="myItemId" value="MedExam" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="DjgLeo001" />
+              <option name="myItemId" value="MedExam" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="DjgLeo001" />
+              <option name="myItemId" value="MedExam" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="DjgLeo001" />
+              <option name="myItemId" value="MedExam" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -184,80 +521,19 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="DjgLeo001" />
+              <option name="myItemId" value="MedExam" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="DjgLeo001" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DjgLeoApp001" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DjgLeo001" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DjgLeo001" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DjgLeoApp001" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DjgLeoApp001" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DjgLeo001" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DjgLeo001" />
+              <option name="myItemId" value="MedExam" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="DjgLeo001" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DjgLeo001" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DjgLeo001" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DjgLeo001" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
-      </pane>
-      <pane id="Scratches">
-        <subPane />
       </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
@@ -272,6 +548,9 @@
             </PATH_ELEMENT>
           </PATH>
         </subPane>
+      </pane>
+      <pane id="Scratches">
+        <subPane />
       </pane>
     </panes>
   </component>
@@ -588,8 +867,9 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="DjgLeo001.settings" />
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DATABASE_URL" value="postgres://postgres:130368@127.0.0.1:5432/MedExam" />
       </envs>
       <option name="SDK_HOME" value="C:\Python27\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -654,7 +934,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="100" y="20" width="1400" height="830" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -663,7 +943,6 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32732317" sideWeight="0.4913295" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="manage.py@DjgLeo001" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32732317" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -674,6 +953,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871014" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="manage.py@DjgLeo001" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32732317" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32871014" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
@@ -703,8 +983,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/AppDjgLeo001/admin.py" />
-    <entry file="file://$PROJECT_DIR$/AppDjgLeo001/__init__.py" />
     <entry file="uml://DjangoModelDependency/#DjgLeo001">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -861,14 +1139,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DjgLeo001/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2397">
-          <caret line="141" column="0" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DjgLeoApp001/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -912,13 +1182,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DjgLeo001/people.html" />
-    <entry file="file://$PROJECT_DIR$/DjgLeoApp001/templates/example_base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DjgLeoApp001/templates/example_form.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -933,20 +1196,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DjgLeoApp001/templates/baseMenu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="15" selection-start-line="4" selection-start-column="0" selection-end-line="8" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DjgLeoApp001/templates/people.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python27/Lib/site-packages/django/shortcuts.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -958,7 +1207,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -966,7 +1214,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -974,7 +1221,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -982,30 +1228,77 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DjgLeoApp001/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
+        <state relative-caret-position="833">
           <caret line="49" column="13" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DjgLeo001/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="42" column="33" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DjgLeoApp001/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="322" column="19" selection-start-line="322" selection-start-column="19" selection-end-line="322" selection-end-column="19" />
+        <state relative-caret-position="142">
+          <caret line="326" column="14" selection-start-line="326" selection-start-column="4" selection-end-line="326" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/examination_list_per_person.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DjgLeoApp001/templates/DjgLeoApp001/examination_list_per_person.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DjgLeoApp001/templates/example_base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DjgLeoApp001/templates/baseMenu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-952">
+          <caret line="4" column="15" selection-start-line="4" selection-start-column="0" selection-end-line="8" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DjgLeoApp001/templates/people.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DjgLeo001/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-116">
+          <caret line="42" column="40" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DjgLeo001/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>

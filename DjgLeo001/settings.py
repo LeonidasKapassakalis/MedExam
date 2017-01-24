@@ -14,7 +14,10 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+print BASE_DIR
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+print BASE_DIR
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
@@ -25,7 +28,7 @@ SECRET_KEY = 'n5!n$cl#reb6oyd0zu*tn_ff113&dn4(71-(9cl%r9zt2v2yf5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [u'med-exams.herokuapp.com']
+ALLOWED_HOSTS = [u'med-exams.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -62,7 +65,7 @@ ROOT_URLCONF = 'DjgLeo001.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
+        'DIRS': [os.path.join(BASE_DIR, 'templates'), os.path.join(BASE_DIR, 'DjgLeoApp001/templates')]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -151,7 +154,11 @@ STATIC_ROOT = 'static/'
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 
+print STATIC_ROOT
+
 STATIC_URL = '/static/'
+
+print STATIC_ROOT
 
 STATICFILES_DIRS = (
                     os.path.join(CURRENT_PATH, 'static'),
