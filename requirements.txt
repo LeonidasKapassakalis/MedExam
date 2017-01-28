@@ -7,3 +7,4 @@ django-tables2==1.2.7
 psycopg2
 dj-database-url
 gunicorn
+whitenoise
