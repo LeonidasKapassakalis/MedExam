@@ -9,6 +9,8 @@ from django.shortcuts import render
 from django.template.loader import get_template
 from django.template import Context
 from django.shortcuts import render_to_response
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import redirect
 
 import datetime
 
@@ -323,8 +325,10 @@ class PeopleTable(tables.Table):
     def render_exam(self, record):
         return mark_safe('<a href=/examinationsper/' + str(record.pk) + '/><span style="color:green">Exams◙</span></a></a>')
 
-
+#@login_required
 def person_list(request):
+    if not request.user.is_authenticated:
+        return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
     table = PeopleTable(People.objects.all())
     RequestConfig(request).configure(table)
     return render(request, 'people.html', {'people': table, 'add_url_leo': 'publishercreate', 'page_title': u'Άνθρωποι'})

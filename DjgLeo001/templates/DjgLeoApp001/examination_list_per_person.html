@@ -1,5 +1,4 @@
 {% load staticfiles %}
-
 <!DOCTYPE html>
 
 <head>
@@ -14,8 +13,8 @@
     <h2>Εξετάσεις για {{ name }} </h2>
     <ul>
         {% for Examination0 in object_list %}
-            <li><a href="http://127.0.0.1:8000/examinationupd/{{ Examination0.pk }}/">{{ Examination0.categorid.name }} {{ Examination0.dateofexam }} {{ Examination0.notes }}</li>
+            <li><a href={% url 'examinationupd' Examination0.pk %}>{{ Examination0.categorid.name }} {{ Examination0.dateofexam }} {{ Examination0.notes }}</li>
         {% endfor %}
     </ul>
-<li><a href="http://127.0.0.1:8000/examinationcre/">Δημιουργεία νέας Εξέτασης</li>
+<li><a href={% url 'examinationcre' %} >Δημιουργεία νέας Εξέτασης</li>
 {% endblock %}

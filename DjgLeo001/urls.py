@@ -19,6 +19,9 @@ from DjgLeoApp001 import views
 from DjgLeoApp001 import models
 from DjgLeoApp001 import forms
 
+from django.contrib import admin
+from django.contrib.auth import views as auth_views
+
 urlpatterns = [
 
     url(r'^admin/', admin.site.urls),
@@ -54,7 +57,7 @@ urlpatterns = [
     url(r'^publishers/$', views.PublisherList.as_view(), name='publishers'),
     url(r'^publisher/(?P<pk>[0-9]+)/$', views.PublisherDetailView.as_view(), name='publisher'),
     url(r'^publisherupd/(?P<pk>[0-9]+)/$', views.PublisherUpdate.as_view(), name='publishersupd'),
-    url(r'^publisherdel/(?P<pk>[0-9]+)/$', views.PublisherDelete.as_view(), name='publishersdel'),
+    url(r'^publisherdel/(?P<pk>[0-9]+)/$', views.PublisherDelete.as_view(), name='publisherdel'),
     url(r'^publishercre/$', views.PublisherCreare.as_view(), name='publishercreate'),
     url(r'^report_builder/', include('report_builder.urls')),
 
@@ -62,7 +65,7 @@ urlpatterns = [
     url(r'^examinationsListPerDoctor/([0-9]+)/$', views.ExaminationsListPerDoctor.as_view(), name='examinationsperdoctor'),
     url(r'^examinationsListPerDoctorPatient/([0-9]+)/([0-9]+)/$', views.ExaminationsListPerDoctorPatient.as_view(), name='examinationsperdoctorpatient'),
 
-    url(r'^xaminationspercategory/([0-9]+)/$', views.ExaminationsListPerCategory.as_view(), name='examinationspercategory'),
+    url(r'^examinationspercategory/([0-9]+)/$', views.ExaminationsListPerCategory.as_view(), name='examinationspercategory'),
     url(r'^examinations/$', views.ExaminationsList.as_view(), name='examinations'),
     url(r'^examinationupd/(?P<pk>[0-9]+)/$', views.ExaminationUpdate.as_view(), name='examinationupd'),
     url(r'^examinationdet/(?P<pk>[0-9]+)/$', views.ExaminationDetail.as_view(), name='examinationdet'),
@@ -77,7 +80,16 @@ urlpatterns = [
     url(r'^contact998/$',views.ZeroConfigurationDatatableView0.as_view(), name='contact998'),
 
     url(r'^multiexam/$', views.MultiExam, name='MultiExamForm'),
-    url(r'^multiexam0/$', views.MultiExam0, name='MultiExamForm0'),    
+    url(r'^multiexam0/$', views.MultiExam0, name='MultiExamForm0'),
+
+#    url(r'^accounts/login/$', 'django.contrib.auth.views.login',{'template_name': 'admin/login.html'}),
+#    url(r'^accounts/logout/$', 'django.contrib.auth.views.logout'),
+
+#    url(r'^logina/$', include('django.contrib.auth.urls')),
+
+    url(r'^login/$', auth_views.login, name='login'),
+    url(r'^logout/$', auth_views.logout, name='logout'),
+    url(r'^admin/', admin.site.urls),
 
     url(r'', views.MainMenu),
 ]

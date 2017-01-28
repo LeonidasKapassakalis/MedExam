@@ -14,8 +14,8 @@
 
     <input type="submit" value="Update" />
 <li>{{ people.id }}</li>
-<li><a href="http://127.0.0.1:8000/publishers">List</li>		
-<li><a href="http://127.0.0.1:8000/publisherdel/{{ people.id }}/">Delete</li>
+<li><a href={% url 'publishers' %}>List</li>		
+<li><a href={% url 'publisherdel'  people.id %} >Delete</li>
 
 
 

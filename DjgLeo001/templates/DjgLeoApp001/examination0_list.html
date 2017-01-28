@@ -1,7 +1,6 @@
 {% load staticfiles %}
 
 <!DOCTYPE html>
-
 <head>
 <title>List</title>
 
@@ -24,8 +23,8 @@
     <h2>Examination</h2>
     <ul>
         {% for Examination0 in object_list %}
-            <li><a href="http://127.0.0.1:8000/examinationupd/{{ Examination0.pk }}/">{{ Examination0.peopleid.name }} {{ Examination0.peopleid.surname }} {{ Examination0.categorid.name }} {{ Examination0.dateofexam }} </li>
+            <li><a href={% url 'examinationupd' Examination0.pk %} >{{ Examination0.peopleid.name }} {{ Examination0.peopleid.surname }} {{ Examination0.categorid.name }} {{ Examination0.dateofexam }} </li>
         {% endfor %}
     </ul>
-<li><a href="http://127.0.0.1:8000/examinationcre/">Add</li>
+<li><a href={% url 'examinationcreate' %} >Add</li>
 {% endblock %}

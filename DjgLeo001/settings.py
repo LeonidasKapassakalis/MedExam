@@ -39,11 +39,15 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+
+
+#    
+    'whitenoise.runserver_nostatic',    
     'django.contrib.staticfiles',
     
     'DjgLeoApp001.apps.Djgleoapp001Config',
 
-    'datatableview',
+#    'datatableview',
     'crispy_forms',
     'django_tables2',    
     'report_builder',
@@ -52,6 +56,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -59,6 +64,10 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+MIDDLEWARE_CLASSES = [
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    ]
 
 ROOT_URLCONF = 'DjgLeo001.urls'
 
@@ -150,15 +159,13 @@ CURRENT_PATH = os.path.abspath(os.path.dirname(__file__).decode('utf-8'))
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-STATIC_ROOT = 'static/'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+#STATIC_ROOT = 'static/'
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 
-print STATIC_ROOT
-
 STATIC_URL = '/static/'
-
-print STATIC_ROOT
 
 STATICFILES_DIRS = (
                     os.path.join(CURRENT_PATH, 'static'),

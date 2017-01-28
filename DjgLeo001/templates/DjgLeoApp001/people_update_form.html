@@ -1,4 +1,5 @@
 {% load static %}
+
 <link rel="stylesheet" type="text/css" href="{% static 'DjgLeoApp001/style.css' %}" />
 <!DOCTYPE html>
 <html lang="en-us" >
@@ -12,7 +13,7 @@
 <form action="" method="post">{% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Update" />
-<li><a href="http://127.0.0.1:8000/publishers">   List</li>		
-<li><a href="http://127.0.0.1:8000/publisherdel/{{ People.id }}/">   Delete</li>
+<li><a href={% url 'publishers' %} >   List</li>		
+<li><a href={% url 'publisherdel'  People.id %}>   Delete</li>
 <li>{{ People.name }}</li>
 </form>
