@@ -1,4 +1,6 @@
+{% extends 'base.html' %}
 {% load static %}
+
 <link rel="stylesheet" type="text/css" href="{% static 'DjgLeoApp001/style.css' %}" />
 <!DOCTYPE html>
 <html lang="en-us" >
@@ -10,6 +12,7 @@
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
+{% block content %}	
 <form action="" method="post">{% csrf_token %}
 <ul> 
     {{ form.as_ul }}
@@ -19,3 +22,4 @@
 <li><a href={% url 'publisherdel' People.id %} >Delete</li>
 <li>{{ People.name }}</li>
 </form>
+{% endblock %}	

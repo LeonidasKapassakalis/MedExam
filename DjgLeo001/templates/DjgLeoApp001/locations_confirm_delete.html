@@ -1,3 +1,5 @@
+{% extends 'base.html' %}
+{% load static %}
 {% load staticfiles %}
 
 <!DOCTYPE html>
@@ -9,8 +11,10 @@
 <title>Delete Patient {{ people.name }} {{ people.surname }}</title>
 </head>
 
+{% block content %}
 <form action="" method="post">{% csrf_token %}
 
 <h1>Delete People with id {{ people.id }} named {{ people.name }} {{ people.surname }}</h1>
     <input type="submit" value="Delete" />
 </form>
+{% endblock %}

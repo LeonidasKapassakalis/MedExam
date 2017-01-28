@@ -1,3 +1,4 @@
+{% extends 'base.html' %}
 {% load static %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'DjgLeoApp001/style.css' %}" />
@@ -39,6 +40,7 @@
             <h1><a href="/">Django Girls Blog</a></h1>
         </div>
 
+{% block content %}		
 <form action="" method="post">{% csrf_token %}
 <table> 
     {{ form.as_table }}
@@ -46,7 +48,8 @@
 
     <input type="submit" value="Update" />
 <li>{{ examination0.peopleid.name }}</li>	
-<li><a href={% url 'examinations' >List</li>		
+<li><a href={% url 'examinations' %} >List</li>		
 <li><a href={% url 'examinationdel' examination0.id %}>Delete</li>
+{% endblock %}
 </body>
 </form>

@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c740e0c-ea5a-408b-9209-810a36073e0b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MedExam-master.zip" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DjgLeo001/settings.py" afterPath="$PROJECT_DIR$/DjgLeo001/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DjgLeo001/templates/DjgLeoApp001/examination0_confirm_delete.html" afterPath="$PROJECT_DIR$/DjgLeo001/templates/DjgLeoApp001/examination0_confirm_delete.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DjgLeo001/templates/DjgLeoApp001/examination0_create_form.html" afterPath="$PROJECT_DIR$/DjgLeo001/templates/DjgLeoApp001/examination0_create_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DjgLeo001/templates/DjgLeoApp001/examination0_detail.html" afterPath="$PROJECT_DIR$/DjgLeo001/templates/DjgLeoApp001/examination0_detail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DjgLeo001/templates/DjgLeoApp001/examination0_list.html" afterPath="$PROJECT_DIR$/DjgLeo001/templates/DjgLeoApp001/examination0_list.html" />
@@ -15,14 +13,13 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DjgLeo001/templates/DjgLeoApp001/locations_create_form.html" afterPath="$PROJECT_DIR$/DjgLeo001/templates/DjgLeoApp001/locations_create_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DjgLeo001/templates/DjgLeoApp001/locations_detail.html" afterPath="$PROJECT_DIR$/DjgLeo001/templates/DjgLeoApp001/locations_detail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DjgLeo001/templates/DjgLeoApp001/locations_update_form.html" afterPath="$PROJECT_DIR$/DjgLeo001/templates/DjgLeoApp001/locations_update_form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DjgLeo001/templates/DjgLeoApp001/people_confirm_delete.html" afterPath="$PROJECT_DIR$/DjgLeo001/templates/DjgLeoApp001/people_confirm_delete.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DjgLeo001/templates/DjgLeoApp001/people_create_form.html" afterPath="$PROJECT_DIR$/DjgLeo001/templates/DjgLeoApp001/people_create_form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DjgLeo001/templates/DjgLeoApp001/people_detail.html" afterPath="$PROJECT_DIR$/DjgLeo001/templates/DjgLeoApp001/people_detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DjgLeo001/templates/DjgLeoApp001/people_form.html" afterPath="$PROJECT_DIR$/DjgLeo001/templates/DjgLeoApp001/people_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DjgLeo001/templates/DjgLeoApp001/people_list.html" afterPath="$PROJECT_DIR$/DjgLeo001/templates/DjgLeoApp001/people_list.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DjgLeo001/templates/DjgLeoApp001/people_update_form.html" afterPath="$PROJECT_DIR$/DjgLeo001/templates/DjgLeoApp001/people_update_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DjgLeo001/templates/DjgLeoApp001/people_update_formb.html" afterPath="$PROJECT_DIR$/DjgLeo001/templates/DjgLeoApp001/people_update_formb.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DjgLeo001/templates/DjgLeoApp001/people_update_formt.html" afterPath="$PROJECT_DIR$/DjgLeo001/templates/DjgLeoApp001/people_update_formt.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DjgLeo001/templates/base.html" afterPath="$PROJECT_DIR$/DjgLeo001/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DjgLeo001/templates/baseMenu.html" afterPath="$PROJECT_DIR$/DjgLeo001/templates/baseMenu.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DjgLeo001/templates/people.html" afterPath="$PROJECT_DIR$/DjgLeo001/templates/people.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DjgLeo001/urls.py" afterPath="$PROJECT_DIR$/DjgLeo001/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DjgLeoApp001/views.py" afterPath="$PROJECT_DIR$/DjgLeoApp001/views.py" />
@@ -71,8 +68,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DjgLeoApp001/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="116" column="19" selection-start-line="116" selection-start-column="6" selection-end-line="116" selection-end-column="19" />
+            <state relative-caret-position="578">
+              <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -91,8 +88,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DjgLeo001/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="58" column="90" selection-start-line="58" selection-start-column="90" selection-end-line="58" selection-end-column="90" />
+            <state relative-caret-position="324">
+              <caret line="93" column="43" selection-start-line="93" selection-start-column="43" selection-end-line="93" selection-end-column="43" />
               <folding>
                 <element signature="e#643#684#0" expanded="true" />
               </folding>
@@ -103,8 +100,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DjgLeo001/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-51">
-              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+            <state relative-caret-position="221">
+              <caret line="82" column="38" selection-start-line="82" selection-start-column="38" selection-end-line="82" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -139,8 +136,8 @@
         <option value="$PROJECT_DIR$/DjgLeoApp001/templates/people.html" />
         <option value="$PROJECT_DIR$/DjgLeoApp001/models.py" />
         <option value="$PROJECT_DIR$/templates/examination_list_per_person.html" />
-        <option value="$PROJECT_DIR$/DjgLeoApp001/views.py" />
         <option value="$PROJECT_DIR$/DjgLeo001/settings.py" />
+        <option value="$PROJECT_DIR$/DjgLeoApp001/views.py" />
         <option value="$PROJECT_DIR$/DjgLeo001/urls.py" />
       </list>
     </option>
@@ -181,6 +178,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches">
+        <subPane />
+      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -194,9 +194,6 @@
             </PATH_ELEMENT>
           </PATH>
         </subPane>
-      </pane>
-      <pane id="Scratches">
-        <subPane />
       </pane>
       <pane id="ProjectPane">
         <subPane>
@@ -601,8 +598,8 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
-        <env name="DJANGO_SETTINGS_MODULE" value="DjgLeo001.settings" />
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="DjgLeo001.settings" />
         <env name="DATABASE_URL" value="postgres://postgres:130368@127.0.0.1:5434/MedExam" />
       </envs>
       <option name="SDK_HOME" value="C:\Python27\python.exe" />
@@ -672,11 +669,11 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32732317" sideWeight="0.5086705" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32732317" sideWeight="0.5115607" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875723" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32732317" sideWeight="0.4913295" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32732317" sideWeight="0.4884393" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -902,24 +899,24 @@
     <entry file="file://$PROJECT_DIR$/DjgLeoApp001/templates/people.html" />
     <entry file="file://$PROJECT_DIR$/DjgLeo001/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state relative-caret-position="221">
+          <caret line="82" column="38" selection-start-line="82" selection-start-column="38" selection-end-line="82" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DjgLeoApp001/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="116" column="19" selection-start-line="116" selection-start-column="6" selection-end-line="116" selection-end-column="19" />
+        <state relative-caret-position="578">
+          <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DjgLeo001/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="58" column="90" selection-start-line="58" selection-start-column="90" selection-end-line="58" selection-end-column="90" />
+        <state relative-caret-position="324">
+          <caret line="93" column="43" selection-start-line="93" selection-start-column="43" selection-end-line="93" selection-end-column="43" />
           <folding>
             <element signature="e#643#684#0" expanded="true" />
           </folding>

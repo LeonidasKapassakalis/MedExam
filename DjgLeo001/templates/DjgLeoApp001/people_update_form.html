@@ -1,3 +1,4 @@
+{% extends 'base.html' %}
 {% load static %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'DjgLeoApp001/style.css' %}" />
@@ -9,7 +10,7 @@
 <link rel="stylesheet" type="text/css" href="/static/admin/css/dashboard.css" />
 </head>
 
-
+{% block content %}
 <form action="" method="post">{% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Update" />
@@ -17,3 +18,4 @@
 <li><a href={% url 'publisherdel'  People.id %}>   Delete</li>
 <li>{{ People.name }}</li>
 </form>
+{% endblock %}

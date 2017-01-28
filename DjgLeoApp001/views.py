@@ -18,12 +18,21 @@ from models import People
 
 from models import Person
 
+from django.contrib.admin import AdminSite
+class MyAdminSite(AdminSite):
+        pass
+
+mysite = MyAdminSite()
+
+
 def MainMenu(request):
     return render(request, 'baseMenu.html')
+#    return render(request, 'baseMenu.html',{'user': request.user, 'site_header': mysite.site_header, 'has_permission': mysite.has_permission(request),
+#                                            'site_url': mysite.site_url})
 
 from django.shortcuts import render
 def people0(request):
-    return render(request, 'people.html', {'people': People.objects.all(), 'add_url_leo': 'locationcreate'})
+    return render(request, 'people.html' , {'people': People.objects.all(), 'add_url_leo': 'locationcreate' } )
 
 from models import Examination0
 def examination00(request):

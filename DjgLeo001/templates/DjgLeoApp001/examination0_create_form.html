@@ -1,3 +1,4 @@
+{% extends 'base.html' %}
 {% load static %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'DjgLeoApp001/style.css' %}" />
@@ -8,7 +9,7 @@
 <!DOCTYPE html>
 
 <head>
-
+{% block content %}
 <script type="text/javascript" src="/jsi18n/"></script>
 <script type="text/javascript" src="/static/admin/js/core.js"></script>
 <script type="text/javascript" src="/static/admin/js/vendor/jquery/jquery.js"></script>
@@ -47,4 +48,5 @@
 <li />
 <li><a href={% url 'examinations' %} >List</li>		
 </body>
+{% endblock %}
 </form>

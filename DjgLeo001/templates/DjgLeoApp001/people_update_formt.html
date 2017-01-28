@@ -1,4 +1,7 @@
+{% extends 'base.html' %}
 {% load static %}
+
+
 <link rel="stylesheet" type="text/css" href="{% static 'DjgLeoApp001/style.css' %}" />
 <!DOCTYPE html>
 <html lang="en-us" >
@@ -7,6 +10,7 @@
 <link rel="stylesheet" type="text/css" href="/static/css/base.css" />
 <link rel="stylesheet" type="text/css" href="/static/css/dashboard.css" />
 
+{% block content %}	
 <form action="" method="post">{% csrf_token %}
 <table> 
     {{ form.as_table }}
@@ -16,7 +20,5 @@
 <li>{{ people.id }}</li>
 <li><a href={% url 'publishers' %}>List</li>		
 <li><a href={% url 'publisherdel'  people.id %} >Delete</li>
-
-
-
 </form>
+{% endblock %}	

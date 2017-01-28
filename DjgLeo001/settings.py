@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
 
 
+
 #    
     'whitenoise.runserver_nostatic',    
     'django.contrib.staticfiles',
@@ -79,6 +80,7 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'DjgLeo001.processors.setforuser.defadm',
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.template.context_processors.request',
