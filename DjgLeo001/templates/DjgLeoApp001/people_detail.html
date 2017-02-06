@@ -1,18 +1,33 @@
-
+{% extends 'base.html' %}
+{% load static %}
 <!DOCTYPE html>
-<html lang="en-us" >
+< html lang="el" >
 <head>
-<title>Djgleoapp001 administration | Django site admin</title>
-<link rel="stylesheet" type="text/css" href="/static/css/base.css" />
-<link rel="stylesheet" type="text/css" href="/static/css/dashboard.css" />
-{% block content %}
-    <h2>People</h2>
+
+
+    {% block content %}
+
+    <link href="{% static 'bootstrap-3.1.1/css/bootstrap.css'%}" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="{% static 'bootstrap-3.1.1/css/bootstrap-theme.css'%}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{% static 'bootstrap-3.1.1/css/theme.css'%}" rel="stylesheet">
+
     <ul>
-            <li>{{ object.name }}</li>
-            <li>{{ object.surname }}</li>
-			<li>{{ object.notes }}</li>
-			<li>{{ object.phone }}</li>
-			<li>{{ object.fax }}</li>
-			<li>{{ object.mail }}</li>
-	</ul>    			
+            <h1>Ονόμα    : {{ object.name }}</h1>
+            <h1>Επώνυμο  : {{ object.surname }}</h1>
+
+			<h2>Τηλεφωνο : {{ object.phone }}</h2>
+			<h2>Κινήτο   : {{ object.mobile }}</h2>
+			<h2>FAX      : {{ object.fax }}</h2>
+			<h2>email    : {{ object.mail }}</h2>
+	</ul>
+
+{% if object.ispatient %}
+  <p><a href={% url 'examinationsper'  object.id %} type="button" class="btn btn-lg btn-success">  Εξετάσεiς      </a></p>
+{% endif %}
+{% if object.isdoctor %}
+  <p><a href={% url 'examinationsperdoctor' object.id %} type="button" class="btn btn-lg btn-info"  >  Exams Ordered  </a></p>
+{% endif %}
+<p><a href={% url 'DjgLeoApp001:update' object.id %} type="button" class="btn btn-lg btn-danger">  Μεταβολή  </a></p>
 {% endblock %}

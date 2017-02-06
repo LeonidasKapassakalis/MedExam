@@ -1,16 +1,8 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load staticfiles %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'DjgLeoApp001/style.css' %}" />
 <!DOCTYPE html>
 <html lang="en-us" >
-<head>
-<title>Djgleoapp001 administration | Django site admin</title>
-<link rel="stylesheet" type="text/css" href="/static/css/base.css" />
-<link rel="stylesheet" type="text/css" href="/static/css/dashboard.css" />
-
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
 {% block content %}	
 <form action="" method="post">{% csrf_token %}
@@ -18,8 +10,36 @@
     {{ form.as_ul }}
 </ul> 	
     <input type="submit" value="Update" />
-<li><a href={% url 'publishers' %} >List</li>		
-<li><a href={% url 'publisherdel' People.id %} >Delete</li>
-<li>{{ People.name }}</li>
+<li><a href={% url 'publisherdel' People.id %} class="cta">Delete</li>
 </form>
+
+<a class="related-widget-wrapper-link change-related" id="change_id_peopleid" data-href-template="/admin/DjgLeoApp001/people/__fk__/change/?_to_field=id&amp;_popup=1" title="Change selected people" href="http://127.0.0.1:8000/admin/DjgLeoApp001/people/1/change/?_to_field=id&amp;_popup=1">
+            <img src="{ static  'admin/img/icon-calendar.svg' }">
+        </a>
+
+
+  <div class="fundraising-sidebar">
+    <h2>Support Django!</h2>
+
+    <div class="small-heart">
+      <img src="/s/img/small-fundraising-heart.d255f6e934e5.png" alt="Support Django!" />
+    </div>
+
+    <div class="small-cta">
+      <ul class="list-links-small">
+        <li><a href="https://www.djangoproject.com/fundraising/">
+          Nadia Eghbal donated to the Django Software Foundation to
+          support Django development. Donate today!
+        </a></li>
+      </ul>
+    </div>
+	
+    <div class="cta">
+      <ul class="list-links-small">
+      </ul>
+    </div>
+	
+	
+  </div>
+  
 {% endblock %}	

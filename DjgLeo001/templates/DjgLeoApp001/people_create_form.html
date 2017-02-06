@@ -1,37 +1,33 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load staticfiles %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'DjgLeoApp001/style.css' %}" />
+
 <!DOCTYPE html>
 <html lang="en-us" >
-<head>
 
-<title>Djgleoapp001 administration | Django site admin</title>
-<link rel="stylesheet" type="text/css" href="/static/css/base.css" />
-<link rel="stylesheet" type="text/css" href="/static/css/dashboard.css" />
-
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-
-        <title>Django Girls blog</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-    </head>
-    <body>
-        <div>
-            <h1><a href="/">Django Girls Blog</a></h1>
-        </div>
-
-{% block content %}		
+{% block content %}
 <form action="" method="post">{% csrf_token %}
+
+<script src="{% static 'bootstrap-3.1.1/js/jquery.js' %}"></script>
+<script>window.jQuery | document.write('<script src="{% static 'bootstrap-3.1.1/js/jquery.min.js'%}"><\/script>')</script>
+<script src="{% static 'bootstrap-3.1.1/js/bootstrap.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'bootstrap-3.1.1/js/moment.js'%}"></script>
+<script type="text/javascript" src="{% static 'bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js'%}"></script>
+
+{{ form.media }}
+
 
 <table>
     {{ form.as_table }}
 </table>	
 <input type="submit" value="Update" />
-<li />
-<li><a href={% url 'publishers' %} > List</li>		
-</body>
 </form>
+
 {% endblock %}
+
+
+
+
+

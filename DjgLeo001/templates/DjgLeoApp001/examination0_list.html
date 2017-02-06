@@ -21,11 +21,12 @@
 {% endif %}
 </head>
 {% block content %}
-    <h2>Examination</h2>
+    <h2>Εξετάσεις {{ name }} </h2>
     <ul>
         {% for Examination0 in object_list %}
-            <li><a href={% url 'examinationupd' Examination0.pk %} >{{ Examination0.peopleid.name }} {{ Examination0.peopleid.surname }} {{ Examination0.categorid.name }} {{ Examination0.dateofexam }} </li>
+            <li><a href={% url 'examinationupd' Examination0.pk %} >{{ Examination0.peopleid.name|truncatechars:15|ljust:"20" }} {{ Examination0.peopleid.surname|truncatechars:20|ljust:"25" }} {{ Examination0.categorid.name|truncatechars:15|rjust:"20" }} {{ Examination0.dateofexam|date:"c"|truncatechars:15|ljust:"15" }} {{ Examination0.notes }} </li>
         {% endfor %}
     </ul>
+	
 <li><a href={% url 'examinationcreate' %} >Add</li>
 {% endblock %}

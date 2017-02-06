@@ -14,7 +14,7 @@
     <h2>People</h2>
     <ul>
         {% for People in object_list %}
-            <li><a href={% url 'publishersupd' People.pk %} > {{ People.name }}	{{ People.surname }} {{ People.dateofbirth }} </li>
+            <li><a href={% url 'DjgLeoApp001:update' People.pk %} > {{ People.name }}	{{ People.surname }} {{ People.dateofbirth }} </li>
         {% endfor %}
     </ul>
 <li><a href={% url 'publishercreate' %}>Add</li>

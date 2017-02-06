@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load staticfiles %}
+{{ form.media }}
 
 <link rel="stylesheet" type="text/css" href="{% static 'DjgLeoApp001/style.css' %}" />
 
@@ -22,6 +24,16 @@
 <script type="text/javascript" src="/static/admin/js/calendar.js"></script>
 <script type="text/javascript" src="/static/admin/js/admin/DateTimeShortcuts.js"></script>
 
+<script type="text/javascript" src="/admin/jsi18n/"></script>
+<script type="text/javascript" src="/static/admin/js/core.js"></script>
+<script type="text/javascript" src="/static/admin/js/admin/RelatedObjectLookups.js"></script>
+<script type="tepxt/javascript" src="/static/admin/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/admin/js/jquery.init.js"></script>
+<script type="text/javascript" src="/static/admin/js/actions.min.js"></script>
+<script type="text/javascript" src="/static/admin/js/calendar.js"></script>
+<script type="text/javascript" src="/static/admin/js/admin/DateTimeShortcuts.js"></script>
+
+
 <title>Djgleoapp001 administration | Django site admin</title>
 <link rel="stylesheet" type="text/css" href="/static/css/base.css" />
 <link rel="stylesheet" type="text/css" href="/static/css/dashboard.css" />
@@ -35,9 +47,6 @@
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     <body>
-        <div>
-            <h1><a href="/">Django Girls Blog</a></h1>
-        </div>
 
 <form action="" method="post">{% csrf_token %}
 
@@ -45,8 +54,7 @@
     {{ form.as_table }}
 </table>	
 <input type="submit" value="Update" />
-<li />
-<li><a href={% url 'examinations' %} >List</li>		
+<!--<li><a href={% url 'examinations' %} >List</li>--!>
 </body>
 {% endblock %}
 </form>

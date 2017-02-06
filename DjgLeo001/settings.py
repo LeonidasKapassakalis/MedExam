@@ -39,19 +39,19 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-
-
-
-#    
+#
     'whitenoise.runserver_nostatic',    
     'django.contrib.staticfiles',
     
     'DjgLeoApp001.apps.Djgleoapp001Config',
 
+    'datetimewidget',
+
 #    'datatableview',
     'crispy_forms',
-    'django_tables2',    
-    'report_builder',
+    'django_tables2',
+#    'columns',
+#    'report_builder',
     
 ]
 

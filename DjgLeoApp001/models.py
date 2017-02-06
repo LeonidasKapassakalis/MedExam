@@ -262,3 +262,27 @@ class Person(models.Model):
 class ZeroConfigurationDatatableView(BaseDatatableView):
     model = Examname
 
+
+from django.contrib.auth.models import User
+
+class SpecialUsers(models.Model):
+    user        = models.OneToOneField(User, on_delete=models.CASCADE)
+    peopleid    = models.ForeignKey(People, verbose_name='Άνθρωπος')
+    altpeopleid = models.ForeignKey(People, verbose_name='Alt.Άνθρωπος', related_name='SpecialUserAltPeople')
+    peoples     = models.ManyToManyField(People, verbose_name = 'Άνθρωποι', related_name='SpecialUserAltPeoples')
+    doctors     = models.ManyToManyField(People, limit_choices_to={'isdoctor': True}, verbose_name = 'Γιατροί', related_name='SpecialUserAltDoctors')
+    location    = models.ForeignKey(Locations, verbose_name='Τόπος')
+    notes       = models.CharField(max_length=100)
+
+
+class DoctorSpeciality(models.Model):
+    id = models.AutoField
+    name = models.CharField(max_length=50)
+    sname = models.CharField(max_length=15)
+
+    class Meta:
+        ordering = ('name',)
+
+    def __unicode__(self):
+        return self.name
+

@@ -1,4 +1,12 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+<!DOCTYPE html>
+
+{% block content %}
+
 {% load crispy_forms_tags %}
 {% crispy example_form example_form.helper %}
+
+{% endblock %}
 
 

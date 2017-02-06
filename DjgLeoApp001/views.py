@@ -11,6 +11,24 @@ from django.template import Context
 from django.shortcuts import render_to_response
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect
+from django.forms.models import modelform_factory
+from django import forms
+
+import django_tables2 as tables
+from django.shortcuts import render
+from django_tables2 import RequestConfig
+from django.utils.html import mark_safe
+from  django.urls import reverse
+
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import UserPassesTestMixin
+
+class ModelFormWidgetMixin(object):
+    def get_form_class(self):
+        return modelform_factory(self.model, fields=self.fields, widgets=self.widgets)
+
+
+
 
 import datetime
 
@@ -26,9 +44,16 @@ mysite = MyAdminSite()
 
 
 def MainMenu(request):
-    return render(request, 'baseMenu.html')
+    return render(request, 'NewMenuBootStrap.html')
+#    return render(request, 'baseMenu.html')
 #    return render(request, 'baseMenu.html',{'user': request.user, 'site_header': mysite.site_header, 'has_permission': mysite.has_permission(request),
 #                                            'site_url': mysite.site_url})
+
+def NewMenu(request):
+    return render(request, 'NewMenu.html')
+
+def NewMenu1(request):
+    return render(request, 'NewMenuBootStrap.html')
 
 from django.shortcuts import render
 def people0(request):
@@ -140,24 +165,37 @@ class PublisherDetailView(DetailView):
         return context
 
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from datetimewidget.widgets import DateTimeWidget
+from datetimewidget.widgets import DateWidget
+from django.contrib.admin.widgets import AdminDateWidget
 
-class PublisherCreare(CreateView):
+
+class PublisherCreare(ModelFormWidgetMixin,CreateView):
     model = People
-    fields = ['id','name','surname','mail','dateofbirth','nationality',
-        'countryid','phone','mail','mobile','ispatient','isdoctor','canlogin',
-        'accessonlyhisfile','notes']
+    fields = ['id', 'name', 'surname', 'mail', 'dateofbirth', 'nationality',
+              'countryid', 'phone', 'mail', 'mobile', 'ispatient', 'isdoctor', 'canlogin',
+              'accessonlyhisfile', 'notes']
     template_name_suffix = '_create_form'
     success_url = '/publishers/'
 
-class PublisherUpdate(UpdateView):
+    widgets = {
+        'notes': forms.Textarea(attrs={'cols': 100, 'rows': 10}),
+        'dateofbirth': DateWidget(attrs={'id': "id_dateofbirth"}, bootstrap_version=3)
+        }
+
+class PublisherUpdate(ModelFormWidgetMixin,UpdateView):
     model = People
-    fields = ['name','surname','notes','mail']
+#    fields = ['name','surname','notes','mail']
     fields = ['id','name','surname','mail','dateofbirth','nationality',
-        'countryid','phone','mail','mobile','ispatient','isdoctor','canlogin',
-        'accessonlyhisfile','notes']
+              'countryid','phone','mail','mobile','ispatient','isdoctor','canlogin',
+              'accessonlyhisfile','notes']
     template_name_suffix = '_update_formt'
-    success_url = '/publishers/'
-    success_url = '/tables10/'    
+#    success_url = '/publishers/'
+    success_url = '/tables10/'
+    widgets = {
+        'notes': forms.Textarea(attrs={'cols': 100, 'rows': 10}),
+        'dateofbirth': DateWidget(attrs={'id': "id_dateofbirth"}, bootstrap_version=3)
+        }
 
 class PublisherDelete(DeleteView):
     model = People
@@ -174,8 +212,19 @@ def ExaminationsListPer000(request):
     RequestConfig(request).configure(table)
     return render(request, 'examination0_list.html', {'object_list': table})
 
-class ExaminationsList(ListView):
+from django.contrib.auth.decorators import login_required
+#@login_required(login_url='/login/')
+
+from django.conf import settings
+from django.shortcuts import redirect
+
+class ExaminationsList(LoginRequiredMixin,UserPassesTestMixin,ListView):
+    login_url = '/login/'
+    redirect_field_name = 'redirect_to'
     model = Examination0
+
+    def test_func(self):
+        return self.request.user.email.endswith('com')
 
 class ExaminationsList0(ListView):
     model = Examination0
@@ -198,7 +247,10 @@ class ExaminationsList0(ListView):
 
 from django.shortcuts import get_object_or_404
 
-class ExaminationsListPer(ListView):
+class ExaminationsListPer(LoginRequiredMixin,ListView):
+    login_url = '/login/'
+    redirect_field_name = 'redirect_to'
+
     model = Examination0
     template_name = 'examination_list_per_person.html'
 #    queryset  = Examination0.dahl_objects.all()
@@ -214,10 +266,13 @@ class ExaminationsListPer(ListView):
         context = super(ExaminationsListPer, self).get_context_data(**kwargs)
 # Add in the publisher
         context['publisher'] = self.id
-        context['name'] = self.name
+        context['name'] = u' για ' + self.name.surname + ' ' +  self.name.name
         return context
 
-class ExaminationsListPerDoctor(ListView):
+class ExaminationsListPerDoctor(LoginRequiredMixin,ListView):
+    login_url = '/login/'
+    redirect_field_name = 'redirect_to'
+
     model = Examination0
     template_name = 'examination_list_per_person.html'
     def get_queryset(self):
@@ -228,7 +283,7 @@ class ExaminationsListPerDoctor(ListView):
     def get_context_data(self, **kwargs):
         context = super(ExaminationsListPerDoctor, self).get_context_data(**kwargs)
         context['publisher'] = self.id
-        context['name'] = self.name
+        context['name'] = u' απο ' +  self.name.surname
         return context
 
 
@@ -246,7 +301,7 @@ class ExaminationsListPerDoctorPatient(ListView):
     def get_context_data(self, **kwargs):
         context = super(ExaminationsListPerDoctorPatient, self).get_context_data(**kwargs)
         context['publisher'] = self.pid
-        context['name'] = self.pname.name + ' ' + self.pname.surname + u' απο ' + self.dname.name + ' ' + self.dname.surname
+        context['name'] = u' για ' + self.pname.name + ' ' + self.pname.surname + u' απο ' + self.dname.name + ' ' + self.dname.surname
         return context
 
 
@@ -265,35 +320,30 @@ from django.views.generic.detail import DetailView
 class ExaminationDetail(DetailView):
     model = Examination0
 
-from django.forms.models import modelform_factory
-from django import forms
-class ModelFormWidgetMixin(object):
-    def get_form_class(self):
-        return modelform_factory(self.model, fields=self.fields, widgets=self.widgets)    
-
 from django.contrib.admin import widgets
+from django.contrib.admin.widgets import AdminDateWidget
 
 class ExaminationCreare(ModelFormWidgetMixin,CreateView):
     model = Examination0
     fields = ['peopleid','doctorid','categorid','dateofexam','notes','comments']
+#    from_date = forms.DateField(widget=AdminDateWidget())
     template_name_suffix = '_create_form'
     success_url = '/examinations/'
     widgets = {
         'notes': forms.Textarea(attrs={'cols': 100, 'rows': 10}),
         'comments': forms.Textarea(attrs={'cols': 100, 'rows': 5}),
-        'dateofexam': widgets.AdminDateWidget,
         }
 
 class ExaminationUpdate(ModelFormWidgetMixin,UpdateView):
     model = Examination0
     fields = ['peopleid','doctorid','categorid','dateofexam','notes','comments']
     readonly_fields = ('peopleid','categorid','dateofexam')
+#    from_date = forms.DateField(widget=AdminDateWidget())
     template_name_suffix = '_update_form'
     success_url = '/examinations/'
     widgets = {
         'notes': forms.Textarea(attrs={'cols': 100, 'rows': 10, 'readonly' : True}),
         'comments': forms.Textarea(attrs={'cols': 100, 'rows': 5, 'readonly' : True}),
-        'dateofexam': widgets.AdminDateWidget(attrs={'cols': 100, 'rows': 10, 'readonly' : True}),
         }
    
 
@@ -302,67 +352,19 @@ class ExaminationDelete(DeleteView):
     fields = ['peopleid','doctorid','categorid','dateofexam','notes','comments']
     success_url = '/examinations/'
 
-    
-
-
-import django_tables2 as tables
-from django.shortcuts import render
-from django_tables2 import RequestConfig
-from django.utils.html import mark_safe
-from  django.urls import reverse
-
-class PeopleTable(tables.Table):
-    edit = tables.LinkColumn('item_edit', args=[('pk')],orderable=False,empty_values=[''])
-    exam = tables.LinkColumn('item_exam', args=[('pk')],orderable=False,empty_values=[''])    
-    delete = tables.LinkColumn('item_delete', args=[('pk')],orderable=False,empty_values=[''])    
-    class Meta:
-        model = People
-        row_attrs = {
-            'data-id': lambda record: record.pk
-        }
-        attrs = {'class': 'paleblue'}
-        exclude = ['nationality','id','idoncontry','ispatient','isdoctor','canlogin','accessonlyhisfile','photo','notes']
-#        fields
-        sequence = ['name','surname','countryid','phone','...']
-
-    def render_edit(self, record):
-        return mark_safe('<a href=/publisherupd/' + str(record.pk) + '/><span style="color:blue">Edit</span></a>')
-
-    def render_delete(self, record):
-        return mark_safe('<a href=/publisherdel/' + str(record.pk) + '/><span style="color:red">Delete</span></a>')
-
-    def render_exam(self, record):
-        return mark_safe('<a href=/examinationsper/' + str(record.pk) + '/><span style="color:green">Exams◙</span></a></a>')
-
-#@login_required
-def person_list(request):
-    if not request.user.is_authenticated:
-        return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
-    table = PeopleTable(People.objects.all())
-    RequestConfig(request).configure(table)
-    return render(request, 'people.html', {'people': table, 'add_url_leo': 'publishercreate', 'page_title': u'Άνθρωποι'})
-
-
-def people10(request):
-    queryset  = People.objects.all()
-    table = PeopleTable(queryset)
-    RequestConfig(request).configure(table)
-    return render(request, 'people.html', {'people': table})
-
-
-
 class ExaminationTable(tables.Table):
+    detail = tables.LinkColumn('item_detail', args=[('pk')], orderable=False, empty_values=[''])
     edit = tables.LinkColumn('item_edit', args=[('pk')],orderable=False,empty_values=[''])
-    delete = tables.LinkColumn('item_delete', args=[('pk')],orderable=False,empty_values=[''])    
+#    delete = tables.LinkColumn('item_delete', args=[('pk')],orderable=False,empty_values=[''])
     class Meta:
         model = Examination0
         row_attrs = {
             'data-id': lambda record: record.pk
         }
         attrs = {'class': 'paleblue'}
-#        exclude = ['nationality','idoncontry','ispatient','isdoctor','canlogin','accessonlyhisfile','photo','notes'] 
+        exclude = ['id','nationality','idoncontry','ispatient','notes','isdoctor','canlogin','accessonlyhisfile','photo','notes'] 
 #        fields
-#        sequence = ['name','surname','countryid','phone','...']
+        sequence = ['dateofexam','...']
 
     def render_edit(self, record):
         return mark_safe('<a href=/examinationupd/' + str(record.pk) + '/><span style="color:blue">Edit</span></a>')
@@ -371,7 +373,7 @@ class ExaminationTable(tables.Table):
         return mark_safe('<a href=/examinationdel/' + str(record.pk) + '/><span style="color:red">Delete</span></a>')
 
     def render_detail(self, record):
-        return mark_safe('<a href=/examinationsper/' + str(record.pk) + '/><span style="color:green">Exams◙</span></a></a>')
+        return mark_safe('<a href=/examinationdet/' + str(record.pk) + '/><span style="color:green">View</span></a></a>')
 
 
 def examination_list(request):
@@ -382,6 +384,7 @@ def examination_list(request):
 
 #Crispy
 from crispy_forms.helper import FormHelper
+from crispy_forms.layout import HTML
 from crispy_forms.layout import Layout, Fieldset, ButtonHolder, Submit, Div, MultiField
 
 class ExampleForm0(CreateView):
@@ -399,6 +402,7 @@ class ExampleForm0(CreateView):
         self.helper.form_method = 'get'
         self.helper.form_action = '/examinations'
 
+#        self.template = 'example_form0.html'
 
 #        self.helper.form_class = 'form-inline'
 #        self.helper.field_template = 'bootstrap3/layout/inline_field.html'
@@ -409,6 +413,7 @@ class ExampleForm0(CreateView):
 #        self.helper.field_class = 'col-lg-8'
 
         self.helper.layout = Layout(
+            HTML("{% extends 'base.html' %}"),
             Fieldset(
                     'Please mr {{ user.username }}',
                     'name',
@@ -707,6 +712,150 @@ def MultiExam0(request):
 
     
 
-    
+class ExaminationsListPerTable(tables.Table):
+    detail = tables.LinkColumn('item_detail', args=[('pk')], orderable=False, empty_values=[''])
+    edit = tables.LinkColumn('item_edit', args=[('pk')],orderable=False,empty_values=[''])
+    delete = tables.LinkColumn('item_delete', args=[('pk')],orderable=False,empty_values=[''])
+    class Meta:
+        model = Examination0
+        row_attrs = {
+            'data-id': lambda record: record.pk
+        }
+        attrs = {'class': 'paleblue'}
+        exclude = ['id','nationality','idoncontry','ispatient','notes','isdoctor','canlogin','accessonlyhisfile','photo','notes']
+#        fields
+#        sequence = ['dateofexam','...']
+
+    def render_edit(self, record):
+        return mark_safe('<a href=/examinationupd/' + str(record.pk) + '/><span style="color:blue">Edit</span></a>')
+
+    def render_delete(self, record):
+        return mark_safe('<a href=/examinationdel/' + str(record.pk) + '/><span style="color:red">Delete</span></a>')
+
+    def render_detail(self, record):
+        return mark_safe('<a href=/examinationdet/' + str(record.pk) + '/><span style="color:green">View</span></a></a>')
+
+
+def ExaminationsListPer_Table(request,pk):
+    id = get_object_or_404(People, id=pk)
+    table = ExaminationsListPerTable(Examination0.objects.filter(peopleid=id))
+    RequestConfig(request).configure(table)
+    return render(request, 'people.html', {'people': table})
+
+#
+class DoctorListTable(tables.Table):
+    detail = tables.LinkColumn('item_detail', args=[('pk')],orderable=False,empty_values=[''])
+    exams  = tables.LinkColumn('item_exams', args=[('pk')],orderable=False,empty_values=[''])
+    class Meta:
+        model = models.People
+        row_attrs = {
+            'data-id': lambda record: record.pk
+        }
+        attrs = {'class': 'paleblue'}
+        exclude = ['dateofbirth', 'nationality', 'countryid', 'ispatient', 'isdoctor', 'canlogin', 'accessonlyhisfile', 'notes' ,'id', 'photo']
+        sequence = ['name','surname','...']
+
+    def render_exams(self, record):
+        return mark_safe('<a href=/examinationsListPerDoctor/'+str(record.pk)+'/><span style="color:blue">Εξετάσεις</span></a>')
+
+    def render_detail(self,record):
+        return mark_safe('<a href=/DjgLeoApp001/detail/'+str(record.pk)+'/><span style="color:green">Λεπτομέριες</span></a></a>')
+
+def doctor_list(request):
+    table = DoctorListTable(models.People.objects.all().filter(isdoctor=1))
+    RequestConfig(request).configure(table)
+    return render(request, 'people.html', {'people': table, 'add_url_leo':'DjgLeoApp001:create', 'page_title':u'Γιατροί'})
+
+
+#Patient Table
+class PatientListTable(tables.Table):
+    detail = tables.LinkColumn('item_detail', args=[('pk')],orderable=False,empty_values=[''])
+    exams  = tables.LinkColumn('item_exams', args=[('pk')],orderable=False,empty_values=[''])
+    class Meta:
+        model = models.People
+        row_attrs = {
+            'data-id': lambda record: record.pk
+        }
+        attrs = {'class': 'paleblue'}
+        exclude = ['dateofbirth', 'nationality', 'countryid', 'ispatient', 'isdoctor', 'canlogin', 'accessonlyhisfile', 'notes' ,'id', 'photo']
+        sequence = ['name','surname','...']
+
+    def render_exams(self, record):
+        return mark_safe('<a href=/examinationsper/'+str(record.pk)+'/><span style="color:blue">Εξετάσεις</span></a>')
+
+# leo    examination_list
+
+
+    def render_detail(self,record):
+        return mark_safe('<a href=/DjgLeoApp001/detail/'+str(record.pk)+'/><span style="color:green">Λεπτομέριες</span></a></a>')
+
+from .models import SpecialUsers
+from django.contrib.auth.models import User
+
+def patient_list(request):
+    if not request.user.is_authenticated:
+        return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
+    u = User.objects.get(username=request.user)
+    if request.user.is_superuser or request.user.is_staff:
+        print 'Soper'
+    us = SpecialUsers.objects.get(user=request.user)
+    for x in us.peoples.all():
+        print x.id , x
+
+    table = PatientListTable(models.People.objects.all().filter(ispatient=1))
+    RequestConfig(request).configure(table)
+    return render(request, 'people.html', {'people': table, 'add_url_leo':'DjgLeoApp001:create', 'page_title':u'Γιατροί'})
+
+class PeopleTable(tables.Table):
+    detail = tables.LinkColumn('item_detail', args=[('pk')],orderable=False,empty_values=[''])
+#    edit = tables.LinkColumn('item_edit', args=[('pk')],orderable=False,empty_values=[''])
+#    exam = tables.LinkColumn('item_exam', args=[('pk')],orderable=False,empty_values=[''])
+#    delete = tables.LinkColumn('item_delete', args=[('pk')],orderable=False,empty_values=[''])
+    class Meta:
+        model = People
+        row_attrs = {
+            'data-id': lambda record: record.pk
+        }
+        attrs = {'class': 'paleblue'}
+        exclude = ['nationality','id','idoncontry','ispatient','isdoctor','canlogin','accessonlyhisfile','photo','notes']
+#        fields
+        sequence = ['name','surname','countryid','phone','...']
+
+    def render_detail(self, record):
+        return mark_safe('<a href=/DjgLeoApp001/detail/' + str(record.pk) + '/><span style="color:green">Λεπτομέριες</span></a></a>')
+
+#    def render_edit(self, record):
+#        return mark_safe('<a href=/publisherupd/' + str(record.pk) + '/><span style="color:blue">Edit</span></a>')
+
+#    def render_delete(self, record):
+#        return mark_safe('<a href=/publisherdel/' + str(record.pk) + '/><span style="color:red">Delete</span></a>')
+
+#    def render_exam(self, record):
+#        return mark_safe('<a href=/examinationsper/' + str(record.pk) + '/><span style="color:green">Exams◙</span></a></a>')
+
+#@login_required
+def person_list(request):
+    if not request.user.is_authenticated:
+        return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
+    table = PeopleTable(People.objects.all())
+    RequestConfig(request).configure(table)
+    return render(request, 'people.html', {'people': table, 'add_url_leo': 'DjgLeoApp001:create', 'page_title': u'Άνθρωποι'})
+
+
+def people10(request):
+    queryset  = People.objects.all()
+    table = PeopleTable(queryset)
+    RequestConfig(request).configure(table)
+    return render(request, 'people.html', {'people': table})
 
 ###MultiExamForm<
+
+
+def examination_list_per(request,pk):
+    if not request.user.is_authenticated:
+        return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
+    id = get_object_or_404(People, id=pk)
+    table = ExaminationTable(Examination0.objects.filter(peopleid=pk))
+    RequestConfig(request).configure(table)
+    return render(request, 'people.html', {'people': table, 'page_title' : 'Εξετάσεις', 'add_url_leo': 'examinationcreate' })
+

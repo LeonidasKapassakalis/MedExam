@@ -25,6 +25,8 @@ from django.contrib.auth import views as auth_views
 urlpatterns = [
 
     url(r'^admin/', admin.site.urls),
+    url(r'^menu/', views.NewMenu),
+    url(r'^menu1/', views.NewMenu1),
     url(r'^(?P<question_id>[0-9]+)/$', views.detail, name='detail'),
     url(r'^(?P<question_id>[0-9]+)/results/$', views.results, name='results'),
     url(r'^(?P<question_id>[0-9]+)/people_det/$', views.people_det, name='people_det'),
@@ -45,6 +47,8 @@ urlpatterns = [
     url(r'^tables101/', views.examination_list, name = 'examination_list'),
     url(r'^tables10/', views.person_list, name='person_list'),
 
+    url(r'^tables222/(?P<pk>[0-9]+)/$', views.ExaminationsListPer_Table, name='ExaminationsListPer_Table'),
+
     url(r'^locations/', views.locations_list, name='locations'),
     url(r'^location/(?P<pk>[0-9]+)/$', views.LocationDetailView.as_view(), name='location'),
     url(r'^locationupd/(?P<pk>[0-9]+)/$', views.LocationUpdate.as_view(), name='locationupd'),
@@ -59,14 +63,18 @@ urlpatterns = [
     url(r'^publisherupd/(?P<pk>[0-9]+)/$', views.PublisherUpdate.as_view(), name='publishersupd'),
     url(r'^publisherdel/(?P<pk>[0-9]+)/$', views.PublisherDelete.as_view(), name='publisherdel'),
     url(r'^publishercre/$', views.PublisherCreare.as_view(), name='publishercreate'),
-    url(r'^report_builder/', include('report_builder.urls')),
+#    url(r'^report_builder/', include('report_builder.urls')),
+
+    url(r'^DjgLeoApp001/', include('DjgLeoApp001.urls')),
 
     url(r'^examinationsper/([0-9]+)/$', views.ExaminationsListPer.as_view(), name='examinationsper'),
+    url(r'^examinationsper1/([0-9]+)/$', views.examination_list_per , name='examinationspert'),
     url(r'^examinationsListPerDoctor/([0-9]+)/$', views.ExaminationsListPerDoctor.as_view(), name='examinationsperdoctor'),
     url(r'^examinationsListPerDoctorPatient/([0-9]+)/([0-9]+)/$', views.ExaminationsListPerDoctorPatient.as_view(), name='examinationsperdoctorpatient'),
 
     url(r'^examinationspercategory/([0-9]+)/$', views.ExaminationsListPerCategory.as_view(), name='examinationspercategory'),
     url(r'^examinations/$', views.ExaminationsList.as_view(), name='examinations'),
+
     url(r'^examinationupd/(?P<pk>[0-9]+)/$', views.ExaminationUpdate.as_view(), name='examinationupd'),
     url(r'^examinationdet/(?P<pk>[0-9]+)/$', views.ExaminationDetail.as_view(), name='examinationdet'),
     url(r'^examinationdel/(?P<pk>[0-9]+)/$', views.ExaminationDelete.as_view(), name='examinationdel'),

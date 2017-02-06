@@ -15,6 +15,17 @@ class MyAdminSite(AdminSite):
 
 mysite = MyAdminSite()
 
+
+from DjgLeoApp001.models import SpecialUsers
+
 def defadm(request):
     return {'user': request.user, 'site_header': mysite.site_header, 'has_permission': mysite.has_permission(request),
-                                            'site_url': mysite.site_url , 'title' : 'Λεωνίδας Exam App' }
+            'site_url': mysite.site_url, 'title': 'Λεωνίδας Exam App'}
+
+#    u = SpecialUsers.objects.get(user=request.user)
+#    if u:
+#        return {'user': request.user, 'site_header': mysite.site_header, 'has_permission': mysite.has_permission(request),
+#                'site_url': mysite.site_url , 'title' : 'Λεωνίδας Exam App','people' : u.peopleid ,'altpeople': u.altpeopleid}
+#    else:
+#        return {'user': request.user, 'site_header': mysite.site_header, 'has_permission': mysite.has_permission(request),
+#                'site_url': mysite.site_url , 'title' : 'Λεωνίδας Exam App'}

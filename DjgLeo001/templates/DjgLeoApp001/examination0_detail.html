@@ -1,16 +1,31 @@
 {% extends 'base.html' %}
 {% load static %}
 <!DOCTYPE html>
-<html lang="en-us" >
+< html lang="el" >
 <head>
 <title>Djgleoapp001 administration | Django site admin</title>
 <link rel="stylesheet" type="text/css" href="/static/css/base.css" />
 <link rel="stylesheet" type="text/css" href="/static/css/dashboard.css" />
 
+
+
+</head>
 {% block content %}
-<h1>{{ object.dateofexam|date }}</h1>
-<h1>{{ object.categorid.name }}</h1>
-<h1>{{ object.peopleid.name }} {{ object.peopleid.surname }}</h1>
-<textarea cols=100 rows=10>{{ object.notes }}</textarea>
-<textarea cols=100 rows=5>{{ object.comments }}</textarea>
+
+<h1>Ημερομηνία Εξέτασης {{ object.dateofexam|date:"D d M Y" }}</h1>
+<h2>Είδος Εξέτασης {{ object.categorid.name }}</h2>
+<h2>Ασθενής {{ object.peopleid.name }} {{ object.peopleid.surname }}</h2>
+<h2>Γιατρός {{ object.doctorid.name }} {{ object.doctorid.surname }}</h2>
+<textarea cols=100 rows=10 readonly="True">{{ object.notes }}</textarea>
+<textarea cols=100 rows=5 readonly="True">{{ object.comments }}</textarea>
+
+    <p>
+<link rel="stylesheet" type="text/css" href="{% static "/bootstrap-3.1.1/css/bootstrap-theme.css" %}"/>
+    <a href={% url 'examinationsper'  object.peopleid.id %} type="button" class="btn btn-lg btn-success">  Εξετάσεος      </a>
+{% if object.doctorid.isdoctor %}
+<a href={% url 'examinationsperdoctor' object.doctorid.id %} type="button" class="btn btn-lg btn-info"  >  Exams Ordered  </a>
+{% endif %}
+</p>
+<a href={% url 'examinationupd'  object.peopleid.id %} type="button" class="btn btn-lg btn-danger">  Μεταβολή  </a>
+
 {% endblock %}

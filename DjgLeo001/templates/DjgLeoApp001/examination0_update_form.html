@@ -1,10 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load staticfiles %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'DjgLeoApp001/style.css' %}" />
-
-<link rel="stylesheet" type="text/css" href="/static/admin/css/base.css" />
-<link rel="stylesheet" type="text/css" href="/static/admin/css/forms.css" />
 
 <!DOCTYPE html>
 
@@ -22,23 +20,7 @@
 
 
 <html lang="en-us" >
-<head>
-<title>Djgleoapp001 administration | Django site admin</title>
-<link rel="stylesheet" type="text/css" href="/static/css/base.css" />
-<link rel="stylesheet" type="text/css" href="/static/css/dashboard.css" />
 
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        
-		<title>Django Girls blog</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-    </head>
-	    <body>
-        <div>
-            <h1><a href="/">Django Girls Blog</a></h1>
-        </div>
 
 {% block content %}		
 <form action="" method="post">{% csrf_token %}
@@ -47,9 +29,6 @@
 </table> 	
 
     <input type="submit" value="Update" />
-<li>{{ examination0.peopleid.name }}</li>	
-<li><a href={% url 'examinations' %} >List</li>		
-<li><a href={% url 'examinationdel' examination0.id %}>Delete</li>
 {% endblock %}
 </body>
 </form>

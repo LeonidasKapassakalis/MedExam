@@ -11,8 +11,9 @@
 
 </head>
 {% block content %}
-    <h2>Εξετάσεις για {{ name }} </h2>
     <ul>
+    <h2>Εξετάσεις για {{ name }} </h2>
+
         {% for Examination0 in object_list %}
             <li><a href={% url 'examinationupd' Examination0.pk %}>{{ Examination0.categorid.name }} {{ Examination0.dateofexam }} {{ Examination0.notes }}</li>
         {% endfor %}
