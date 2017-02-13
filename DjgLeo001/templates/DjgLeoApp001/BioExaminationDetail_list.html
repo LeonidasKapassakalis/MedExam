@@ -14,8 +14,8 @@
 {% block content %}
     <h2>People</h2>
     <ul>
-        {% for People in object_list %}
-            <li><a href={% url 'DjgLeoApp001:update' People.pk %} > {{ People.name }}	{{ People.surname }} {{ People.dateofbirth }} </li>
+        {% for BioExaminationDetail in object_list %}
+            <li>{{ BioExaminationDetail.BioExaminationId.peopleid.name}}  {{ BioExaminationDetail.BioExaminationId.peopleid.surname}}	{{ BioExaminationDetail.examnameid.name }} {{ BioExaminationDetail.value }} </li>
         {% endfor %}
     </ul>
 <li><a href={% url 'publishercreate' %}>Add</li>

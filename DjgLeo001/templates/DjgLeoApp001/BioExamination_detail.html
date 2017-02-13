@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+< html lang="el" >
+<head>
+
+
+    {% block content %}
+
+    <link href="{% static 'bootstrap-3.1.1/css/bootstrap.css'%}" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="{% static 'bootstrap-3.1.1/css/bootstrap-theme.css'%}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{% static 'bootstrap-3.1.1/css/theme.css'%}" rel="stylesheet">
+
+    <ul>
+            <h1>Ασθενής   : {{ object.peopleid.name }} {{ object.peopleid.surname }}</h1>
+            <h1>Ιατρός    : {{ object.doctorid.name }} {{ object.doctorid.surname }}</h1>
+			<h2>Κατηγορία : {{ object.categorid.name }}</h2>
+			<h2>Ημερομηνία: {{ object.dateofexam }}</h2>
+			<h2>Notes    : {{ object.notes }}</h2>
+			<h2>Comments : {{ object.comments }}</h2>
+			
+<!--    examsschema = models.ManyToManyField('Examschema') --!>
+			
+	</ul>
+
+<p><a href={% url 'DjgLeoApp001:updateexambio' object.id %} type="button" class="btn btn-lg btn-danger">  Μεταβολή  </a></p>
+<p><a href={% url 'DjgLeoApp001:updateexambiodet' object.id %} type="button" class="btn btn-lg btn-danger">  Μεταβολή  </a></p>
+{% endblock %}

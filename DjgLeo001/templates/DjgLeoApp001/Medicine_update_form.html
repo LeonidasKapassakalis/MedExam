@@ -18,11 +18,16 @@
 
 {{ form.media }}
 
-
 <table>
     {{ form.as_table }}
 </table>	
 <input type="submit" value="Update" />
+
+<p/>
+
+<p><a href={% url 'DjgLeoApp001:deletemedicine' medicine.pk %} type="button" class="btn btn-lg btn-danger"  >  Delete  </a></p>
+
+
 </form>
 
 {% endblock %}

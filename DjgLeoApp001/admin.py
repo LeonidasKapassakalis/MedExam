@@ -2,13 +2,13 @@ from django.contrib import admin
 
 # Register your models here.
 
-from .models import Dates
-class DatesAdmin(admin.ModelAdmin):
-    list_display = ('date', 'peopleid', 'locationid')
-    search_fields = ('date',)
-    list_filter = ('peopleid', 'locationid')
-    ordering = ('date','peopleid',)
-admin.site.register(Dates,DatesAdmin)
+#from .models import Dates
+# class DatesAdmin(admin.ModelAdmin):
+#     list_display = ('date', 'peopleid', 'locationid')
+#     search_fields = ('date',)
+#     list_filter = ('peopleid', 'locationid')
+#     ordering = ('date','peopleid',)
+# admin.site.register(Dates,DatesAdmin)
 
 from .models import Country
 admin.site.register(Country)
@@ -45,8 +45,8 @@ admin.site.register(Locations)
 from .models import Mm
 admin.site.register(Mm)
 
-from .models import Examminmax
-admin.site.register(Examminmax)
+#from .models import Examminmax
+#admin.site.register(Examminmax)
 
 from .models import DoctorSpeciality
 admin.site.register(DoctorSpeciality)
@@ -70,3 +70,24 @@ class UserAdmin(BaseUserAdmin):
 
 admin.site.unregister(User)
 admin.site.register(User, UserAdmin)
+
+from .models import OperationCategory
+admin.site.register(OperationCategory)
+
+from .models import Operations
+admin.site.register(Operations)
+
+from .models import BioExaminationCategory
+admin.site.register(BioExaminationCategory)
+
+from .models import BioExamination
+admin.site.register(BioExamination)
+
+from .models import BioExaminationDetail
+admin.site.register(BioExaminationDetail)
+
+from .models import MedicineCategory
+admin.site.register(MedicineCategory)
+
+from .models import Medicine
+admin.site.register(Medicine)

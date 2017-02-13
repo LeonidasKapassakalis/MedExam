@@ -25,14 +25,6 @@ class Country(models.Model):
     def __unicode__(self):
         return self.name
 
-class Examschema(models.Model):
-    name = models.CharField(unique=True, max_length=150, blank=True, null=True)
-    sequence = models.CharField(max_length=50, blank=True, null=True)
-    notes = models.CharField(max_length=150, blank=True, null=True)
-
-    def __unicode__(self):
-        return self.name
-
 
 class Locations(models.Model):
     id = models.AutoField
@@ -76,8 +68,37 @@ class People(models.Model):
     def __unicode__(self):
         return self.surname + ' ' + self.name
 
+class Dates(models.Model):
+    id = models.AutoField
+    date = models.DateTimeField(db_column='Date')   
+    peopleid = models.ForeignKey(People, db_column='PeopleId')   
+    doctorid = models.ForeignKey(People, limit_choices_to={'isdoctor': True} , related_name = 'Doctor')
+    locationid = models.ForeignKey(Locations, db_column='LocationId')   
+    examupdated = models.NullBooleanField(db_column='ExamUpdated')   
+    examupdateddt = models.DateTimeField(db_column='ExamUpdatedDT', blank=True, null=True)
+    examposted = models.NullBooleanField(db_column='ExamPosted')   
+    examposteddt = models.DateTimeField(db_column='ExamPostedDT', blank=True, null=True)
+    comments = models.TextField(db_column='Comments', blank=True,null=True)
+    results = models.TextField(db_column='Results', blank=True, null=True)
+
+    def __unicode__(self):
+        return str(self.date) + ' ' + unicode(self.peopleid) + ' ' + unicode(self.locationid)
+
+class Datesexamlog(models.Model):
+    id = models.AutoField
+    dateid = models.IntegerField(db_column='DateId')   
+    examid = models.IntegerField(db_column='ExamId')   
+    mmid = models.IntegerField(db_column='MMId', blank=True, null=True)   
+    result_n = models.TextField(db_column='Result_N', blank=True, null=True)
+    result_t = models.TextField(db_column='Result_T', blank=True, null=True)
+    updated = models.NullBooleanField(db_column='Updated')   
+
+    def __unicode__(self):
+        return str(self.dateid)
+
 
 class Examname(models.Model):
+    id = models.AutoField
     name = models.TextField(db_column='Name', unique=True)
     sname = models.CharField(db_column='SName', max_length=25)   
     groupexam_id = models.IntegerField(db_column='GroupExam_Id')   
@@ -93,15 +114,78 @@ class Examname(models.Model):
     def __unicode__(self):
         return self.name
 
+class Examminmax(models.Model):
+    id = models.AutoField
+    examid = models.ForeignKey(Examname, db_column='ExamId')   
+    mmid = models.IntegerField(db_column='MMId', blank=True, null=True)   
+    mfa = models.IntegerField(db_column='MFA')   
+    minvalue = models.TextField(db_column='MinValue', blank=True, null=True)
+    maxvalue = models.TextField(db_column='MaxValue', blank=True, null=True)
+
+    def __unicode__(self):
+        return self.examid
+
+class Examschema(models.Model):
+    id = models.IntegerField(primary_key=True)  # AutoField?
+    name = models.CharField(db_column='Name', unique=True, max_length=150, blank=True, null=True)   
+    sequence = models.CharField(db_column='Sequence', max_length=50, blank=True, null=True)   
+    notes = models.CharField(db_column='Notes', max_length=150, blank=True, null=True)   
+
+    def __unicode__(self):
+        return self.name
+
+class Examschemadet(models.Model):
+    id = models.IntegerField(primary_key=True)  # AutoField?
+    examschemaid = models.ForeignKey(Examschema, db_column='ExamSchemaid')   
+    groupexamid = models.IntegerField(db_column='GroupExamId')   
+    aa = models.IntegerField(db_column='AA')   
+
+class Groupexam(models.Model):
+    id = models.AutoField
+    name = models.CharField(db_column='Name', max_length=100)   
+    sname = models.CharField(db_column='SName', max_length=50)   
+
+    def __unicode__(self):
+        return self.name
+
+
+class Groupmm(models.Model):
+    id = models.AutoField
+    name = models.CharField(db_column='Name', max_length=50, blank=True, null=True)   
+    sname = models.CharField(db_column='SName', max_length=20, blank=True, null=True)   
+
+    def __unicode__(self):
+        return self.name
+
+
+class Keystable(models.Model):
+    table = models.CharField(db_column='Table', primary_key=True, max_length=20)   
+    currentkey = models.IntegerField(db_column='CurrentKey')   
+    updated = models.DateTimeField(db_column='Updated', blank=True, null=True)   
+
+
+class Mfa(models.Model):
+    id = models.AutoField
+    fromage = models.IntegerField(db_column='FromAge')   
+    toage = models.IntegerField(db_column='ToAge')   
+    sex = models.IntegerField(db_column='SEX')   
+
 class Mm(models.Model):
-    pk = models.AutoField
+    id = models.AutoField
     name = models.CharField(db_column='Name', max_length=50, blank=True, null=True)   
     sname = models.CharField(db_column='SName', max_length=8, blank=True, null=True)   
 
     def __unicode__(self):
         return self.name
 
+class Mm2Mm(models.Model):
+    id = models.AutoField
+    fromid = models.IntegerField(db_column='Fromid')   
+    toid = models.IntegerField(db_column='Toid')   
+    text = models.CharField(db_column='Text', max_length=50, blank=True, null=True)   
+
 class ExaminationCategory(models.Model):
+    id = models.AutoField
     name = models.CharField(max_length=50)
     sname = models.CharField(max_length=15)    
 
@@ -125,7 +209,7 @@ def get_filter_manager(*args, **kwargs):
 class DahlBookManager(models.Manager):
     def get_queryset(self):
         return super(DahlBookManager,self).get_queryset().filter(peopleid='1')
-
+    
 
 class Examination0(models.Model):
     id = models.AutoField
@@ -140,14 +224,8 @@ class Examination0(models.Model):
     dahl_objects = DahlBookManager() # The Dahl-specific manager.
     leo_objects = get_filter_manager(peopleid=2)
 
-    class Meta:
-        ordering = ('-dateofexam',)
-
     def surname(self):
         return self.peopleid.surname + ' ' + self.peopleid.name
-
-    def get_absolute_url(self):
-        return reverse('DjgLeoApp001:listexam', kwargs={'Patient': self.peopleid.id})
 
     def __unicode__(self):
         a=self.dateofexam
@@ -171,6 +249,7 @@ class SpecialUsers(models.Model):
 
 
 class DoctorSpeciality(models.Model):
+    id = models.AutoField
     name = models.CharField(max_length=50)
     sname = models.CharField(max_length=15)
 
@@ -182,6 +261,7 @@ class DoctorSpeciality(models.Model):
 
 # OperationsCategory
 class OperationCategory(models.Model):
+    id = models.AutoField
     name = models.CharField(max_length=50)
     sname = models.CharField(max_length=15)
 
@@ -236,13 +316,8 @@ class BioExaminationDetail(models.Model):
     value = models.FloatField('Τιμή')
     notes = models.CharField(max_length=255, blank=True, null=True)
 
-    def get_absolute_url(self):
-        return reverse('DjgLeoApp001:listexambiodet', kwargs={'exampk': self.BioExaminationId.pk})
-
     class Meta:
         unique_together = (("BioExaminationId", "examnameid" ),)
-        ordering = ('BioExaminationId','id')
-
 
     def __unicode__(self):
         return self.examnameid.name

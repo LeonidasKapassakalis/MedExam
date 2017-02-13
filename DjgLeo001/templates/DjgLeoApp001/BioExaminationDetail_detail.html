@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+< html lang="el" >
+<head>
+
+
+    {% block content %}
+
+    <link href="{% static 'bootstrap-3.1.1/css/bootstrap.css'%}" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="{% static 'bootstrap-3.1.1/css/bootstrap-theme.css'%}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{% static 'bootstrap-3.1.1/css/theme.css'%}" rel="stylesheet">
+
+    <ul>
+            <h1>Ασθενής   : {{ object.BioExaminationId.peopleid.name }} {{ object.BioExaminationId.peopleid.surname }}</h1>
+			<h1>Την 	  : {{ object.BioExaminationId.dateofexam|date:"SHORT_DATE_FORMAT" }} </h1>			
+            <h1>Εξέταση   : {{ object.examnameid.name }} </h1>
+			<h2>Τιμή      : {{ object.value }}</h2>
+			<h2>Notes     : {{ object.notes }}</h2>
+	</ul>
+
+<p><a href={% url 'DjgLeoApp001:updateexambiodet' object.id %} type="button" class="btn btn-lg btn-warning">  Μεταβολή  </a></p>
+<p><a href={% url 'DjgLeoApp001:deleteexambiodet' object.id %} type="button" class="btn btn-lg btn-danger">  Διαγραφή  </a></p>
+{% endblock %}

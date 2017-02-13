@@ -43,33 +43,37 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Άτομα<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li role="separator" class="divider"></li>
-            <li><a href="{% url "tables0" %}">Ασθενείς (Πίνακας)</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="{% url "publishers" %}">Ασθενείς (Λίστα)</a></li>
-		    <li><a href="{% url "person_list" %}">Ασθενείς (Λίστα2)</a></li>
-			<li><a href="{% url "people1" %}">Ασθενείς (Λίστα3)</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Έξετάσεις<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="{% url "examinations" %}">Εξετάσεις</a></li>
-            <li><a href="{% url "examination_list" %}">Εξετάσεις (Λίστα)</a></li>
-            <li><a href="{% url "examinationcreate" %}">Προσθήκη Εξετάσεις</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Δίαφορα<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-			<li><a href="{% url "contact0" %}">  contact0</a></li>
-			<li><a href="{% url "contact1" %}">  contact1</a></li>
-			<li><a href="{% url "locations" %}">  Locations</a></li>
-          </ul>
-        </li>
+		    <li><a href="{% url "DjgLeoApp001:patient_list" %}">Ασθενείς</a></li>
+		    <li><a href="{% url "DjgLeoApp001:doctor_list" %}">Γιατροί</a></li>
+
+
+{#        <li class="dropdown">#}
+{#          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Άτομα<span class="caret"></span></a>#}
+{#          <ul class="dropdown-menu">#}
+{#            <li role="separator" class="divider"></li>#}
+{#            <li><a href="{% url "tables0" %}">Ασθενείς (Πίνακας)</a></li>#}
+{#            <li role="separator" class="divider"></li>#}
+{#            <li><a href="{% url "publishers" %}">Ασθενείς (Λίστα)</a></li>#}
+{#		    <li><a href="{% url "person_list" %}">Ασθενείς (Λίστα2)</a></li>#}
+{#			<li><a href="{% url "people1" %}">Ασθενείς (Λίστα3)</a></li>#}
+{#          </ul>#}
+{#        </li>#}
+{#        <li class="dropdown">#}
+{#          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Έξετάσεις<span class="caret"></span></a>#}
+{#          <ul class="dropdown-menu">#}
+{#            <li><a href="{% url "examinations" %}">Εξετάσεις</a></li>#}
+{#            <li><a href="{% url "examination_list" %}">Εξετάσεις (Λίστα)</a></li>#}
+{#            <li><a href="{% url "examinationcreate" %}">Προσθήκη Εξετάσεις</a></li>#}
+{#          </ul>#}
+{#        </li>#}
+{#        <li class="dropdown">#}
+{#          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Δίαφορα<span class="caret"></span></a>#}
+{#          <ul class="dropdown-menu">#}
+{#			<li><a href="{% url "contact0" %}">  contact0</a></li>#}
+{#			<li><a href="{% url "contact1" %}">  contact1</a></li>#}
+{#			<li><a href="{% url "locations" %}">  Locations</a></li>#}
+{#          </ul>#}
+{#        </li>#}
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Άτομα<span class="caret"></span></a>
           <ul class="dropdown-menu">
