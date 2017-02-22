@@ -32,7 +32,7 @@
         {% block branding %}{% endblock %}
         </div>
         {% block usertools %}
-        {% if has_permission %}
+        {% if not user.is_anonymous %}
         <div id="user-tools">
             {% block welcome-msg %}
                 {% trans 'Welcome,' %}
@@ -49,14 +49,14 @@
                     {% endif %}
                 {% endif %}
                 {% if user.has_usable_password %}
-                <a href="{% url 'admin:password_change' %}">{% trans 'Change password' %}</a> /
+                <a href="{% url 'password_change' %}">{% trans 'Change password' %}</a> /
                 {% endif %}
-                <a href="{% url 'admin:logout' %}">{% trans 'Log out' %}</a>
+                <a href="{% url 'logout' %}">{% trans 'Log out' %}</a>
             {% endblock %}
         </div>
         {% endif %}
         {% if user.is_anonymous %}
-        <a href="{% url 'admin:login' %}">{% trans 'Log in' %}</a>
+        <a href="{% url 'login' %}">{% trans 'Log in' %}</a>
         {% endif %}
         {% endblock %}
         {% block nav-global %}{% endblock %}

@@ -4,6 +4,10 @@
 < html lang="el" >
 <head>
 
+{% block title %}
+    {{ page_title }}
+{% endblock %}
+
 
     {% block content %}
 
@@ -13,6 +17,8 @@
     <!-- Custom styles for this template -->
     <link href="{% static 'bootstrap-3.1.1/css/theme.css'%}" rel="stylesheet">
 
+    <h1>{{ form_name }}</h1>
+
     <ul>
             <h1>Ασθενής   : {{ object.BioExaminationId.peopleid.name }} {{ object.BioExaminationId.peopleid.surname }}</h1>
 			<h1>Την 	  : {{ object.BioExaminationId.dateofexam|date:"SHORT_DATE_FORMAT" }} </h1>			
@@ -21,6 +27,23 @@
 			<h2>Notes     : {{ object.notes }}</h2>
 	</ul>
 
-<p><a href={% url 'DjgLeoApp001:updateexambiodet' object.id %} type="button" class="btn btn-lg btn-warning">  Μεταβολή  </a></p>
-<p><a href={% url 'DjgLeoApp001:deleteexambiodet' object.id %} type="button" class="btn btn-lg btn-danger">  Διαγραφή  </a></p>
+<p><a href={% url 'DjgLeoApp001:updateexambiodet' object.id %} type="button" class="btn btn-lg btn-warning">  Μεταβολή  </a>
+<a href={% url 'DjgLeoApp001:deleteexambiodet' object.id %} type="button" class="btn btn-lg btn-danger">  Διαγραφή  </a></p>
+
+<link rel="stylesheet" type="text/css" href="{% static "/admin/css/BasePlus.css" %}"/>
+
+<p>
+{% if param_action1 %}
+<a class="w3-btn w3-green w3-border w3-round" href={{  param_action1 }} > {{param_action1_name}}</a>
+{% endif %}
+{% if param_action2 %}
+  <a class="w3-btn w3-red w3-border w3-round" href={{  param_action2 }} > {{param_action2_name}}</a>
+{% endif %}
+{% if param_action3 %}
+  <a class="w3-btn w3-white w3-border w3-round" href={{  param_action3 }} > {{param_action3_name}}</a>
+{% endif %}
+{% if param_action4 %}
+ <a class="w3-btn w3-white w3-border w3-round" href={{  param_action4 }} > {{param_action4_name}}</a>
+{% endif %}
+</p>
 {% endblock %}

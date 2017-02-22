@@ -1,0 +1,26 @@
+{% extend 'base.html' %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en-us" >
+
+<link rel="stylesheet" href="{% static 'css/DjgLeoApp001.css' %}">
+
+<head>
+<title>Delete Patient {{ people.name }} {{ people.surname }}</title>
+</head>
+{% block content %}
+<form action="" method="post">{% csrf_token %}
+
+<h1>Delete Examination with id
+            <h1>Ονόμασία    : {{ object.name }}</h1>
+            <h1>Συντ.Ονόμασία  : {{ object.sname }}</h1>
+
+			<h2>Min/Max  : {{ object.min }}-{{ object.max }} {{ object.mm }}</h2>
+			<h2>Κατηγορία: {{ object.bioexaminationcategory }}</h2>
+			<h2>Group    : {{ object.groupexam }}</h2>
+</h1>
+
+    <input type="submit" value="Delete" />
+</form>
+{% endblock %}

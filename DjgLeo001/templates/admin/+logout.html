@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html>
+
+<html lang="el" >
+<head>
+<title>Έγινε αποσύνδεση | Ιστότοπος διαχείρισης Django</title>
+<link rel="stylesheet" type="text/css" href="/static/admin/css/base.css" />
+
+
+
+<meta name="robots" content="NONE,NOARCHIVE" />
+</head>
+
+
+<body class=""
+  data-admin-utc-offset="0">
+
+<!-- Container -->
+<div id="container">
+
+    
+    <!-- Header -->
+    <div id="header">
+        <div id="branding">
+        
+<h1 id="site-name"><a href="/admin/">Διαχείριση Django</a></h1>
+
+        </div>
+        
+        
+        
+        
+    </div>
+    <!-- END Header -->
+    <div class="breadcrumbs"><a href="">Αρχική</a></div>
+    
+
+    
+        
+    
+
+    <!-- Content -->
+    <div id="content" class="colM">
+        
+        <h1>Έγινε αποσύνδεση</h1>
+        
+
+<p>Ευχαριστούμε που διαθέσατε κάποιο ποιοτικό χρόνο στον ιστότοπο σήμερα.</p>
+
+<p><a href="login/">Επανασύνδεση</a></p>
+
+
+        
+        <br class="clear" />
+    </div>
+    <!-- END Content -->
+
+    <div id="footer"></div>
+</div>
+<!-- END Container -->
+
+</body>
+</html>
+
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+  <h2>Login</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+  </form>
+{% endblock %}

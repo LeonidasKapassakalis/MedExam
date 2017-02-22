@@ -16,8 +16,8 @@
     <h2>Εξετάσεις για {{ name }} </h2>
 
         {% for Examination0 in object_list %}
-            <li><a href={% url 'examinationupd' Examination0.pk %}>{{ Examination0.categorid.name }} {{ Examination0.dateofexam }} {{ Examination0.notes }}</li>
+            <li><a href={% url 'DjgLeoApp001:updateexam' Examination0.pk %}>{{ Examination0.categorid.name }} {{ Examination0.dateofexam }} {{ Examination0.notes }}</li>
         {% endfor %}
     </ul>
-<li><a href={% url 'examinationcre' %} >Δημιουργεία νέας Εξέτασης</li>
+<li><a href={% url 'DjgLeoApp001:createexam' %} >Δημιουργεία νέας Εξέτασης</li>
 {% endblock %}

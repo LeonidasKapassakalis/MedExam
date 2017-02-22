@@ -154,6 +154,8 @@ FIXTURE_DIRS = ('/fixtures/',)
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
 import os
 CURRENT_PATH = os.path.abspath(os.path.dirname(__file__).decode('utf-8'))
 

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load render_table from django_tables2 %}
+
+<!DOCTYPE html>
+<html lang="el_EL" >
+
+{% block title %}
+    {{ page_title }}
+{% endblock %}
+
+{% block content %}
+<form action="/DjgLeoApp001/someurl/" method="get">{% csrf_token %}
+<html>
+    <html lang="el_EL" >
+    <h2> {{ form_name }} </h2>
+    <body>
+        {% for x in ForDelete %}
+        {% if forloop.counter0 == 0 %}
+            <h1>Θα γίνει διαγραφή των παρακάτω Εγγραφών</h1><h2>
+        {% endif %}
+        {{ x }}
+        {% if not forloop.last %}
+            ,
+        {% endif %}
+        {% empty %}
+        <h1>Δεν υπάρχουν Εγγραφές για διαγραφή!</h1><h2>
+        {%  endfor  %}
+        </h2>
+    {% for x in ForDelete %}
+        {% if forloop.last %}
+            <input type="submit" value="Delete Then"/>
+        {% endif %}
+    {% empty %}
+
+    {%  endfor  %}
+    </body>
+
+</html>
+{% endblock %}

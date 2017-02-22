@@ -75,7 +75,23 @@
 {#          </ul>#}
 {#        </li>#}
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Άτομα<span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Παραμετρικά<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{% url "DjgLeoApp001:listlocation" %}">Τοποθεσίες</a></li>
+            <li><a href="{% url "DjgLeoApp001:listexamname" %}">Εξετάσεις</a></li>
+            <li><a href="{% url "DjgLeoApp001:listmm" %}">Μονάδες Μέτρησης</a></li>
+            <li><a href="{% url "DjgLeoApp001:listmmtype" %}">Είδος Μονάδας Μέτρησης</a></li>
+            <li><a href="{% url "DjgLeoApp001:listgroupexam" %}">Ομάδα Εξετάσεων</a></li>
+            <li><a href="{% url "DjgLeoApp001:listmedicinecategory" %}">Κατηγορία Φαρμάκων</a></li>
+            <li><a href="{% url "DjgLeoApp001:listbioexaminationcategory" %}">Κατηγορία Εξετάσεων</a></li>
+            <li><a href="{% url "DjgLeoApp001:listoperationcategory" %}">Κατηγορία Επεμβάσεων</a></li>
+            <li><a href="{% url "DjgLeoApp001:listdoctorspeciality" %}">Ειδικότητες Γιατρών</a></li>
+            <li><a href="{% url "DjgLeoApp001:listexamschema" %}">Σχήμα Εξετάσεων</a></li>
+            <li><a href="{% url "DjgLeoApp001:listcountry" %}">Χώρες</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Άλλα<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li role="separator" class="divider"></li>
             <li><a href="{% url "DjgLeoApp001:create" %}">People Create</a></li>

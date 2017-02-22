@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="el-gr" >
+
+{% block content %}	
+
+<form action="" method="post">{% csrf_token %}
+
+<link rel="stylesheet" type="text/css" href="{% static "/admin/css/BasePlus.css" %}"/>
+<a class="w3-btn w3-white w3-border w3-round" href={% url 'DjgLeoApp001:examinationsper'  people.id %}>Exams</a>
+{% if people.isdoctor %}
+<a class="w3-btn w3-white w3-border w3-round" href={% url 'DjgLeoApp001:examinationsListPerDoctor'  people.id %}>Ordered Exams</a>
+{% endif %}
+
+<script src="{% static 'bootstrap-3.1.1/js/jquery.js' %}"></script>
+<script>window.jQuery | document.write('<script src="{% static 'bootstrap-3.1.1/js/jquery.min.js'%}"><\/script>')</script>
+<script src="{% static 'bootstrap-3.1.1/js/bootstrap.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'bootstrap-3.1.1/js/moment.js'%}"></script>
+<script type="text/javascript" src="{% static 'bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js'%}"></script>
+
+{{ form.media }}
+
+<table> 
+    {{ form.as_table }}
+</table> 	
+<input type="submit" value="Update" />
+<!--	<button type="reset" value="Reset">Reset</button> --!>
+<!-- <li><a href={% url 'DjgLeoApp001:update'  people.id %} >Delete/li> --!>
+<!-- <li><a href={% url 'DjgLeoApp001:examinationsper'  people.id %}>Exams/li> --!>
+<!-- {% if people.isdoctor %}--!>
+<!-- <p><a href={% url 'DjgLeoApp001:examinationsListPerDoctor'  people.id %} class="cta">Ordered Exams/p>--!>
+<!-- {% endif %}	--!>
+
+<link rel="stylesheet" type="text/css" href="{% static "/admin/css/BasePlus.css" %}"/>
+<a class="w3-btn w3-red w3-border" href={% url 'DjgLeoApp001:delete'  people.id %}>Delete</a>
+<!--<a class="w3-btn w3-white w3-border" href={% url 'DjgLeoApp001:examinationsper'  people.id %}>Exams</a>--!>
+<!--{% if people.isdoctor %}--!>
+<!--<a class="w3-btn w3-white w3-border" href={% url 'DjgLeoApp001:examinationsListPerDoctor'  people.id %}>Ordered Exams</a>--!>
+<!--{% endif %}--!>
+
+
+</form>
+{% endblock %}	

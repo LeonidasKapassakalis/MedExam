@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load staticfiles %}
+
+
+<!DOCTYPE html>
+<html lang="el" >
+
+{% block content %}
+
+<form action="" method="post">{% csrf_token %}
+
+<script src="{% static 'bootstrap-3.1.1/js/jquery.js' %}"></script>
+<script>window.jQuery | document.write('<script src="{% static 'bootstrap-3.1.1/js/jquery.min.js'%}"><\/script>')</script>
+<script src="{% static 'bootstrap-3.1.1/js/bootstrap.js' %}"></script>
+<script type="text/javascript" src="{% static 'bootstrap-3.1.1/js/moment.js' %}"></script>
+<script type="text/javascript" src="{% static 'bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js' %}"></script>
+{{ form.media }}
+
+<h2> {{ form_name }} </h2>
+
+<table>
+    {{ form.as_table }}
+</table>
+
+<input type="submit" value="Update" />
+
+{% if param_action1 %}
+ <p><a> href={{  param_action1 }} class="w3-btn w3-white w3-border w3-round"</a>{{param_action1_name}}</p>
+{% endif %}
+{% if param_action2 %}
+ <p><a href={{ param_action2 }} class="cta">{{param_action2_name}}/p>
+{% endif %}
+{% if param_action3 %}
+ <p><a href={{ param_action3 }} class="cta">{{param_action3_name}}/p>
+{% endif %}
+{% if param_action4 %}
+ <p><a href={{ param_action4 }} class="cta">{{param_action4_name}}/p>
+{% endif %}
+
+</form>
+
+{% endblock %}
+
+
+
+
+

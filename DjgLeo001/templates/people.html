@@ -5,7 +5,6 @@
 <!DOCTYPE html>
 <html lang="en-us" >
 <head>
-<title>{{ page_title }}  </title>
 </head>
 	{% if user.is_authenticated %}
 	<p>Welcone, {{ user.username }} </p>
@@ -19,9 +18,15 @@
 	<li><a href={% url  main_url_leo  %}>Add</li>
 {% endif %}
 
+
+{% block title %}
+    {{ page_title }}
+{% endblock %}
+
+
 {% block content %}
 <html>
-    <h2> {{ name }} </h2>
+    <h2> {{ form_name }} </h2>
     <head>
         <link rel="stylesheet" href="{% static 'django_tables2/themes/paleblue/css/screen.css' %}" />
     </head>
@@ -29,20 +34,18 @@
         {% render_table people %}
     </body>
 
-    {% if add_url_leo %}
-	<p><a href={% url  add_url_leo  %}>Add</p>
+    {% if param_action1_name %}
+	<p><a href={{ param_action1 }} type="button" class="btn btn-lg btn-success"> {{ param_action1_name}} </a></p>
     {% endif %}
-    {% if other_url_leo %}
-	<p><a href={% url  other_url_leo  %}> {% url  other_url_leo_name %}</p>
+    {% if param_action2_name %}
+	<p><a href={{ param_action2 }} type="button" class="btn btn-lg btn-info"> {{ param_action2_name}} </a></p>
     {% endif %}
-    {% if other_url_leo1 %}
-	<p><a href={% url  other_url_leo1  %}> {% url  other_url_leo1_name %}</p>
+    {% if param_action3_name %}
+	<p><a href={{ param_action3 }} type="button" class="btn btn-lg btn-danger"> {{ param_action3_name}} </a></p>
     {% endif %}
-    {% if other_url_leo2 %}
-	<p><a href={% url  other_url_leo2 %}> {% url  other_url_leo2_name %} </p>
+    {% if param_action4_name %}
+	<p><a href={{ param_action4 }} type="button" class="btn btn-lg "> {{ param_action4_name}} </a></p>
     {% endif %}
-
-
 
 </html>
 {% endblock %}

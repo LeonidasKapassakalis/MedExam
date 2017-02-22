@@ -4,6 +4,11 @@
 < html lang="el" >
 <head>
 
+{% block title %}
+    {{ page_title }}
+{% endblock %}
+
+
 
     {% block content %}
 
@@ -12,6 +17,9 @@
     <link href="{% static 'bootstrap-3.1.1/css/bootstrap-theme.css'%}" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="{% static 'bootstrap-3.1.1/css/theme.css'%}" rel="stylesheet">
+
+    <h1>{{ form_name }}</h1>
+
 
     <ul>
             <h1>Ονόμα    : {{ object.name }}</h1>
@@ -23,11 +31,11 @@
 			<h2>email    : {{ object.mail }}</h2>
 	</ul>
 
-{% if object.ispatient %}
-  <p><a href={% url 'examinationsper'  object.id %} type="button" class="btn btn-lg btn-success">  Εξετάσεiς      </a></p>
-{% endif %}
-{% if object.isdoctor %}
-  <p><a href={% url 'examinationsperdoctor' object.id %} type="button" class="btn btn-lg btn-info"  >  Exams Ordered  </a></p>
-{% endif %}
+<!--{% if object.ispatient %}--!>
+<!--  <p><a href={% url 'DjgLeoApp001:examinationsper'  object.id %} type="button" class="btn btn-lg btn-success">  Εξετάσεiς      </a></p>--!>
+<!--{% endif %}--!>
+<!--{% if object.isdoctor %}--!>
+  <!--<p><a href={% url 'DjgLeoApp001:examinationsListPerDoctor' object.id %} type="button" class="btn btn-lg btn-info"  >  Exams Ordered  </a></p>--!>
+<!--{% endif %}--!>
 <p><a href={% url 'DjgLeoApp001:update' object.id %} type="button" class="btn btn-lg btn-danger">  Μεταβολή  </a></p>
 {% endblock %}

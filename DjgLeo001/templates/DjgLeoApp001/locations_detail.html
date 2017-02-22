@@ -4,25 +4,35 @@
 <!DOCTYPE html>
 <html lang="el" >
 <head>
-<title>Djgleoapp001 administration | Django site admin</title>
+
+
 <link rel="stylesheet" type="text/css" href="/static/css/base.css" />
 <link rel="stylesheet" type="text/css" href="/static/css/dashboard.css" />
+
+{% block title %}
+    {{ page_title }}
+{% endblock %}
+
 {% block content %}
-    <h2>Locations</h2>
+    <h2>Τοποθεσία</h2>
     <ul>
-            <h1>Name {{ object.name }}</h1>
-            <h3>Address {{ object.address }} {{ object.tk }}</h3>
+            <h1>Επωνυμία {{ object.name }}</h1>
+            <h3>Διεύθυνση {{ object.address }} {{ object.tk }}</h3>
 			<h3>email{{ object.mail }}</h3>
 			<h3>.</h3>
 			<h3>.</h3>
 			<h3>Text {{ object.text }}</h3>
-			<h3>Hospital {{ object.hospital }}</h3>
-	</ul>   
+			<h3>Νοσοκομείο {{ object.hospital }}</h3>
+	</ul>
 
   <ul>
-  {% for area in object.peoples.all %}
-    <li>{{ area }}</li>
+  {% for pplitem in object.peoples.all %}
+    <li>{{ pplitem }}</li>
   {% endfor %}
   </ul>
+
+<link rel="stylesheet" type="text/css" href="{% static "/admin/css/BasePlus.css" %}"/>
+<a class="w3-btn w3-gray w3-border w3-round"  href={% url 'DjgLeoApp001:updatelocation' object.id %}> Μεταβολη</a>
+<a class="w3-btn w3-red w3-border w3-round"  href={% url 'DjgLeoApp001:deletelocation' object.id %}> Διαγραφή</a>
 	
 {% endblock %}

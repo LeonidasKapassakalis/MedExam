@@ -42,34 +42,20 @@ admin.site.register(Examname)
 from .models import Locations
 admin.site.register(Locations)
 
-from .models import Mm
-admin.site.register(Mm)
+from .models import MM
+admin.site.register(MM)
 
-#from .models import Examminmax
-#admin.site.register(Examminmax)
+from .models import MMType
+admin.site.register(MMType)
+
+from .models import Examschema
+admin.site.register(Examschema)
+
+from .models import GroupExam
+admin.site.register(GroupExam)
 
 from .models import DoctorSpeciality
 admin.site.register(DoctorSpeciality)
-
-from .models import SpecialUsers
-
-from django.contrib import admin
-from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
-from django.contrib.auth.models import User
-
-# Define an inline admin descriptor for Employee model
-# which acts a bit like a singleton
-class SpecialUsersInline(admin.StackedInline):
-    model = SpecialUsers
-    can_delete = False
-    verbose_name_plural = 'SpecialUsers'
-
-# Define a new User admin
-class UserAdmin(BaseUserAdmin):
-    inlines = (SpecialUsersInline, )
-
-admin.site.unregister(User)
-admin.site.register(User, UserAdmin)
 
 from .models import OperationCategory
 admin.site.register(OperationCategory)
@@ -91,3 +77,26 @@ admin.site.register(MedicineCategory)
 
 from .models import Medicine
 admin.site.register(Medicine)
+
+
+
+
+from .models import SpecialUsers
+from django.contrib import admin
+from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
+from django.contrib.auth.models import User
+
+# Define an inline admin descriptor for Employee model
+# which acts a bit like a singleton
+class SpecialUsersInline(admin.StackedInline):
+    model = SpecialUsers
+    can_delete = False
+    verbose_name_plural = 'SpecialUsers'
+
+# Define a new User admin
+class UserAdmin(BaseUserAdmin):
+    inlines = (SpecialUsersInline, )
+
+admin.site.unregister(User)
+admin.site.register(User, UserAdmin)
+

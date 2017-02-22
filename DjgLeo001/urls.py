@@ -19,12 +19,11 @@ from DjgLeoApp001 import views
 from DjgLeoApp001 import models
 from DjgLeoApp001 import forms
 
-from django.contrib import admin
+#from django.contrib import admin
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
 
-    url(r'^admin/', admin.site.urls),
     url(r'^menu/', views.NewMenu),
     url(r'^menu1/', views.NewMenu1),
     # url(r'^(?P<question_id>[0-9]+)/$', views.detail, name='detail'),
@@ -49,11 +48,11 @@ urlpatterns = [
 
     #url(r'^tables222/(?P<pk>[0-9]+)/$', views.ExaminationsListPer_Table, name='ExaminationsListPer_Table'),
 
-    url(r'^locations/', views.locations_list, name='locations'),
-    url(r'^location/(?P<pk>[0-9]+)/$', views.LocationDetailView.as_view(), name='location'),
-    url(r'^locationupd/(?P<pk>[0-9]+)/$', views.LocationUpdate.as_view(), name='locationupd'),
-    url(r'^locationdel/(?P<pk>[0-9]+)/$', views.LocationDelete.as_view(), name='locationdel'),
-    url(r'^locationcre/$', views.LocationCreare.as_view(), name='locationcreate'),
+    # url(r'^locations/', views.locations_list, name='locations'),
+    # url(r'^location/(?P<pk>[0-9]+)/$', views.LocationDetailView.as_view(), name='location'),
+    # url(r'^locationupd/(?P<pk>[0-9]+)/$', views.LocationUpdate.as_view(), name='locationupd'),
+    # url(r'^locationdel/(?P<pk>[0-9]+)/$', views.LocationDelete.as_view(), name='locationdel'),
+    # url(r'^locationcre/$', views.LocationCreare.as_view(), name='locationcreate'),
 
     # url(r'^tables1/', views.people1, name='people1'),
     # url(r'^tables3/', models.ZeroConfigurationDatatableView.as_view(), name='order_list_json'),
@@ -67,21 +66,21 @@ urlpatterns = [
 
     url(r'^DjgLeoApp001/', include('DjgLeoApp001.urls')),
 
-    url(r'^examinationsper/([0-9]+)/$', views.ExaminationsListPer.as_view(), name='examinationsper'),
-    url(r'^examinationsper1/([0-9]+)/$', views.examination_list_per , name='examinationspert'),
-    url(r'^examinationsListPerDoctor/([0-9]+)/$', views.ExaminationsListPerDoctor.as_view(), name='examinationsperdoctor'),
-    url(r'^examinationsListPerDoctorPatient/([0-9]+)/([0-9]+)/$', views.ExaminationsListPerDoctorPatient.as_view(), name='examinationsperdoctorpatient'),
-
-    url(r'^examinationspercategory/([0-9]+)/$', views.ExaminationsListPerCategory.as_view(), name='examinationspercategory'),
-    url(r'^examinations/$', views.ExaminationsList.as_view(), name='examinations'),
-
-    url(r'^examinationupd/(?P<pk>[0-9]+)/$', views.ExaminationUpdate.as_view(), name='examinationupd'),
-    url(r'^examinationdet/(?P<pk>[0-9]+)/$', views.ExaminationDetail.as_view(), name='examinationdet'),
-    url(r'^examinationdel/(?P<pk>[0-9]+)/$', views.ExaminationDelete.as_view(), name='examinationdel'),
-    url(r'^examinationcre/$', views.ExaminationCreare.as_view(), name='examinationcreate'),
-
-    url(r'^contact0/$', forms.index, name='contact0'),
-    url(r'^contact1/$', views.ExampleForm0.as_view(), name = 'contact1'),
+    # url(r'^examinationsper/([0-9]+)/$', views.ExaminationsListPer.as_view(), name='examinationsper'),
+    # url(r'^examinationsper1/([0-9]+)/$', views.examination_list_per , name='examinationspert'),
+    # url(r'^examinationsListPerDoctor/([0-9]+)/$', views.ExaminationsListPerDoctor.as_view(), name='examinationsperdoctor'),
+    # url(r'^examinationsListPerDoctorPatient/([0-9]+)/([0-9]+)/$', views.ExaminationsListPerDoctorPatient.as_view(), name='examinationsperdoctorpatient'),
+    #
+    # url(r'^examinationspercategory/([0-9]+)/$', views.ExaminationsListPerCategory.as_view(), name='examinationspercategory'),
+    # url(r'^examinations/$', views.ExaminationsList.as_view(), name='examinations'),
+    #
+    # url(r'^examinationupd/(?P<pk>[0-9]+)/$', views.ExaminationUpdate.as_view(), name='examinationupd'),
+    # url(r'^examinationdet/(?P<pk>[0-9]+)/$', views.ExaminationDetail.as_view(), name='examinationdet'),
+    # url(r'^examinationdel/(?P<pk>[0-9]+)/$', views.ExaminationDelete.as_view(), name='examinationdel'),
+    # url(r'^examinationcre/$', views.ExaminationCreare.as_view(), name='examinationcreate'),
+    #
+    # url(r'^contact0/$', forms.index, name='contact0'),
+    # url(r'^contact1/$', views.ExampleForm0.as_view(), name = 'contact1'),
 
 #DataTables
     url(r'^contact999/$',views.ZeroConfigurationDatatableView.as_view(), name='contact999'),
@@ -95,8 +94,20 @@ urlpatterns = [
 
 #    url(r'^logina/$', include('django.contrib.auth.urls')),
 
-    url(r'^login/$', auth_views.login, name='login'),
-    url(r'^logout/$', auth_views.logout, name='logout'),
+    # url(r'^login/$', auth_views.login, name='login'),
+    # url(r'^logout/$', auth_views.logout, name='logout'),
+    url(r'^admin/', admin.site.urls),
+
+    url(r'^login/$', views.login, name='login'),
+    url(r'^logout/$', views.logout, name='logout'),
+    url(r'^password_change/$', views.password_change, name='password_change'),
+    url(r'^password_change/done/$', views.password_change_done, name='password_change_done'),
+    url(r'^password_reset/$', views.password_reset, name='password_reset'),
+    url(r'^password_reset/done/$', views.password_reset_done, name='password_reset_done'),
+    url(r'^reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',
+        views.password_reset_confirm, name='password_reset_confirm'),
+    url(r'^reset/done/$', views.password_reset_complete, name='password_reset_complete'),
+
     url(r'^admin/', admin.site.urls),
 
     url(r'', views.MainMenu, name='MainMenu'),

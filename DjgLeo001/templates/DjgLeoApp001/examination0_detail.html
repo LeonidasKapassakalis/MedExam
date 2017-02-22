@@ -21,11 +21,11 @@
 
     <p>
 <link rel="stylesheet" type="text/css" href="{% static "/bootstrap-3.1.1/css/bootstrap-theme.css" %}"/>
-    <a href={% url 'examinationsper'  object.peopleid.id %} type="button" class="btn btn-lg btn-success">  Εξετάσεος      </a>
+    <a href={% url 'DjgLeoApp001:examinationspert'  object.peopleid.id %} type="button" class="btn btn-lg btn-success">  Εξετάσεος      </a>
 {% if object.doctorid.isdoctor %}
-<a href={% url 'examinationsperdoctor' object.doctorid.id %} type="button" class="btn btn-lg btn-info"  >  Exams Ordered  </a>
+<a href={% url 'DjgLeoApp001:examinationsListPerDoctor' object.doctorid.id %} type="button" class="btn btn-lg btn-info"  >  Exams Ordered  </a>
 {% endif %}
 </p>
-<a href={% url 'examinationupd'  object.peopleid.id %} type="button" class="btn btn-lg btn-danger">  Μεταβολή  </a>
+<a href={% url 'DjgLeoApp001:updateexam'  object.id %} type="button" class="btn btn-lg btn-danger">  Μεταβολή  </a>
 
 {% endblock %}

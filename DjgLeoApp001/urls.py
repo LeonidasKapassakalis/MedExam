@@ -24,13 +24,18 @@ urlpatterns = [
     url(r'^deleteexam/(?P<pk>[0-9]+)/$', views.ExaminationDelete.as_view(), name='deleteexam'),
     url(r'^createexam/$', views.ExaminationCreare.as_view(), name='createexam'),
 
+    url(r'^examinationsper/([0-9]+)/$', views.ExaminationsListPer.as_view(), name='examinationsper'),
+    url(r'^examinationsper1/([0-9]+)/$', views.examination_list_per, name='examinationspert'),
+    url(r'^examinationsListPerDoctor/([0-9]+)/$', views.ExaminationsListPerDoctor.as_view(),name='examinationsListPerDoctor'),
+    url(r'^examinationsListPerDoctorPatient/([0-9]+)/([0-9]+)/$', views.ExaminationsListPerDoctorPatient.as_view(),name='examinationsperdoctorpatient'),
+
 #ExamBio
     url(r'^listexambio/(?P<Patient>[0-9]+)/$', views.BioExaminationList, name='listexambio'),
     url(r'^detailexambio/(?P<pk>[0-9]+)/$', views.BioExaminationDetailView.as_view(), name='detailexambio'),
     url(r'^updateexambio/(?P<pk>[0-9]+)/$', views.BioExaminationUpdate.as_view(), name='updateexambio'),
     url(r'^deleteexambio/(?P<pk>[0-9]+)/$', views.BioExaminationDelete.as_view(), name='deleteexambio'),
     url(r'^createexambio/$', views.BioExaminationCreare.as_view(), name='createexambio'),
-    url(r'^updateexambio/(?P<pk>[0-9]+)/$', views.MassBioExaminationDetailUpdate, name='updateexambio'),
+    url(r'^massupdateexambio/(?P<pk>[0-9]+)/$', views.MassBioExaminationDetailUpdate, name='massupdateexambio'),
 
 #ExamBioDet
     url(r'^listexambiodet/(?P<exampk>[0-9]+)/$', views.BioExaminationDetList, name='listexambiodet'),
@@ -54,5 +59,82 @@ urlpatterns = [
     url(r'^updatemedicine/(?P<pk>[0-9]+)/$', views.MedicineUpdate.as_view(), name='updatemedicine'),
     url(r'^deletemedicine/(?P<pk>[0-9]+)/$', views.MedicineDelete.as_view(), name='deletemedicine'),
     url(r'^createmedicine/$', views.MedicineCreare.as_view(), name='createmedicine'),
+
+#Location
+    url(r'^listlocation/$', views.LocationList, name='listlocation'),
+    url(r'^detaillocation/(?P<pk>[0-9]+)/$', views.LocationDetailView.as_view(), name='detaillocation'),
+    url(r'^updatelocation/(?P<pk>[0-9]+)/$', views.LocationUpdate.as_view(), name='updatelocation'),
+    url(r'^deletelocation/(?P<pk>[0-9]+)/$', views.LocationDelete.as_view(), name='deletelocation'),
+    url(r'^createlocation/$', views.LocationCreare.as_view(), name='createlocation'),
+
+#examname
+    url(r'^listexamname/$', views.ExamnameList, name='listexamname'),
+    url(r'^detailexamname/(?P<pk>[0-9]+)/$', views.ExamnameDetailView.as_view(), name='detailexamname'),
+    url(r'^updateexamname/(?P<pk>[0-9]+)/$', views.ExamnameUpdate.as_view(), name='updateexamname'),
+    url(r'^deleteexamname/(?P<pk>[0-9]+)/$', views.ExamnameDelete.as_view(), name='deleteexamname'),
+    url(r'^createexamname/$', views.ExamnameCreare.as_view(), name='createexamname'),
+
+
+#mm
+    url(r'^listmm/$', views.MMList, name='listmm'),
+    url(r'^updatemm/(?P<pk>[0-9]+)/$', views.MMUpdate.as_view(), name='updatemm'),
+    url(r'^createmm/$', views.MMCreate.as_view(), name='createmm'),
+
+
+#mmtype
+    url(r'^listmmtype/$', views.MMTypeList, name='listmmtype'),
+    url(r'^updatemmtype/(?P<pk>[0-9]+)/$', views.MMTypeUpdate.as_view(), name='updatemmtype'),
+    url(r'^createmmtype/$', views.MMTypeCreate.as_view(), name='createmmtype'),
+
+
+#groupexam
+    url(r'^listgroupexam/$', views.GroupExamList, name='listgroupexam'),
+    url(r'^updategroupexam/(?P<pk>[0-9]+)/$', views.GroupExamUpdate.as_view(), name='updategroupexam'),
+    url(r'^creategroupexam/$', views.GroupExamCreate.as_view(), name='creategroupexam'),
+
+
+#medicinecategory
+    url(r'^listmedicinecategory/$', views.MedicineCategoryList, name='listmedicinecategory'),
+    url(r'^updatemedicinecategory/(?P<pk>[0-9]+)/$', views.MedicineCategoryUpdate.as_view(), name='updatemedicinecategory'),
+    url(r'^createmedicinecategory/$', views.MedicineCategoryCreate.as_view(), name='createmedicinecategory'),
+
+
+#bioexaminationcategory
+    url(r'^listbioexaminationcategory/$', views.BioExaminationCategoryList, name='listbioexaminationcategory'),
+    url(r'^updatebioexaminationcategory/(?P<pk>[0-9]+)/$', views.BioExaminationCategoryUpdate.as_view(), name='updatebioexaminationcategory'),
+    url(r'^createbioexaminationcategory/$', views.BioExaminationCategoryCreate.as_view(), name='createbioexaminationcategory'),
+
+
+#operationcategory
+    url(r'^listoperationcategory/$', views.OperationCategoryList, name='listoperationcategory'),
+    url(r'^updateoperationcategory/(?P<pk>[0-9]+)/$', views.OperationCategoryUpdate.as_view(), name='updateoperationcategory'),
+    url(r'^createoperationcategory/$', views.OperationCategoryCreate.as_view(), name='createoperationcategory'),
+
+
+#doctorspeciality
+    url(r'^listdoctorspeciality/$', views.DoctorSpecialityList, name='listdoctorspeciality'),
+    url(r'^updatedoctorspeciality/(?P<pk>[0-9]+)/$', views.DoctorSpecialityUpdate.as_view(), name='updatedoctorspeciality'),
+    url(r'^createdoctorspeciality/$', views.DoctorSpecialityCreate.as_view(), name='createdoctorspeciality'),
+
+
+#examinationcategory
+    url(r'^listexaminationcategory/$', views.ExaminationCategoryList, name='listexaminationcategory'),
+    url(r'^updateexaminationcategory/(?P<pk>[0-9]+)/$', views.ExaminationCategoryUpdate.as_view(), name='updateexaminationcategory'),
+    url(r'^createexaminationcategory/$', views.ExaminationCategoryCreate.as_view(), name='createexaminationcategory'),
+
+
+#examschema
+    url(r'^listexamschema/$', views.ExamSchemaList, name='listexamschema'),
+    url(r'^updateexamschema/(?P<pk>[0-9]+)/$', views.ExamSchemaUpdate.as_view(), name='updateexamschema'),
+    url(r'^createexamschema/$', views.ExamSchemaCreate.as_view(), name='createexamschema'),
+
+
+#country
+    url(r'^listcountry/$', views.CountryList, name='listcountry'),
+    url(r'^updatecountry/(?P<pk>[0-9]+)/$', views.CountryUpdate.as_view(), name='updatecountry'),
+    url(r'^createcountry/$', views.CountryCreate.as_view(), name='createcountry'),
+
+
+    url(r'^someurl/$', views.someurl, name='someurl'),
 
 ]
