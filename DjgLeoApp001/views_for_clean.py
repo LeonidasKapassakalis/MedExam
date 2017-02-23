@@ -271,26 +271,26 @@ class ExaminationsListPerCategory(LoginRequiredMixin,UserPassesTestMixin,ModelFo
 
 from django.views.generic.detail import DetailView
 
-class ExaminationDetail(LoginRequiredMixin,UserPassesTestMixin,ModelFormWidgetMixin,DetailView):
-    model = Examination0
+# class ExaminationDetail(LoginRequiredMixin,UserPassesTestMixin,ModelFormWidgetMixin,DetailView):
+#     model = Examination0
+#
+#     def test_func(self):
+#         return True
 
-    def test_func(self):
-        return True
 
-
-class ExaminationCreare(LoginRequiredMixin,UserPassesTestMixin,ModelFormWidgetMixin,CreateView):
-    model = Examination0
-    fields = ['peopleid','doctorid','categorid','dateofexam','notes','comments']
-    template_name_suffix = '_create_form'
-    success_url = '/examinations/'
-    widgets = {
-        'dateofexam': DateWidget(attrs={'id': "id_dateofexam"}, bootstrap_version=3),
-        'notes': forms.Textarea(attrs={'cols': 100, 'rows': 10}),
-        'comments': forms.Textarea(attrs={'cols': 100, 'rows': 5}),
-        }
-
-    def test_func(self):
-        return True
+# class ExaminationCreare(LoginRequiredMixin,UserPassesTestMixin,ModelFormWidgetMixin,CreateView):
+#     model = Examination0
+#     fields = ['peopleid','doctorid','categorid','dateofexam','notes','comments']
+#     template_name_suffix = '_create_form'
+#     success_url = '/examinations/'
+#     widgets = {
+#         'dateofexam': DateWidget(attrs={'id': "id_dateofexam"}, bootstrap_version=3),
+#         'notes': forms.Textarea(attrs={'cols': 100, 'rows': 10}),
+#         'comments': forms.Textarea(attrs={'cols': 100, 'rows': 5}),
+#         }
+#
+#     def test_func(self):
+#         return True
 
 
 # class ExaminationUpdate(LoginRequiredMixin,UserPassesTestMixin,ModelFormWidgetMixin,UpdateView):
@@ -309,48 +309,48 @@ class ExaminationCreare(LoginRequiredMixin,UserPassesTestMixin,ModelFormWidgetMi
 #         return True
 
 
-class ExaminationDelete(LoginRequiredMixin,UserPassesTestMixin,ModelFormWidgetMixin,DeleteView):
-    model = Examination0
-    fields = ['peopleid','doctorid','categorid','dateofexam','notes','comments']
-    success_url = '/examinations/'
-
-    def test_func(self):
-        return True
-
-
-class ExaminationTable(tables.Table):
-    detail = tables.LinkColumn('item_detail', args=[('pk')], orderable=False, empty_values=[''])
-    edit = tables.LinkColumn('item_edit', args=[('pk')],orderable=False,empty_values=[''])
-#    delete = tables.LinkColumn('item_delete', args=[('pk')],orderable=False,empty_values=[''])
-    class Meta:
-        model = Examination0
-        row_attrs = {
-            'data-id': lambda record: record.pk
-        }
-        attrs = {'class': 'paleblue'}
-        exclude = ['id','nationality','idoncontry','ispatient','notes','isdoctor','canlogin','accessonlyhisfile','photo','notes']
-#        fields
-        sequence = ['dateofexam','...']
-
-    def render_edit(self, record):
-        return mark_safe('<a href=/examinationupd/' + str(record.pk) + '/><span style="color:blue">Edit</span></a>')
-
-    def render_delete(self, record):
-        return mark_safe('<a href=/examinationdel/' + str(record.pk) + '/><span style="color:red">Delete</span></a>')
-
-    def render_detail(self, record):
-        return mark_safe('<a href=/examinationdet/' + str(record.pk) + '/><span style="color:green">View</span></a></a>')
-
-
-def examination_list(request):
-    table = ExaminationTable(Examination0.objects.all())
-    RequestConfig(request).configure(table)
-    return render(request, 'General/Generic_Table_view.html',
-                  {'objects': table,
-                    'page_title': u'Εξετάσεις',
-                    'form_name' : u'Εξετάσεις',
-                    'param_action1': reverse('DjgLeoApp001:createexambio'),
-                    'param_action1_name': 'Προσθήκη'})
+# class ExaminationDelete(LoginRequiredMixin,UserPassesTestMixin,ModelFormWidgetMixin,DeleteView):
+#     model = Examination0
+#     fields = ['peopleid','doctorid','categorid','dateofexam','notes','comments']
+#     success_url = '/examinations/'
+#
+#     def test_func(self):
+#         return True
+#
+#
+# class ExaminationTable(tables.Table):
+#     detail = tables.LinkColumn('item_detail', args=[('pk')], orderable=False, empty_values=[''])
+#     edit = tables.LinkColumn('item_edit', args=[('pk')],orderable=False,empty_values=[''])
+# #    delete = tables.LinkColumn('item_delete', args=[('pk')],orderable=False,empty_values=[''])
+#     class Meta:
+#         model = Examination0
+#         row_attrs = {
+#             'data-id': lambda record: record.pk
+#         }
+#         attrs = {'class': 'paleblue'}
+#         exclude = ['id','nationality','idoncontry','ispatient','notes','isdoctor','canlogin','accessonlyhisfile','photo','notes']
+# #        fields
+#         sequence = ['dateofexam','...']
+#
+#     def render_edit(self, record):
+#         return mark_safe('<a href=/examinationupd/' + str(record.pk) + '/><span style="color:blue">Edit</span></a>')
+#
+#     def render_delete(self, record):
+#         return mark_safe('<a href=/examinationdel/' + str(record.pk) + '/><span style="color:red">Delete</span></a>')
+#
+#     def render_detail(self, record):
+#         return mark_safe('<a href=/examinationdet/' + str(record.pk) + '/><span style="color:green">View</span></a></a>')
+#
+#
+# def examination_list(request):
+#     table = ExaminationTable(Examination0.objects.all())
+#     RequestConfig(request).configure(table)
+#     return render(request, 'General/Generic_Table_view.html',
+#                   {'objects': table,
+#                     'page_title': u'Εξετάσεις',
+#                     'form_name' : u'Εξετάσεις',
+#                     'param_action1': reverse('DjgLeoApp001:createexambio'),
+#                     'param_action1_name': 'Προσθήκη'})
 
 #Crispy
 from crispy_forms.helper import FormHelper

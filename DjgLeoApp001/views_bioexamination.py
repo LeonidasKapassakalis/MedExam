@@ -110,7 +110,7 @@ class BioExaminationCreare(LoginRequiredMixin,UserPassesTestMixin,CreateView):
 class BioExaminationUpdate(LoginRequiredMixin,UserPassesTestMixin,UpdateView):
     model = BioExamination
     form_class = BioExaminationForm
-    template_name = 'DjgLeoApp001/../DjgLeo001/templates/General/General_cu_form.html'
+    template_name = 'General/General_cu_form.html'
 
     def test_func(self):
         return True
@@ -126,6 +126,7 @@ class BioExaminationDelete(LoginRequiredMixin,UserPassesTestMixin,ModelFormWidge
 
 from .models import BioExaminationDetail
 from .models import Examname
+from .models import GroupExam
 
 class BioExaminationDetailList(ListView):
     model = BioExaminationDetail
@@ -133,7 +134,7 @@ class BioExaminationDetailList(ListView):
 def MassBioExaminationDetailUpdate(request, pk):
     BioExamTable = BioExamination.objects.get(pk=pk)
     for x in BioExamTable.examsschema.all():
-        for y in Examname.objects.filter(groupexam_id=x.pk):
+        for y in Examname.objects.filter(groupexam=x.pk):
             a=BioExaminationDetail()
             a.BioExaminationId = BioExamTable
             a.examnameid = y
@@ -146,5 +147,22 @@ def MassBioExaminationDetailUpdate(request, pk):
                 pass
     return BioExaminationList(request, BioExamTable.peopleid.pk)
 
+    # def MassBioExaminationDetailUpdate(request, pk):
+    #     BioExamTable = BioExamination.objects.get(pk=pk)
+    #     for x in BioExamTable.examsschema.all():
+    #         for y in Examname.objects.filter(groupexam=x.pk):
+    #             a = BioExaminationDetail()
+    #             a.BioExaminationId = BioExamTable
+    #             a.examnameid = y
+    #             a.value = 0
+    #             try:
+    #                 a.save()
+    #             except:
+    #                 print y.name
+    #                 a.clean()
+    #                 pass
+    #     return BioExaminationList(request, BioExamTable.peopleid.pk)
 
-########################################################################################################
+
+
+        ########################################################################################################

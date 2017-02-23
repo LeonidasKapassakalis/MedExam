@@ -91,6 +91,7 @@ def ExaminationList(request, Patient):
 
 
 class ExaminationCreare(LoginRequiredMixin, UserPassesTestMixin,CreateView):
+    model = Examination0
     form_class = ExaminationForm
     template_name = 'General/General_cu_form.html'
 

@@ -80,7 +80,7 @@ def MedicineList(request, Patient):
                     'param_action1': reverse('DjgLeoApp001:createmedicine'),
                     'param_action1_name': 'Προσθήκη'})
 
-class MedicineDetailView(LoginRequiredMixin, UserPassesTestMixin, ModelFormWidgetMixin, DetailView):
+class MedicineDetailView(LoginRequiredMixin, UserPassesTestMixin, DetailView):
     model = Medicine
 
     def get_context_data(self, **kwargs):
@@ -90,7 +90,7 @@ class MedicineDetailView(LoginRequiredMixin, UserPassesTestMixin, ModelFormWidge
     def test_func(self):
         return True
 
-class MedicineCreare(LoginRequiredMixin, UserPassesTestMixin, ModelFormWidgetMixin, CreateView):
+class MedicineCreare(LoginRequiredMixin, UserPassesTestMixin, CreateView):
     model = Medicine
     form_class = Medicine
     template_name = 'General/General_cu_form.html'
@@ -101,10 +101,10 @@ class MedicineCreare(LoginRequiredMixin, UserPassesTestMixin, ModelFormWidgetMix
     def test_func(self):
         return True
 
-class MedicineUpdate(LoginRequiredMixin, UserPassesTestMixin, ModelFormWidgetMixin, UpdateView):
+class MedicineUpdate(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Medicine
     form_class = Medicine
-    template_name = 'DjgLeoApp001/../DjgLeo001/templates/General/General_cu_form.html'
+    template_name = 'General/General_cu_form.html'
 
     def test_func(self):
         return True

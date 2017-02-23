@@ -107,6 +107,8 @@ class Examname(models.Model):
         (2, 'Κείμενο'),
         (3, 'Αριθμητικό + Κείμενο'),
         (4, 'Εκτενές Κείμενο'),
+        (5, 'Λογικό'),
+        (9, 'Άλλο'),
     )
     result_type = models.IntegerField(max_length=1, choices=RESULT_TYPES, verbose_name=u'Είδος Απάντησης')
     bioexaminationcategory = models.ForeignKey('BioExaminationCategory', verbose_name=u'Κατηγορία', blank=True,null=True)

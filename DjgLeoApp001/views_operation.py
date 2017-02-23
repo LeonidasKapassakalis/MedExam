@@ -78,7 +78,7 @@ def OperationList(request, Patient):
                     'param_action1_name': 'Προσθήκη'})
 
 
-class OperationDetailView(LoginRequiredMixin, UserPassesTestMixin, ModelFormWidgetMixin, DetailView):
+class OperationDetailView(LoginRequiredMixin, UserPassesTestMixin, DetailView):
     model = Operations
 
     def get_context_data(self, **kwargs):
@@ -88,18 +88,18 @@ class OperationDetailView(LoginRequiredMixin, UserPassesTestMixin, ModelFormWidg
     def test_func(self):
         return True
 
-class OperationCreare(LoginRequiredMixin, UserPassesTestMixin, ModelFormWidgetMixin, CreateView):
+class OperationCreare(LoginRequiredMixin, UserPassesTestMixin, CreateView):
     model = Operations
     form_class = OperationsForm
-    template_name = 'DjgLeoApp001/../DjgLeo001/templates/General/General_cu_form.html'
+    template_name = 'General/General_cu_form.html'
 
     def test_func(self):
         return True
 
-class OperationUpdate(LoginRequiredMixin, UserPassesTestMixin, ModelFormWidgetMixin, UpdateView):
+class OperationUpdate(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Operations
     form_class = OperationsForm
-    template_name = 'DjgLeoApp001/../DjgLeo001/templates/General/General_cu_form.html'
+    template_name = 'General/General_cu_form.html'
 
     def test_func(self):
         return True
