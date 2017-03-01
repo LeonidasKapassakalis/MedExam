@@ -105,9 +105,9 @@ class People(models.Model):
 
     def get_absolute_url(self):
         if self.isdoctor:
-            return reverse('DjgLeoApp001:listd')
+            return reverse('DjgLeoApp001:doctor_list')
         else:
-            return reverse('DjgLeoApp001:listp')
+            return reverse('DjgLeoApp001:patient_list')
 
 #max_digits=10, decimal_places=4,
 
