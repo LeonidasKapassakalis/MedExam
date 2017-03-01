@@ -84,10 +84,12 @@ def ExaminationList(request, Patient):
     request.session['patient_id'] = Patient
     RequestConfig(request, paginate={'per_page': 25}).configure(table)
     p = People.objects.get(pk=Patient)
-    return render(request, 'people.html', {'people': table,
-                                           'form_name': u'Εξετάσεις για ' + p.name + ' ' + p.surname,
-                                           'param_action1': reverse('DjgLeoApp001:createexam'),
-                                           'param_action1_name': 'Προσθήκη'})
+    return render(request, 'General/Generic_Table_view.html',
+                  {'objects': table,
+                   'page_title': u'Εξετάσεις για ' + p.name + ' ' + p.surname,
+                   'form_name': u'Εξετάσεις για ' + p.name + ' ' + p.surname,
+                   'param_action1': reverse('DjgLeoApp001:createexam'),
+                    'param_action1_name': 'Προσθήκη'})
 
 
 class ExaminationCreare(LoginRequiredMixin, UserPassesTestMixin,CreateView):

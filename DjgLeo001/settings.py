@@ -45,6 +45,8 @@ INSTALLED_APPS = [
 
     'datetimewidget',
 
+    'django_filters',
+
 #    'datatableview',
     'crispy_forms',
     'django_tables2',
@@ -153,6 +155,12 @@ FIXTURE_DIRS = ('/fixtures/',)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'medexamsgreece'
+EMAIL_HOST_PASSWORD = '094057575LE@'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 

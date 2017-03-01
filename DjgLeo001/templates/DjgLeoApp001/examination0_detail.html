@@ -19,14 +19,17 @@
 <textarea cols=100 rows=10 readonly="True">{{ object.notes }}</textarea>
 <textarea cols=100 rows=5 readonly="True">{{ object.comments }}</textarea>
 
-    <p>
-<link rel="stylesheet" type="text/css" href="{% static "/bootstrap-3.1.1/css/bootstrap-theme.css" %}"/>
-    <a href={% url 'DjgLeoApp001:examinationspert'  object.peopleid.id %} type="button" class="btn btn-lg btn-success">  Εξετάσεος      </a>
+
+<link rel="stylesheet" type="text/css" href="{% static "/admin/css/BasePlus.css" %}"/>
+<p>
+    <a class="w3-btn w3-blue w3-border w3-round" href={% url 'DjgLeoApp001:updateexam' object.id %}  > Μεταβολή</a>
+    <a class="w3-btn w3-green w3-border w3-round" href={% url 'DjgLeoApp001:examinationsper' object.id %}  > Εξετάσεις</a>
 {% if object.doctorid.isdoctor %}
-<a href={% url 'DjgLeoApp001:examinationsListPerDoctor' object.doctorid.id %} type="button" class="btn btn-lg btn-info"  >  Exams Ordered  </a>
+       <a class="w3-btn w3-lime w3-border w3-round" href={% url 'DjgLeoApp001:examinationsListPerDoctor' object.id %}  >Exams Ordered</a>
 {% endif %}
 </p>
-<a href={% url 'DjgLeoApp001:updateexam'  object.id %} type="button" class="btn btn-lg btn-danger">  Μεταβολή  </a>
+
+
 
 {% endblock %}
 

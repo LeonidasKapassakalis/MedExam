@@ -4,25 +4,12 @@
 
 <!DOCTYPE html>
 <html lang="el_EL" >
-<head>
-</head>
-	{% if user.is_authenticated %}
-	<p>Welcone, {{ user.username }} </p>
-	{% else %}
-	<p>Welcome, new user. Please log in.</p>
-	{% endif %}
 
 <h1>{{ page_title }}  </h1>
-
-{% if main_url_leo %}
-	<li><a href={% url  main_url_leo  %}>Add</li>
-{% endif %}
-
 
 {% block title %}
     {{ page_title }}
 {% endblock %}
-
 
 {% block content %}
 <html>
@@ -31,6 +18,18 @@
     <head>
         <link rel="stylesheet" href="{% static 'django_tables2/themes/paleblue/css/screen.css' %}" />
     </head>
+<body>
+<form method='GET'>
+    {{ filter.form }}
+    <p>
+    <input type='submit' value='Filter' />
+    |
+    {{ filter.qs.count }} από {{ filter.queryset.count }}.
+    |
+    <a href='{{ request.path }}' >Clear</a>
+    </p>
+</form>
+
     <body>
         {% render_table objects %}
     </body>

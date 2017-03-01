@@ -29,9 +29,11 @@
 			<h2>Comments : {{ object.comments }}</h2>
 			
 </ul>
-
-<p><a href={% url 'DjgLeoApp001:updateexambio' object.id %} type="button" class="btn btn-lg btn-danger">  Μεταβολή  </a></p>
-<p><a href={% url 'DjgLeoApp001:massupdateexambio' object.id %} type="button" class="btn btn-lg btn-danger">  Mass Update </a></p>
+<link rel="stylesheet" type="text/css" href="{% static "/admin/css/BasePlus.css" %}"/>
+<p>
+    <a class="w3-btn w3-blue w3-border w3-round" href={% url 'DjgLeoApp001:updateexambio' object.id %}  > Μεταβολή</a>
+    <a class="w3-btn w3-green w3-border w3-round" href={% url 'DjgLeoApp001:massupdateexambio' object.id %}  >Mass Update</a>
+</p>
 {% endblock %}
 
 

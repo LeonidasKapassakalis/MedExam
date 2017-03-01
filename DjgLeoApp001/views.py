@@ -115,7 +115,7 @@ from views_examname import *
 from views_for_clean import *
 from views_admin import *
 from views_param import *
-
+from views_schemadetail import *
 
 
 def someurl(request):

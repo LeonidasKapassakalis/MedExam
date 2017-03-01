@@ -4,6 +4,7 @@ from django.shortcuts import redirect
 from django import forms
 
 import django_tables2 as tables
+
 from django.shortcuts import render
 from django_tables2 import RequestConfig
 from django.utils.html import mark_safe
@@ -44,11 +45,13 @@ class BioExaminationDetForm(forms.ModelForm):
             'notes': forms.Textarea(attrs={'cols': 100, 'rows': 10}),
             }
 
+
 class BioExaminationDetTable(tables.Table):
     detail = tables.LinkColumn('item_detail', args=[('pk')], orderable=False, empty_values=[''])
     update = tables.LinkColumn('item_update', args=[('pk')], orderable=False, empty_values=[''])
     delete = tables.LinkColumn('item_delete', args=[('pk')], orderable=False, empty_values=[''])
     mark   = tables.LinkColumn('item_mark', args=[('value')], orderable=False, empty_values=[''])
+
     class Meta:
         model = BioExaminationDetail
         row_attrs = {
@@ -80,8 +83,6 @@ def BioExaminationDetList(request,exampk):
     if not request.user.is_authenticated:
         return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
 
-#    locale.setlocale(locale.LC_ALL, 'Greek')
-
     table = BioExaminationDetTable(BioExaminationDetail.objects.all().filter(BioExaminationId=exampk))
     p = BioExamination.objects.get(id=exampk).peopleid
     e = BioExamination.objects.get(id=exampk)
@@ -99,7 +100,7 @@ class BioExaminationDetDetailView(LoginRequiredMixin,UserPassesTestMixin,ModelFo
     model = BioExaminationDetail
     def get_context_data(self, **kwargs):
         context = super(BioExaminationDetDetailView, self).get_context_data(**kwargs)
-        context['page_title'] = u'Αναλυτικά Στοιχεία Βιοχημικών ' +  context['BioExaminationId']
+        context['page_title'] = u'Αναλυτικά Στοιχεία Βιοχημικών ' +  context['bioexaminationdetail'].BioExaminationId.__str__()
         context['form_name'] = u'Αναλυτικά Στοιχεία Βιοχημικών '
         context['param_action1'] = reverse('DjgLeoApp001:updateexambiodet', kwargs={'pk':context['bioexaminationdetail'].pk})
         context['param_action1_name'] = u'Μεταβολή'
@@ -134,4 +135,3 @@ class BioExaminationDetDelete(LoginRequiredMixin,UserPassesTestMixin,DeleteView)
     def test_func(self):
         return True
 
-########################################################################################################

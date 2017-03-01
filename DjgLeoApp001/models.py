@@ -39,6 +39,21 @@ class Examschema(models.Model):
         return reverse('DjgLeoApp001:listexamschema')
 
 
+class ExamSchemaDetail(models.Model):
+    ExamSchema = models.ForeignKey('Examschema', verbose_name=u'Σχήμα')
+    ExamName = models.ForeignKey('Examname', verbose_name=u'Εξέταση')
+
+    def __unicode__(self):
+        return self.ExamSchema.name + ' ' +  self.ExamName.name
+
+    class Meta:
+        unique_together = (("ExamSchema", "ExamName"),)
+        ordering = ('ExamSchema','ExamName')
+
+    def get_absolute_url(self):
+        return reverse('DjgLeoApp001:listschemadetail')
+
+
 class Locations(models.Model):
     id = models.AutoField
     name = models.CharField(u'Οναμασία',unique=True, max_length=50)
@@ -269,8 +284,9 @@ class BioExaminationCategory(models.Model):
 class BioExamination(models.Model):
     peopleid = models.ForeignKey(People, verbose_name=u'Ασθενής')
     doctorid = models.ForeignKey(People, verbose_name=u'Γιατρός', limit_choices_to={'isdoctor': True} , related_name = 'ExaminationBioDoctor')
-    categorid = models.ForeignKey(ExaminationCategory, verbose_name=u'Κατηγορία')
+    categorid = models.ForeignKey(ExaminationCategory, verbose_name=u'Κατηγορία', related_name='BioExaminationCategory')
     examsschema = models.ManyToManyField('Examschema', verbose_name = u'Σχήμα')
+    category = models.ManyToManyField(ExaminationCategory, verbose_name=u'Κατηγορίες', blank=True, related_name='BioExaminationCategories')
     dateofexam = models.DateField(verbose_name=u'Ημερομηνία Εξέτασης')
     notes   = models.CharField(verbose_name=u'Σημειώσεις',max_length=8192, blank=True, null=True)
     comments = models.CharField(verbose_name=u'Σχόλια',max_length=8192, blank=True, null=True)
@@ -279,6 +295,10 @@ class BioExamination(models.Model):
         return reverse('DjgLeoApp001:listexambio', kwargs={'Patient': self.peopleid.id})
 
     def __unicode__(self):
+        a=self.dateofexam
+        return self.peopleid.surname + ' ' + self.peopleid.name +  ' ' +a.strftime('%d/%m/%Y') + ' + ' + self.notes[:100]
+
+    def __str__(self):
         a=self.dateofexam
         return self.peopleid.surname + ' ' + self.peopleid.name +  ' ' +a.strftime('%d/%m/%Y') + ' + ' + self.notes[:100]
 

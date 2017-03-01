@@ -51,6 +51,9 @@ admin.site.register(MMType)
 from .models import Examschema
 admin.site.register(Examschema)
 
+from .models import ExamSchemaDetail
+admin.site.register(ExamSchemaDetail)
+
 from .models import GroupExam
 admin.site.register(GroupExam)
 

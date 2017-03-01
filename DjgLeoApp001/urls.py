@@ -3,6 +3,7 @@ from django.conf.urls import url
 
 from . import views
 
+from . import views_test
 
 app_name = 'DjgLeoApp001'
 urlpatterns = [
@@ -129,10 +130,32 @@ urlpatterns = [
     url(r'^createexamschema/$', views.ExamSchemaCreate.as_view(), name='createexamschema'),
 
 
+#schemadetail
+    url(r'^listschemadetail/$', views.SchemaDetailList, name='listschemadetail'),
+    url(r'^updateschemadetail/(?P<pk>[0-9]+)/$', views.SchemaDetailUpdate.as_view(), name='updateschemadetail'),
+    url(r'^createschemadetail/$', views.SchemaDetailCreate.as_view(), name='createschemadetail'),
+
+
+
+
 #country
     url(r'^listcountry/$', views.CountryList, name='listcountry'),
     url(r'^updatecountry/(?P<pk>[0-9]+)/$', views.CountryUpdate.as_view(), name='updatecountry'),
     url(r'^createcountry/$', views.CountryCreate.as_view(), name='createcountry'),
+
+
+    # url(r'^test/$', views_test.BioExaminationDetailSingleTableView.as_view(), name='test'),
+    # url(r'^testnf/$', views_test.BioExaminationDetailSingleTableView.as_view(), name='test'),
+    # url(r'^testfil/$', views_test.BioExaminationDetailFilteredSingleTableView.as_view(), name='test'),
+    url(r'^testf/(?P<exampk>[0-9]+)/$', views_test.BioExaminationDetailFiltered, name='testf'),
+    url(r'^testfa/(?P<peoplepk>[0-9]+)/$', views_test.BioExaminationDetailFilteredAll, name='testfa'),
+    url(r'^testff/$', views_test.PeopleFiltered, name='testf'),
+    # url(r'^testfilex/$', views_test.BioExaminationDetailFilterEx.as_view(), name='test'),
+
+    # url(r'^$', BookFilteredSingleTableView.as_view()),
+    # url(r'^nofilter/$', BookSingleTableView.as_view()),
+    # url(r'^filter2/$', FilteredTableView.as_view()),
+    # url(r'^filter_ex/$', FilterExListView.as_view()),
 
 
     url(r'^someurl/$', views.someurl, name='someurl'),

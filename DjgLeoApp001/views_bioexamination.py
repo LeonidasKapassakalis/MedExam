@@ -38,7 +38,7 @@ class BioExaminationForm(forms.ModelForm):
 
     class Meta:
         model = BioExamination
-        fields = ['peopleid', 'doctorid', 'examsschema', 'categorid', 'dateofexam', 'notes', 'comments']
+        fields = ['peopleid', 'doctorid', 'examsschema', 'categorid', 'category' ,'dateofexam', 'notes', 'comments']
         widgets = {
              'dateofexam': DateWidget(attrs={'id': "id_dateof"}, bootstrap_version=3),
              'notes': forms.Textarea(attrs={'cols': 100, 'rows': 10}),
@@ -133,8 +133,8 @@ class BioExaminationDetailList(ListView):
 
 def MassBioExaminationDetailUpdate(request, pk):
     BioExamTable = BioExamination.objects.get(pk=pk)
-    for x in BioExamTable.examsschema.all():
-        for y in Examname.objects.filter(groupexam=x.pk):
+    for x in BioExamTable.category.all():
+        for y in Examname.objects.filter(bioexaminationcategory=x.pk):
             a=BioExaminationDetail()
             a.BioExaminationId = BioExamTable
             a.examnameid = y

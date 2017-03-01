@@ -12,6 +12,7 @@ from django.conf import settings
 
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.mixins import UserPassesTestMixin
+from django.contrib.auth.decorators import permission_required
 
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
@@ -85,7 +86,7 @@ class PeopleDelete(LoginRequiredMixin,UserPassesTestMixin,ModelFormWidgetMixin,D
     def test_func(self):
         return True
 
-
+@permission_required('People.view', login_url='/login/')
 def patient_list(request):
 #     u = User.objects.get(username=request.user)
 #     if request.user.is_superuser or request.user.is_staff:
@@ -159,6 +160,7 @@ class PeopleTable(tables.Table):
         return mark_safe(aaa)
 
 
+@permission_required('People.view', login_url='/login/')
 def person_list(request):
     if not request.user.is_authenticated:
         return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
@@ -190,6 +192,8 @@ class DoctorListTable(tables.Table):
     def render_detail(self,record):
         return mark_safe('<a href=/DjgLeoApp001/detail/'+str(record.pk)+'/><span style="color:green">Λεπτομέριες</span></a></a>')
 
+
+@permission_required('People.view', login_url='/login/')
 def doctor_list(request):
     table = DoctorListTable(People.objects.all().filter(isdoctor=1))
     RequestConfig(request, paginate={'per_page': 25}).configure(table)

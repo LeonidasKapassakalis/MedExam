@@ -21,11 +21,13 @@
 			<h2>Από Ημερ. : {{ object.datestart }}</h2>			
 			<h2>Έως Ημερ. : {{ object.dateend }}</h2>
 			<textarea cols=100 rows=10 readonly="True">{{ object.notes }}</textarea>
-			
-			
-<!--    examsschema = models.ManyToManyField('Examschema') --!>
-			
 	</ul>
+			
+<link rel="stylesheet" type="text/css" href="{% static "/admin/css/BasePlus.css" %}"/>
+<p>
+    <a class="w3-btn w3-blue w3-border w3-round" href={% url 'DjgLeoApp001:updatemedicine' object.id %}  > Μεταβολή</a>
+</p>
 
-<p><a href={% url 'DjgLeoApp001:updatemedicine' object.id %} type="button" class="btn btn-lg btn-danger">  Μεταβολή  </a></p>
+
+
 {% endblock %}

@@ -12,6 +12,7 @@ from django.conf import settings
 
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.mixins import UserPassesTestMixin
+from django.contrib.auth.decorators import permission_required
 
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
@@ -65,9 +66,10 @@ class MedicineTable(tables.Table):
         return mark_safe('<a href=' + rev + u'><span style="color:red">Λεπτομέρειες</span></a>')
 
 # @login_required
+@permission_required('Medicine.view')
 def MedicineList(request, Patient):
-    if not request.user.is_authenticated:
-        return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
+#    if not request.user.is_authenticated:
+#        return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
     table = MedicineTable(Medicine.objects.all().filter(peopleid=Patient))
     request.session['patient_id'] = Patient
     RequestConfig(request, paginate={'per_page': 25}).configure(table)
@@ -92,7 +94,7 @@ class MedicineDetailView(LoginRequiredMixin, UserPassesTestMixin, DetailView):
 
 class MedicineCreare(LoginRequiredMixin, UserPassesTestMixin, CreateView):
     model = Medicine
-    form_class = Medicine
+    form_class = MedicineForm
     template_name = 'General/General_cu_form.html'
 
     def get_initial(self):
@@ -103,7 +105,7 @@ class MedicineCreare(LoginRequiredMixin, UserPassesTestMixin, CreateView):
 
 class MedicineUpdate(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Medicine
-    form_class = Medicine
+    form_class = MedicineForm
     template_name = 'General/General_cu_form.html'
 
     def test_func(self):
