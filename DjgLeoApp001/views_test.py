@@ -205,3 +205,36 @@ def PeopleFiltered(request):
                    'param_action1': reverse('DjgLeoApp001:createexambiodet'),
                    'param_action1_name': 'Προσθήκη'})
 
+
+def Graphos(request):
+    data = [
+        ['Year', 'Sales', 'Expenses', 'Items Sold', 'Net Profit'],
+        ['2004', 1000, 400, 100, 600],
+        ['2005', 1170, 460, 120, 310],
+        ['2006', 660, 1120, 50, -460],
+        ['2007', 1030, 540, 100, 200],
+        ]
+
+    from graphos.sources.simple import SimpleDataSource
+    from graphos.renderers.gchart import LineChart
+    from graphos.renderers.gchart import ColumnChart
+    from graphos.renderers.gchart import BarChart
+    from graphos.renderers.gchart import PieChart
+    from graphos.renderers.gchart import AreaChart
+    from graphos.renderers.gchart import TreeMapChart
+    from graphos.renderers.gchart import CandlestickChart
+    from graphos.renderers.gchart import GaugeChart
+
+#    from graphos.renderers.highcharts import LineChart
+
+
+
+    # DataSource object
+    data_source = SimpleDataSource(data=data)
+    # Chart object
+    chart  = LineChart(data_source)
+    chart1 = BarChart(data_source)
+    context = {'chart': chart, 'chart1': chart1 }
+    return render(request, 'char.html', context)
+
+

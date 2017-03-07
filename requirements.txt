@@ -3,9 +3,11 @@ django-bootstrap3==7.1.0
 django-crispy-forms==1.6.1
 django-datatables-view==1.13.2
 django-report-builder==3.4.4
+django-chartit==0.2.9
 django-tables2==1.2.7
 django-filter==1.0.1
 psycopg2
 dj-database-url
 gunicorn
 whitenoise
+django-graphos==0.3.41

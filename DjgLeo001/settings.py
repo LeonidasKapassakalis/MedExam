@@ -45,11 +45,14 @@ INSTALLED_APPS = [
 
     'datetimewidget',
 
+    'graphos',
+
     'django_filters',
 
 #    'datatableview',
     'crispy_forms',
     'django_tables2',
+
 #    'columns',
 #    'report_builder',
     

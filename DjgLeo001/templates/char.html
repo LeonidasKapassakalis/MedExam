@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+    google.load("visualization", "1", {packages:["corechart"]});
+</script>
+
+<script src="http://yui.yahooapis.com/3.10.0/build/yui/yui-min.js"></script>
+
+{{ chart.as_html }}
+<p></p>
+{{ chart1.as_html }}
+
+{% endblock content %}
