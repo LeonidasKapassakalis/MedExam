@@ -137,8 +137,8 @@ def BioExaminationDetailFiltered(request,exampk):
     return render(request, 'General/Generic_Table_view_filter_panel.html',
                   {'objects': table,
                    'filter' : filter,
-                   'page_title': u'Ανάληση Βιοχημικών για ' + p.name + ' ' + p.surname + ' ' + e.dateofexam.strftime('%d/%m/%Y'),
-                   'form_name':  u'Ανάληση Βιοχημικών για ' + p.name + ' ' + p.surname + ' ' + e.dateofexam.strftime('%d/%m/%Y'),
+                   'page_title': u'Ανάληση Εργαστηριακών για ' + p.name + ' ' + p.surname + ' ' + e.dateofexam.strftime('%d/%m/%Y'),
+                   'form_name':  u'Ανάληση Εργαστηριακών για ' + p.name + ' ' + p.surname + ' ' + e.dateofexam.strftime('%d/%m/%Y'),
                    'param_action1': reverse('DjgLeoApp001:createexambiodet'),
                    'param_action1_name': 'Προσθήκη'})
 
@@ -171,8 +171,8 @@ def BioExaminationDetailFilteredAll(request,peoplepk):
     return render(request, 'General/Generic_Table_view_filter_panel.html',
                   {'objects': table,
                    'filter' : filter,
-                   'page_title': u'Ανάληση Βιοχημικών για ' + p.name + ' ' + p.surname,
-                   'form_name':  u'Ανάληση Βιοχημικών για ' + p.name + ' ' + p.surname,
+                   'page_title': u'Ανάληση Εργαστηριακών για ' + p.name + ' ' + p.surname,
+                   'form_name':  u'Ανάληση Εργαστηριακών για ' + p.name + ' ' + p.surname,
                    'param_action1': reverse('DjgLeoApp001:createexambiodet'),
                    'param_action1_name': 'Προσθήκη'})
 
@@ -200,19 +200,19 @@ def PeopleFiltered(request):
     return render(request, 'General/Generic_Table_view_filter_panel.html',
                   {'objects': table,
                    'filter' : filter,
-                   'page_title': u'Ανάληση Βιοχημικών για ',
-                   'form_name':  u'Ανάληση Βιοχημικών για ',
+                   'page_title': u'Ανάληση Εργαστηριακών για ',
+                   'form_name':  u'Ανάληση Εργαστηριακών για ',
                    'param_action1': reverse('DjgLeoApp001:createexambiodet'),
                    'param_action1_name': 'Προσθήκη'})
 
 
 def Graphos(request):
     data = [
-        ['Year', 'Sales', 'Expenses', 'Items Sold', 'Net Profit'],
-        ['2004', 1000, 400, 100, 600],
-        ['2005', 1170, 460, 120, 310],
-        ['2006', 660, 1120, 50, -460],
-        ['2007', 1030, 540, 100, 200],
+        ['Year', 'Sales', 'Expenses', 'Items Sold', 'Net Profit', 'All'],
+        ['2004', 1000, 400, 100, 600, 100],
+        ['2005', 1170, 460, 120, 310, 100],
+        ['2006', 660, 1120, 50, -460, 100],
+        ['2007', 1030, 540, 100, 200, 100],
         ]
 
     from graphos.sources.simple import SimpleDataSource

@@ -31,11 +31,16 @@
 			<h2>email    : {{ object.mail }}</h2>
 	</ul>
 
-<!--{% if object.ispatient %}--!>
-<!--  <p><a href={% url 'DjgLeoApp001:examinationsper'  object.id %} type="button" class="btn btn-lg btn-success">  Εξετάσεiς      </a></p>--!>
-<!--{% endif %}--!>
-<!--{% if object.isdoctor %}--!>
-  <!--<p><a href={% url 'DjgLeoApp001:examinationsListPerDoctor' object.id %} type="button" class="btn btn-lg btn-info"  >  Exams Ordered  </a></p>--!>
-<!--{% endif %}--!>
-<p><a href={% url 'DjgLeoApp001:update' object.id %} type="button" class="btn btn-lg btn-danger">  Μεταβολή  </a></p>
+<link rel="stylesheet" type="text/css" href="{% static "/admin/css/BasePlus.css" %}"/>
+<p>
+    <a class="w3-btn w3-blue w3-border w3-round" href={% url 'DjgLeoApp001:update' object.id %}> Μεταβολή</a>
+<!---    {% if object.ispatient %} --!>
+<!---    <a class="w3-btn w3-green w3-border w3-round" href={% url 'DjgLeoApp001:examinationsper'  object.id %}>Εξετάσεiς</a>--!>
+<!---    {% endif %}--!>
+<!---    {% if object.isdoctor %}--!>
+<!---    <a class="w3-btn w3-green w3-border w3-round" href={% url 'DjgLeoApp001:examinationsListPerDoctor' object.id %}>Exams Ordered</a>--!>
+<!---    {% endif %} --!>
+</p>
+
+
 {% endblock %}

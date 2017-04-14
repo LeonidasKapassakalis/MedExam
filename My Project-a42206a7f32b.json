@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "formidable-era-164410",
+  "private_key_id": "a42206a7f32b75b4606854f9791394b9bf5e6ea2",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDYObx0RtzTQIji\nwUqWxw2mqXJe1oybRjbRyRH5SSEq0nQgpPfPFZiiEGAltRWsXYWFhNqAaDWorcob\nFwf8jRCGLYbXVewB7jgaQSNfWVS5vIWi/UKK86HvHpZsjyss12A9EUZFmAGJhPnU\nlHouxaQyzV7ewQbdja4DZJguAz/FfdJYLf8htA3Yaj7sa24/Xc8o0TtoqDnbWffs\nQKGChKZao1eYER8aUSsdTysNjlrEs2nMg0ym3GtMsartw+wdxDfw7BjIBEDlHgjn\nT7OKqwsvIzrIu3rgkXYuQpEI9FgAlIxI/PXaMfMShJG8XoMH8DB4UJY+19SNiNsZ\nRkim1sSpAgMBAAECggEANpLT8tET2SnXosvAZK/WzTLFUBR8ppAhM++43p9LhMBb\nWQXqGdVMkdLqQXoj/z4Xfiya7X/f0zQR56Z3eJGuEv+Yoe7ow0/5zv6Ty/QDA2IG\npK2hRurY+z5QHxQ/hHDTtHYQs237LVdnqvTSpc1ydPQKttQnRHIG8opIMozVYqW5\nRtXuko6AxDbn4Sbe0fYrdCINJC0Jvn7y73QwaQg+N5Cojs7lwnKZcgl5r4yLMNdm\n802aBRWaL4Peye8S+yglCHFy0rIeZvXsq6eNKTy5aXxfaiipdBawqenXQ0YEZUm9\nQZ3zN+1Rq5astJXdH20wHtH+nvr6JFxlFPVTq/xehQKBgQDy/7XGigo8+trtsgOA\nCJxEoJNQURgTsHE8zJDnRQTUNuUrcwSobmGKw2RPG5iU0El9E/aqX4Vk3PILJlGM\nArCi4HAMIcCchrMQ5nFH75/xxyfqAnLvz6t7YpXlxkI0z6hdI9OmamiYnwMRvKkY\n9BAQs541Ylu/brGuqJ4+5Z46lwKBgQDjy1GlllTILAQqNeQB8wPCbeh/in2AO9Rz\nJqIv/7y3wTxSMddC6YcZMurZFOMsnwUJDD0gCBunAWIj5CSHabojuC69PH9Vi3cn\nldQdnzFg577Buw/D5nl59VCApsOJ0+vJ8ALeZZQ+WNGWW9EvH1bCjVW6YPylP+vf\n4wnPYycivwKBgFwFPd8Lk0j4bkOpL+4iVJsge+jkbMu3+4ncpdsOpf9/MlW73r2x\n3zpfN/NFLgjcv5egIb7vIWLK0NYsEqGEu0NS3tuZRImB8PmraqalNdqnYpQZjVEH\nQZceBEnZRGUfZlCvKo1Qqn9xaAYlfZu3gQXyHy10K+5YiuzradHDvqHNAoGAQHV7\nQCEfEpmqAAvJ3mdW7ADP5q9Yvh2wC3mmMXDrhQ/wMs4ZvLx6Vz4aSJ1pf2nsMdg9\nv7+rm4F/tOpND+hyHMN0rmXdHmbdq9zw7gTrIyHQz99QIb4pJ8KsKguGj4zhTv5U\nwXv7C/10KVkIA46ZrWnzFU92johdBbioQQAsxd8CgYEA8qQmetYIdErR6U6SIF6a\ntk06N0iYoWcPbFTduvrOHOAs+Kj1NUgc5jGkVv01PpBlt+o73ZJ4mmS22Iz3Zmkx\nsWp+Fivs4WZHKfjDY/D9IYwlMB4uAxolSMXpYI0+YkyVttsQLMufSL3So8GB9CVk\nYqfjkvMzovyqOuHTKMpHxvE=\n-----END PRIVATE KEY-----\n",
+  "client_email": "medexams@formidable-era-164410.iam.gserviceaccount.com",
+  "client_id": "101841382316925882025",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/medexams%40formidable-era-164410.iam.gserviceaccount.com"
+}

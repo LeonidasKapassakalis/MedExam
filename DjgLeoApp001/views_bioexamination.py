@@ -78,8 +78,8 @@ def BioExaminationList(request,Patient):
     p = People.objects.get(pk=Patient)
     return render(request, 'General/Generic_Table_view.html',
                   {'objects': table,
-                    'page_title': u'Βιοχημικές για ' + p.name + ' ' + p.surname,
-                    'form_name': u'Βιοχημικές για ' + p.name + ' ' + p.surname,
+                    'page_title': u'Εργαστηριακές για ' + p.name + ' ' + p.surname,
+                    'form_name': u'Εργαστηριακές για ' + p.name + ' ' + p.surname,
                     'param_action1': reverse('DjgLeoApp001:createexambio'),
                     'param_action1_name': 'Προσθήκη'})
 
@@ -88,9 +88,9 @@ class BioExaminationDetailView(LoginRequiredMixin,UserPassesTestMixin,ModelFormW
     model = BioExamination
     def get_context_data(self, **kwargs):
         context = super(self.__class__, self).get_context_data(**kwargs)
-        context['page_title'] = u'Στοιχεία Βιοχημικών ' +  context['object'].peopleid.surname + ' ' \
+        context['page_title'] = u'Στοιχεία Εργαστηριακές ' +  context['object'].peopleid.surname + ' ' \
                                 + context['object'].peopleid.name + ' ' + str(context['object'].dateofexam)
-        context['form_name'] = u'Στοιχεία Βιοχημικών '
+        context['form_name'] = u'Στοιχεία Εργαστηριακές '
         return context
     def test_func(self):
         return True
@@ -122,47 +122,31 @@ class BioExaminationDelete(LoginRequiredMixin,UserPassesTestMixin,ModelFormWidge
 
 
 ########################################################################################################
-#TODO
+
 
 from .models import BioExaminationDetail
 from .models import Examname
 from .models import GroupExam
+from .models import Examschema
+from .models import ExamSchemaDetail
 
 class BioExaminationDetailList(ListView):
     model = BioExaminationDetail
 
 def MassBioExaminationDetailUpdate(request, pk):
     BioExamTable = BioExamination.objects.get(pk=pk)
-    for x in BioExamTable.category.all():
-        for y in Examname.objects.filter(bioexaminationcategory=x.pk):
+    for x in BioExamTable.examsschema.all():
+        for y in ExamSchemaDetail.objects.filter(ExamSchema=x.pk):
             a=BioExaminationDetail()
             a.BioExaminationId = BioExamTable
-            a.examnameid = y
+            a.examnameid = y.ExamName
             a.value = 0
             try:
                 a.save()
             except:
-                print y.name
+                print y.ExamName.name
                 a.clean()
                 pass
     return BioExaminationList(request, BioExamTable.peopleid.pk)
 
-    # def MassBioExaminationDetailUpdate(request, pk):
-    #     BioExamTable = BioExamination.objects.get(pk=pk)
-    #     for x in BioExamTable.examsschema.all():
-    #         for y in Examname.objects.filter(groupexam=x.pk):
-    #             a = BioExaminationDetail()
-    #             a.BioExaminationId = BioExamTable
-    #             a.examnameid = y
-    #             a.value = 0
-    #             try:
-    #                 a.save()
-    #             except:
-    #                 print y.name
-    #                 a.clean()
-    #                 pass
-    #     return BioExaminationList(request, BioExamTable.peopleid.pk)
-
-
-
-        ########################################################################################################
+######################################################################################################

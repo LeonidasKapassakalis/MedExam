@@ -32,6 +32,7 @@ from .views import ModelFormWidgetMixin
 
 from .models import BioExaminationDetail
 from .models import BioExamination
+from .models import Examname
 
 class BioExaminationDetForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
@@ -57,7 +58,7 @@ class BioExaminationDetTable(tables.Table):
         row_attrs = {
             'data-id': lambda record: record.pk
         }
-        exclude = ['BioExaminationId','id']
+        exclude = ['BioExaminationId',]#'id']
         attrs = {'class': 'paleblue'}
 
     def render_detail(self, record):
@@ -90,8 +91,8 @@ def BioExaminationDetList(request,exampk):
     RequestConfig(request, paginate={'per_page': 20}).configure(table)
     return render(request, 'General/Generic_Table_view.html',
                   {'objects': table,
-                   'page_title': u'Ανάληση Βιοχημικών για ' + p.name + ' ' + p.surname + ' ' + e.dateofexam.strftime('%d/%m/%Y'),
-                   'form_name':  u'Ανάληση Βιοχημικών για ' + p.name + ' ' + p.surname + ' ' + e.dateofexam.strftime('%d/%m/%Y'),
+                   'page_title': u'Ανάληση Εργαστηριακών για ' + p.name + ' ' + p.surname + ' ' + e.dateofexam.strftime('%d/%m/%Y'),
+                   'form_name':  u'Ανάληση Εργαστηριακών για ' + p.name + ' ' + p.surname + ' ' + e.dateofexam.strftime('%d/%m/%Y'),
                     'param_action1': reverse('DjgLeoApp001:createexambiodet'),
                     'param_action1_name': 'Προσθήκη'})
 
@@ -100,8 +101,8 @@ class BioExaminationDetDetailView(LoginRequiredMixin,UserPassesTestMixin,ModelFo
     model = BioExaminationDetail
     def get_context_data(self, **kwargs):
         context = super(BioExaminationDetDetailView, self).get_context_data(**kwargs)
-        context['page_title'] = u'Αναλυτικά Στοιχεία Βιοχημικών ' +  context['bioexaminationdetail'].BioExaminationId.__str__()
-        context['form_name'] = u'Αναλυτικά Στοιχεία Βιοχημικών '
+        context['page_title'] = u'Αναλυτικά Στοιχεία Εργαστηριακών ' +  context['bioexaminationdetail'].BioExaminationId.__str__()
+        context['form_name'] = u'Αναλυτικά Στοιχεία Εργαστηριακών '
         context['param_action1'] = reverse('DjgLeoApp001:updateexambiodet', kwargs={'pk':context['bioexaminationdetail'].pk})
         context['param_action1_name'] = u'Μεταβολή'
         context['param_action2'] = reverse('DjgLeoApp001:deleteexambiodet', kwargs={'pk':context['bioexaminationdetail'].pk})

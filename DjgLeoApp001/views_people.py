@@ -226,10 +226,10 @@ class PatientListTable(tables.Table):
         return mark_safe('<a href=/DjgLeoApp001/detail/'+str(record.pk)+'/><span style="color:green">Λεπτομέριες</span></a></a>')
 
     def render_exam(self, record):
-        return mark_safe('<a href=/DjgLeoApp001/listexam/'+str(record.pk)+'/><span style="color:blue">Εξετάσεις</span></a>')
+        return mark_safe('<a href=/DjgLeoApp001/listexam/'+str(record.pk)+'/><span style="color:blue">Ιατρικές Εξ.</span></a>')
 
     def render_exambio(self, record):
-        return mark_safe('<a href=/DjgLeoApp001/listexambio/'+str(record.pk)+'/><span style="color:blue">Βιοχημικές Εξετάσεις</span></a>')
+        return mark_safe('<a href=/DjgLeoApp001/listexambio/'+str(record.pk)+'/><span style="color:blue">Εργαστηριακές</span></a>')
 
     def render_medicine(self, record):
         return mark_safe('<a href=/DjgLeoApp001/listmedicine/'+str(record.pk)+'/><span style="color:blue">Φάρμακα</span></a>')
