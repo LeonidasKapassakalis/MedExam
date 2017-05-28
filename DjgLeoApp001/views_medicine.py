@@ -39,7 +39,7 @@ class MedicineForm(forms.ModelForm):
 
     class Meta:
         model = Medicine
-        fields = ['peopleid', 'doctorid', 'categorid', 'dateof', 'datestart', 'dateend', 'notes']
+        fields = ['peopleid', 'doctorid', 'categorid', 'dateof', 'datestart', 'dateend', 'docfile', 'notes']
         widgets = {
             'dateof': DateWidget(attrs={'id': "id_dateof"}, bootstrap_version=3),
             'datestart': DateWidget(attrs={'id': "id_dateof"}, bootstrap_version=3),

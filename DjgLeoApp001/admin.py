@@ -81,6 +81,9 @@ admin.site.register(MedicineCategory)
 from .models import Medicine
 admin.site.register(Medicine)
 
+from .models import VExamdetaisl
+admin.site.register(VExamdetaisl)
+
 
 
 

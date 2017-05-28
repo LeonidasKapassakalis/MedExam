@@ -150,6 +150,7 @@ urlpatterns = [
     url(r'^testf/(?P<exampk>[0-9]+)/$', views_test.BioExaminationDetailFiltered, name='testf'),
     url(r'^testfa/(?P<peoplepk>[0-9]+)/$', views_test.BioExaminationDetailFilteredAll, name='testfa'),
     url(r'^testff/$', views_test.PeopleFiltered, name='testf'),
+    url(r'^testff1/$', views_test.VExamdetaislFiltered, name='testf1'),
     url(r'^Graphos/$', views_test.Graphos, name='Graphos'),
     # url(r'^testchart/$', views_test.basicline, name='testchart'),
     # url(r'^testfilex/$', views_test.BioExaminationDetailFilterEx.as_view(), name='test'),

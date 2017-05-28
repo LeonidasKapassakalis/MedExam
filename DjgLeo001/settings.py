@@ -40,15 +40,13 @@ INSTALLED_APPS = [
 #
     'whitenoise.runserver_nostatic',    
     'django.contrib.staticfiles',
-    
     'DjgLeoApp001.apps.Djgleoapp001Config',
-
     'datetimewidget',
 
     'graphos',
+    'gdstorage',    
 
     'django_filters',
-
 #    'datatableview',
     'crispy_forms',
     'django_tables2',
@@ -164,6 +162,11 @@ EMAIL_HOST_USER = 'medexamsgreece'
 EMAIL_HOST_PASSWORD = '094057575LE@'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+#
+# Google Drive Storage Settings
+#
+GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE = 'MedExamPDF-f593eef68e0d.json'
 
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 

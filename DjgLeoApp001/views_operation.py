@@ -37,7 +37,7 @@ class OperationsForm(forms.ModelForm):
 
     class Meta:
         model = Operations
-        fields = ['peopleid', 'doctorid', 'categorid', 'dateof', 'notes', 'comments']
+        fields = ['peopleid', 'doctorid', 'categorid', 'dateof', 'docfile', 'notes', 'comments']
         widgets = {
             'dateof': DateWidget(attrs={'id': "id_dateof"}, bootstrap_version=3),
             'notes': forms.Textarea(attrs={'cols': 100, 'rows': 10}),

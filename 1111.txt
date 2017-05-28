@@ -1,0 +1,411 @@
+# This is an auto-generated Django model module.
+# You'll have to do the following manually to clean this up:
+#   * Rearrange models' order
+#   * Make sure each model has one field with primary_key=True
+#   * Make sure each ForeignKey has `on_delete` set to the desired behavior.
+#   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
+# Feel free to rename the models, but don't rename db_table values or field names.
+from __future__ import unicode_literals
+
+from django.db import models
+
+
+class Djgleoapp001Bioexamination(models.Model):
+    dateofexam = models.DateField()
+    notes = models.CharField(max_length=8192, blank=True, null=True)
+    comments = models.CharField(max_length=8192, blank=True, null=True)
+    categorid = models.ForeignKey('Djgleoapp001Examinationcategory', models.DO_NOTHING)
+    doctorid = models.ForeignKey('Djgleoapp001People', models.DO_NOTHING)
+    peopleid = models.ForeignKey('Djgleoapp001People', models.DO_NOTHING)
+    docfile = models.CharField(max_length=100, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'DjgLeoApp001_bioexamination'
+
+
+class Djgleoapp001BioexaminationCategory(models.Model):
+    bioexamination = models.ForeignKey(Djgleoapp001Bioexamination, models.DO_NOTHING)
+    examinationcategory = models.ForeignKey('Djgleoapp001Examinationcategory', models.DO_NOTHING)
+
+    class Meta:
+        managed = False
+        db_table = 'DjgLeoApp001_bioexamination_category'
+        unique_together = (('bioexamination', 'examinationcategory'),)
+
+
+class Djgleoapp001BioexaminationExamsschema(models.Model):
+    bioexamination = models.ForeignKey(Djgleoapp001Bioexamination, models.DO_NOTHING)
+    examschema = models.ForeignKey('Djgleoapp001Examschema', models.DO_NOTHING)
+
+    class Meta:
+        managed = False
+        db_table = 'DjgLeoApp001_bioexamination_examsschema'
+        unique_together = (('bioexamination', 'examschema'),)
+
+
+class Djgleoapp001Bioexaminationcategory(models.Model):
+    name = models.CharField(unique=True, max_length=50)
+    sname = models.CharField(max_length=15)
+
+    class Meta:
+        managed = False
+        db_table = 'DjgLeoApp001_bioexaminationcategory'
+
+
+class Djgleoapp001Bioexaminationdetail(models.Model):
+    value = models.FloatField(blank=True, null=True)
+    notes = models.CharField(max_length=255, blank=True, null=True)
+    bioexaminationid = models.ForeignKey(Djgleoapp001Bioexamination, models.DO_NOTHING, db_column='BioExaminationId_id')  # Field name made lowercase.
+    examnameid = models.ForeignKey('Djgleoapp001Examname', models.DO_NOTHING)
+
+    class Meta:
+        managed = False
+        db_table = 'DjgLeoApp001_bioexaminationdetail'
+        unique_together = (('bioexaminationid', 'examnameid'),)
+
+
+class Djgleoapp001Country(models.Model):
+    name = models.CharField(unique=True, max_length=50)
+    abbr = models.CharField(unique=True, max_length=2)
+    telephoneext = models.CharField(max_length=4)
+
+    class Meta:
+        managed = False
+        db_table = 'DjgLeoApp001_country'
+
+
+class Djgleoapp001Doctorspeciality(models.Model):
+    name = models.CharField(unique=True, max_length=50)
+    sname = models.CharField(max_length=15)
+
+    class Meta:
+        managed = False
+        db_table = 'DjgLeoApp001_doctorspeciality'
+
+
+class Djgleoapp001Examination0(models.Model):
+    dateofexam = models.DateField()
+    notes = models.CharField(max_length=8192, blank=True, null=True)
+    comments = models.CharField(max_length=8192, blank=True, null=True)
+    categorid = models.ForeignKey('Djgleoapp001Examinationcategory', models.DO_NOTHING)
+    doctorid = models.ForeignKey('Djgleoapp001People', models.DO_NOTHING)
+    peopleid = models.ForeignKey('Djgleoapp001People', models.DO_NOTHING)
+    docfile = models.CharField(max_length=100, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'DjgLeoApp001_examination0'
+
+
+class Djgleoapp001Examinationcategory(models.Model):
+    name = models.CharField(unique=True, max_length=50)
+    sname = models.CharField(max_length=15)
+
+    class Meta:
+        managed = False
+        db_table = 'DjgLeoApp001_examinationcategory'
+
+
+class Djgleoapp001Examname(models.Model):
+    name = models.CharField(unique=True, max_length=100)
+    sname = models.CharField(max_length=25)
+    comments = models.CharField(max_length=250, blank=True, null=True)
+    bioexaminationcategory = models.ForeignKey(Djgleoapp001Bioexaminationcategory, models.DO_NOTHING, blank=True, null=True)
+    mm = models.ForeignKey('Djgleoapp001Mm', models.DO_NOTHING, blank=True, null=True)
+    groupexam = models.ForeignKey('Djgleoapp001Groupexam', models.DO_NOTHING, blank=True, null=True)
+    result_type = models.IntegerField()
+    maxvalue = models.DecimalField(max_digits=10, decimal_places=4)
+    minvalue = models.DecimalField(max_digits=10, decimal_places=4)
+
+    class Meta:
+        managed = False
+        db_table = 'DjgLeoApp001_examname'
+
+
+class Djgleoapp001Examschema(models.Model):
+    name = models.CharField(unique=True, max_length=150)
+    sequence = models.CharField(max_length=50, blank=True, null=True)
+    notes = models.CharField(max_length=150, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'DjgLeoApp001_examschema'
+
+
+class Djgleoapp001Examschemadetail(models.Model):
+    examname = models.ForeignKey(Djgleoapp001Examname, models.DO_NOTHING, db_column='ExamName_id')  # Field name made lowercase.
+    examschema = models.ForeignKey(Djgleoapp001Examschema, models.DO_NOTHING, db_column='ExamSchema_id')  # Field name made lowercase.
+
+    class Meta:
+        managed = False
+        db_table = 'DjgLeoApp001_examschemadetail'
+        unique_together = (('examschema', 'examname'),)
+
+
+class Djgleoapp001Groupexam(models.Model):
+    name = models.CharField(unique=True, max_length=50)
+    sname = models.CharField(max_length=15)
+
+    class Meta:
+        managed = False
+        db_table = 'DjgLeoApp001_groupexam'
+
+
+class Djgleoapp001Locations(models.Model):
+    name = models.CharField(unique=True, max_length=50)
+    address = models.CharField(max_length=200, blank=True, null=True)
+    phone = models.CharField(max_length=60, blank=True, null=True)
+    mail = models.CharField(max_length=50, blank=True, null=True)
+    tk = models.CharField(max_length=5, blank=True, null=True)
+    text = models.TextField(blank=True, null=True)
+    hospital = models.NullBooleanField()
+    medicalcenter = models.NullBooleanField()
+    eopyy = models.NullBooleanField()
+    contact = models.TextField(blank=True, null=True)
+    countryid = models.ForeignKey(Djgleoapp001Country, models.DO_NOTHING)
+
+    class Meta:
+        managed = False
+        db_table = 'DjgLeoApp001_locations'
+
+
+class Djgleoapp001LocationsPeoples(models.Model):
+    locations = models.ForeignKey(Djgleoapp001Locations, models.DO_NOTHING)
+    people = models.ForeignKey('Djgleoapp001People', models.DO_NOTHING)
+
+    class Meta:
+        managed = False
+        db_table = 'DjgLeoApp001_locations_peoples'
+        unique_together = (('locations', 'people'),)
+
+
+class Djgleoapp001Medicine(models.Model):
+    dateof = models.DateField()
+    datestart = models.DateField()
+    dateend = models.DateField()
+    notes = models.CharField(max_length=8192, blank=True, null=True)
+    categorid = models.ForeignKey('Djgleoapp001Medicinecategory', models.DO_NOTHING)
+    doctorid = models.ForeignKey('Djgleoapp001People', models.DO_NOTHING)
+    peopleid = models.ForeignKey('Djgleoapp001People', models.DO_NOTHING)
+    docfile = models.CharField(max_length=100, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'DjgLeoApp001_medicine'
+        unique_together = (('peopleid', 'doctorid', 'categorid', 'dateof'),)
+
+
+class Djgleoapp001Medicinecategory(models.Model):
+    name = models.CharField(unique=True, max_length=50)
+    sname = models.CharField(max_length=15)
+
+    class Meta:
+        managed = False
+        db_table = 'DjgLeoApp001_medicinecategory'
+
+
+class Djgleoapp001Mm(models.Model):
+    name = models.CharField(unique=True, max_length=50)
+    sname = models.CharField(max_length=15)
+    mmtype = models.ForeignKey('Djgleoapp001Mmtype', models.DO_NOTHING, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'DjgLeoApp001_mm'
+
+
+class Djgleoapp001Mmtype(models.Model):
+    name = models.CharField(unique=True, max_length=50)
+    sname = models.CharField(max_length=15)
+
+    class Meta:
+        managed = False
+        db_table = 'DjgLeoApp001_mmtype'
+
+
+class Djgleoapp001Operationcategory(models.Model):
+    name = models.CharField(unique=True, max_length=50)
+    sname = models.CharField(max_length=15)
+
+    class Meta:
+        managed = False
+        db_table = 'DjgLeoApp001_operationcategory'
+
+
+class Djgleoapp001Operations(models.Model):
+    dateof = models.DateField()
+    notes = models.CharField(max_length=8192, blank=True, null=True)
+    comments = models.CharField(max_length=8192, blank=True, null=True)
+    categorid = models.ForeignKey(Djgleoapp001Operationcategory, models.DO_NOTHING)
+    doctorid = models.ForeignKey('Djgleoapp001People', models.DO_NOTHING)
+    peopleid = models.ForeignKey('Djgleoapp001People', models.DO_NOTHING)
+    docfile = models.CharField(max_length=100, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'DjgLeoApp001_operations'
+
+
+class Djgleoapp001People(models.Model):
+    name = models.CharField(max_length=30)
+    surname = models.CharField(max_length=50)
+    dateofbirth = models.DateField(blank=True, null=True)
+    nationality = models.CharField(max_length=20, blank=True, null=True)
+    phone = models.CharField(max_length=60, blank=True, null=True)
+    fax = models.CharField(max_length=60, blank=True, null=True)
+    mobile = models.CharField(max_length=60, blank=True, null=True)
+    mail = models.CharField(max_length=250, blank=True, null=True)
+    ispatient = models.NullBooleanField(db_column='IsPatient')  # Field name made lowercase.
+    isdoctor = models.NullBooleanField(db_column='IsDoctor')  # Field name made lowercase.
+    canlogin = models.NullBooleanField()
+    accessonlyhisfile = models.NullBooleanField()
+    notes = models.CharField(max_length=8192, blank=True, null=True)
+    photo = models.BinaryField(blank=True, null=True)
+    countryid = models.ForeignKey(Djgleoapp001Country, models.DO_NOTHING, db_column='CountryId')  # Field name made lowercase.
+
+    class Meta:
+        managed = False
+        db_table = 'DjgLeoApp001_people'
+
+
+class Djgleoapp001Specialusers(models.Model):
+    notes = models.CharField(max_length=100)
+    altpeopleid = models.ForeignKey(Djgleoapp001People, models.DO_NOTHING)
+    location = models.ForeignKey(Djgleoapp001Locations, models.DO_NOTHING)
+    peopleid = models.ForeignKey(Djgleoapp001People, models.DO_NOTHING)
+    user = models.ForeignKey('AuthUser', models.DO_NOTHING, unique=True)
+
+    class Meta:
+        managed = False
+        db_table = 'DjgLeoApp001_specialusers'
+
+
+class Djgleoapp001SpecialusersDoctors(models.Model):
+    specialusers = models.ForeignKey(Djgleoapp001Specialusers, models.DO_NOTHING)
+    people = models.ForeignKey(Djgleoapp001People, models.DO_NOTHING)
+
+    class Meta:
+        managed = False
+        db_table = 'DjgLeoApp001_specialusers_doctors'
+        unique_together = (('specialusers', 'people'),)
+
+
+class Djgleoapp001SpecialusersPeoples(models.Model):
+    specialusers = models.ForeignKey(Djgleoapp001Specialusers, models.DO_NOTHING)
+    people = models.ForeignKey(Djgleoapp001People, models.DO_NOTHING)
+
+    class Meta:
+        managed = False
+        db_table = 'DjgLeoApp001_specialusers_peoples'
+        unique_together = (('specialusers', 'people'),)
+
+
+class AuthGroup(models.Model):
+    name = models.CharField(unique=True, max_length=80)
+
+    class Meta:
+        managed = False
+        db_table = 'auth_group'
+
+
+class AuthGroupPermissions(models.Model):
+    group = models.ForeignKey(AuthGroup, models.DO_NOTHING)
+    permission = models.ForeignKey('AuthPermission', models.DO_NOTHING)
+
+    class Meta:
+        managed = False
+        db_table = 'auth_group_permissions'
+        unique_together = (('group', 'permission'),)
+
+
+class AuthPermission(models.Model):
+    name = models.CharField(max_length=255)
+    content_type = models.ForeignKey('DjangoContentType', models.DO_NOTHING)
+    codename = models.CharField(max_length=100)
+
+    class Meta:
+        managed = False
+        db_table = 'auth_permission'
+        unique_together = (('content_type', 'codename'),)
+
+
+class AuthUser(models.Model):
+    password = models.CharField(max_length=128)
+    last_login = models.DateTimeField(blank=True, null=True)
+    is_superuser = models.BooleanField()
+    username = models.CharField(unique=True, max_length=150)
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=30)
+    email = models.CharField(max_length=254)
+    is_staff = models.BooleanField()
+    is_active = models.BooleanField()
+    date_joined = models.DateTimeField()
+
+    class Meta:
+        managed = False
+        db_table = 'auth_user'
+
+
+class AuthUserGroups(models.Model):
+    user = models.ForeignKey(AuthUser, models.DO_NOTHING)
+    group = models.ForeignKey(AuthGroup, models.DO_NOTHING)
+
+    class Meta:
+        managed = False
+        db_table = 'auth_user_groups'
+        unique_together = (('user', 'group'),)
+
+
+class AuthUserUserPermissions(models.Model):
+    user = models.ForeignKey(AuthUser, models.DO_NOTHING)
+    permission = models.ForeignKey(AuthPermission, models.DO_NOTHING)
+
+    class Meta:
+        managed = False
+        db_table = 'auth_user_user_permissions'
+        unique_together = (('user', 'permission'),)
+
+
+class DjangoAdminLog(models.Model):
+    action_time = models.DateTimeField()
+    object_id = models.TextField(blank=True, null=True)
+    object_repr = models.CharField(max_length=200)
+    action_flag = models.SmallIntegerField()
+    change_message = models.TextField()
+    content_type = models.ForeignKey('DjangoContentType', models.DO_NOTHING, blank=True, null=True)
+    user = models.ForeignKey(AuthUser, models.DO_NOTHING)
+
+    class Meta:
+        managed = False
+        db_table = 'django_admin_log'
+
+
+class DjangoContentType(models.Model):
+    app_label = models.CharField(max_length=100)
+    model = models.CharField(max_length=100)
+
+    class Meta:
+        managed = False
+        db_table = 'django_content_type'
+        unique_together = (('app_label', 'model'),)
+
+
+class DjangoMigrations(models.Model):
+    app = models.CharField(max_length=255)
+    name = models.CharField(max_length=255)
+    applied = models.DateTimeField()
+
+    class Meta:
+        managed = False
+        db_table = 'django_migrations'
+
+
+class DjangoSession(models.Model):
+    session_key = models.CharField(primary_key=True, max_length=40)
+    session_data = models.TextField()
+    expire_date = models.DateTimeField()
+
+    class Meta:
+        managed = False
+        db_table = 'django_session'

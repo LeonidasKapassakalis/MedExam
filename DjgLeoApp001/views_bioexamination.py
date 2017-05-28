@@ -38,7 +38,7 @@ class BioExaminationForm(forms.ModelForm):
 
     class Meta:
         model = BioExamination
-        fields = ['peopleid', 'doctorid', 'examsschema', 'categorid', 'category' ,'dateofexam', 'notes', 'comments']
+        fields = ['peopleid', 'doctorid', 'examsschema', 'categorid', 'category' ,'dateofexam', 'docfile', 'notes', 'comments']
         widgets = {
              'dateofexam': DateWidget(attrs={'id': "id_dateof"}, bootstrap_version=3),
              'notes': forms.Textarea(attrs={'cols': 100, 'rows': 10}),

@@ -206,13 +206,43 @@ def PeopleFiltered(request):
                    'param_action1_name': 'Προσθήκη'})
 
 
+#########################################################################################################################
+
+
+from views_examination import ExaminationTable
+from models import VExamdetaisl
+
+class VExamdetaislFilter(django_filters.FilterSet):
+    class Meta:
+        model = VExamdetaisl
+        exclude = ('id',)
+
+
+def VExamdetaislFiltered(request):
+
+    data = VExamdetaisl.objects.all()
+    filter = VExamdetaislFilter(request.GET, queryset=data)
+    table = ExaminationTable(filter.qs)
+
+    RequestConfig(request, paginate={'per_page': 20}).configure(table)
+    return render(request, 'General/Generic_Table_view_filter_panel.html',
+                  {'objects': table,
+                   'filter' : filter,
+                   'page_title': u'Ανάληση Εργαστηριακών για ',
+                   'form_name':  u'Ανάληση Εργαστηριακών για ',
+                   'param_action1': reverse('DjgLeoApp001:createexambiodet'),
+                   'param_action1_name': 'Προσθήκη'})
+
+
+#########################################################################################################################
+
 def Graphos(request):
     data = [
         ['Year', 'Sales', 'Expenses', 'Items Sold', 'Net Profit', 'All'],
-        ['2004', 1000, 400, 100, 600, 100],
-        ['2005', 1170, 460, 120, 310, 100],
-        ['2006', 660, 1120, 50, -460, 100],
-        ['2007', 1030, 540, 100, 200, 100],
+        ['2004-04-12', 1000, 400, 100, 600, 100],
+        ['2005-05-12', 1170, 460, 120, 310, 100],
+        ['2006-01-12', 660, 1120, 50, 460, 100],
+        ['2007-04-12', 1030, 540, 100, 200, 100],
         ]
 
     from graphos.sources.simple import SimpleDataSource

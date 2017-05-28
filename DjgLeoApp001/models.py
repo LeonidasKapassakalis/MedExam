@@ -8,6 +8,11 @@ from django_datatables_view.base_datatable_view import BaseDatatableView
 
 from django.core.urlresolvers import reverse
 
+from gdstorage.storage import GoogleDriveStorage
+
+# Define Google Drive Storage
+gd_storage = GoogleDriveStorage()
+
 class Country(models.Model):
     id = models.AutoField
     name = models.CharField(u'Χώρα', max_length=50, unique=True)
@@ -125,7 +130,7 @@ class Examname(models.Model):
         (5, 'Λογικό'),
         (9, 'Άλλο'),
     )
-    result_type = models.IntegerField(max_length=1, choices=RESULT_TYPES, verbose_name=u'Είδος Απάντησης')
+    result_type = models.IntegerField(choices=RESULT_TYPES, verbose_name=u'Είδος Απάντησης')
     bioexaminationcategory = models.ForeignKey('BioExaminationCategory', verbose_name=u'Κατηγορία', blank=True,null=True)
     groupexam = models.ForeignKey('GroupExam', verbose_name=u'Ομάδα(Group)', blank=True, null=True)
     mm = models.ForeignKey('mm', verbose_name=u'Mονάδα Mέτρησης(Min/Max)', blank=True, null=True)
@@ -181,6 +186,7 @@ class Examination0(models.Model):
     dateofexam = models.DateField(verbose_name=u'Ημερομηνία Εξέτασης')
     notes   = models.CharField(verbose_name=u'Σημειώσεις',max_length=8192, blank=True, null=True)
     comments = models.CharField(verbose_name=u'Σχόλια',max_length=8192, blank=True, null=True)
+    docfile = models.FileField(upload_to='%Y/%m/%d', blank=True, null=True, storage=gd_storage)    
 
     objects = models.Manager() # The default manager.
     dahl_objects = DahlBookManager() # The Dahl-specific manager.
@@ -253,6 +259,7 @@ class Operations(models.Model):
     dateof = models.DateField(verbose_name=u'Ημερομηνία')
     notes = models.CharField(verbose_name=u'Σημειώσεις',max_length=8192, blank=True, null=True)
     comments = models.CharField(verbose_name=u'Σχόλια',max_length=8192, blank=True, null=True)
+    docfile = models.FileField(upload_to='%Y/%m/%d', blank=True, null=True, storage=gd_storage)
 
     def get_absolute_url(self):
         return reverse('DjgLeoApp001:listoperation', kwargs={'Patient': self.peopleid.id})
@@ -288,6 +295,7 @@ class BioExamination(models.Model):
     examsschema = models.ManyToManyField('Examschema', verbose_name = u'Σχήμα')
     category = models.ManyToManyField(ExaminationCategory, verbose_name=u'Κατηγορίες', blank=True, related_name='BioExaminationCategories')
     dateofexam = models.DateField(verbose_name=u'Ημερομηνία Εξέτασης')
+    docfile = models.FileField(upload_to='%Y/%m/%d', blank=True, null=True, storage=gd_storage)
     notes   = models.CharField(verbose_name=u'Σημειώσεις',max_length=8192, blank=True, null=True)
     comments = models.CharField(verbose_name=u'Σχόλια',max_length=8192, blank=True, null=True)
 
@@ -348,6 +356,7 @@ class Medicine(models.Model):
     datestart = models.DateField(verbose_name=u'Από')
     dateend   = models.DateField(verbose_name=u'Έως')
     notes     = models.CharField(verbose_name=u'Σημειώσεις',max_length=8192, blank=True, null=True)
+    docfile   = models.FileField(upload_to='%Y/%m/%d', blank=True, null=True, storage=gd_storage)
 
     class Meta:
         unique_together = (("peopleid", "doctorid", "categorid", "dateof" ),)
@@ -403,3 +412,46 @@ class MM(models.Model):
     class Meta:
         ordering = ('name',)
 
+
+# class ChargeSummary(models.Model):
+#     id = models.BigIntegerField(primary_key=True)
+#     user = models.ForeignKey(User, on_delete=models.DO_NOTHING)
+#     job = models.ForeignKey(Job, on_delete=models.DO_NOTHING)
+#     month = models.DateField()
+#     hardware = models.DecimalField(max_digits=19, decimal_places=2)
+#     software = models.DecimalField(max_digits=19, decimal_places=2)
+#
+#     class Meta:
+#         managed = False
+#         db_table = 'app_chargesummary'
+#         v_examdetaisl
+
+class VExamdetaisl(models.Model):
+    dateofexam = models.DateField(blank=True, null=True)
+    notes = models.CharField(max_length=8192, blank=True, null=True)
+    comments = models.CharField(max_length=8192, blank=True, null=True)
+    peopleid = models.ForeignKey(People, verbose_name=u'Ασθενής')
+    doctorid = models.ForeignKey(People, verbose_name=u'Γιατρός',limit_choices_to={'isdoctor': True} , related_name = 'VExamdetaislDoctor')
+    categorid = models.ForeignKey(ExaminationCategory,verbose_name=u'Κατηγορία')
+    dateofexam = models.DateField(verbose_name=u'Ημερομηνία Εξέτασης')
+    value = models.FloatField(blank=True, null=True)
+    notes01 = models.CharField(max_length=255, blank=True, null=True)
+    bioexaminationid = models.ForeignKey(BioExamination, verbose_name=u'Ασθενής')
+    examnameid = models.ForeignKey(Examname, verbose_name=u'Ασθενής')
+    id02 = models.IntegerField(blank=True, null=True)
+    name = models.CharField(max_length=100, blank=True, null=True)
+    sname = models.CharField(max_length=25, blank=True, null=True)
+    comments01 = models.CharField(max_length=250, blank=True, null=True)
+    bioexaminationcategory = models.ForeignKey(BioExaminationCategory)
+    mm_id = models.IntegerField(blank=True, null=True)
+    groupexam = models.ForeignKey(GroupExam)
+    result_type = models.IntegerField(blank=True, null=True)
+    maxvalue = models.DecimalField(max_digits=10, decimal_places=4, blank=True, null=True)
+    minvalue = models.DecimalField(max_digits=10, decimal_places=4, blank=True, null=True)
+
+    def __unicode__(self):
+        return self.peopleid.name + ' ' + self.examnameid.name + ' ' + str(self.dateofexam)
+
+    class Meta:
+        managed = False
+        db_table = 'v_examdetaisl'
