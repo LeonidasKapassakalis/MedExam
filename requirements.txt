@@ -11,3 +11,10 @@ dj-database-url
 gunicorn
 whitenoise
 django-graphos==0.3.41
+django-storages
+django-dropbox
+azure
+django-googledrive-storage
+django-autocomplete-light
+django_addanother
+django_popup_view_field
