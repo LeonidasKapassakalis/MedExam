@@ -18,3 +18,4 @@ django-googledrive-storage
 django-autocomplete-light
 django_addanother
 django_popup_view_field
+djangorestframework>=3.15.2 # not directly required, pinned by Snyk to avoid a vulnerability
