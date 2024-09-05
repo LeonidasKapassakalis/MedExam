@@ -1,4 +1,4 @@
-Django==1.10.5
+Django==4.2.16
 django-bootstrap3==7.1.0
 django-crispy-forms==1.6.1
 django-datatables-view==1.13.2
