@@ -1,4 +1,4 @@
-Django==1.10.5
+Django==4.2.28
 django-bootstrap3==7.1.0
 django-crispy-forms==1.6.1
 django-datatables-view==1.13.2
@@ -18,3 +18,4 @@ django-googledrive-storage
 django-autocomplete-light
 django_addanother
 django_popup_view_field
+protobuf>=6.33.5 # not directly required, pinned by Snyk to avoid a vulnerability
